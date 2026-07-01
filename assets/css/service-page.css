@@ -1,0 +1,1487 @@
+/* =========================================================
+   Página de serviço — Trabalhista
+   Escopo: somente Trabalhista.html / body.page-service
+   Atualiza apenas as duas primeiras sections.
+   ========================================================= */
+
+body.page-service .service-hero {
+  min-height: 560px;
+}
+
+body.page-service .service-hero .hero-grid {
+  align-items: center;
+}
+
+body.page-service .service-eyebrow,
+body.page-service .service-section-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 16px;
+  padding: 7px 14px;
+  border: 1px solid rgba(94, 43, 90, 0.18);
+  border-radius: 999px;
+  background: rgba(255,255,255,0.72);
+  color: #5e2b5a;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+body.page-service .service-eyebrow::before,
+body.page-service .service-section-label::before {
+  content: "";
+  width: 7px;
+  height: 7px;
+  border-radius: 999px;
+  background: #c9a24f;
+  box-shadow: 0 0 0 5px rgba(201, 162, 79, 0.12);
+}
+
+body.page-service .service-hero .hero-copy h1 {
+  max-width: 780px !important;
+  font-weight: 600 !important;
+  font-size: clamp(2.15rem, 3.45vw, 4.35rem) !important;
+  line-height: 1.08 !important;
+  letter-spacing: -0.04em !important;
+}
+
+body.page-service .service-hero .subtitle {
+  max-width: 720px;
+}
+
+body.page-service .service-intro {
+  padding: clamp(58px, 7vw, 96px) 0;
+  overflow: hidden;
+}
+
+body.page-service .service-intro__grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.02fr) minmax(360px, 0.78fr);
+  gap: clamp(42px, 7vw, 96px);
+  align-items: center;
+}
+
+body.page-service .service-intro__copy {
+  position: relative;
+  max-width: 820px;
+}
+
+body.page-service .service-intro__copy .pain-title {
+  position: relative;
+  max-width: 780px;
+  margin: 0 0 22px;
+  padding-left: 20px;
+  font-weight: 600 !important;
+  font-size: clamp(1.95rem, 2.65vw, 3rem) !important;
+  line-height: 1.13 !important;
+  letter-spacing: -0.035em !important;
+}
+
+body.page-service .service-intro__copy .pain-title::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.14em;
+  width: 3px;
+  height: 1.7em;
+  border-radius: 999px;
+  background: #c9a24f;
+}
+
+body.page-service .service-intro .lead {
+  max-width: 760px !important;
+  margin: 0 0 28px !important;
+  color: rgba(17, 20, 28, 0.68);
+  font-size: clamp(1rem, 1.05vw, 1.12rem);
+  line-height: 1.72;
+}
+
+body.page-service .service-intro__actions {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+body.page-service .service-intro__panel {
+  position: relative;
+  padding: 34px 34px 34px 38px;
+  border: 1px solid rgba(94, 43, 90, 0.14);
+  background:
+    radial-gradient(circle at 90% 0%, rgba(201, 162, 79, 0.11), transparent 34%),
+    rgba(255,255,255,0.62);
+  box-shadow: 0 24px 70px rgba(33, 18, 31, 0.06);
+}
+
+body.page-service .service-intro__line {
+  position: absolute;
+  left: 20px;
+  top: 36px;
+  bottom: 36px;
+  width: 1px;
+  background: linear-gradient(to bottom, #5e2b5a, rgba(94, 43, 90, 0.08));
+}
+
+body.page-service .service-case {
+  display: grid;
+  grid-template-columns: 42px 1fr;
+  gap: 16px;
+  align-items: start;
+  padding: 18px 0;
+}
+
+body.page-service .service-case + .service-case {
+  border-top: 1px solid rgba(94, 43, 90, 0.1);
+}
+
+body.page-service .service-case span {
+  color: #c9a24f;
+  font-size: 0.86rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+}
+
+body.page-service .service-case p {
+  margin: 0;
+  color: rgba(17, 20, 28, 0.72);
+  font-size: 1rem;
+  line-height: 1.55;
+}
+
+@media (max-width: 980px) {
+  body.page-service .service-intro__grid {
+    grid-template-columns: 1fr;
+    gap: 34px;
+  }
+
+  body.page-service .service-intro__panel {
+    padding: 28px 26px 28px 32px;
+  }
+}
+
+@media (max-width: 720px) {
+  body.page-service .service-hero {
+    min-height: auto;
+  }
+
+  body.page-service .service-hero .hero-copy h1 {
+    font-size: clamp(2rem, 9vw, 3rem) !important;
+  }
+
+  body.page-service .service-intro {
+    padding: 46px 0;
+  }
+
+  body.page-service .service-intro__copy .pain-title {
+    padding-left: 16px;
+  }
+
+  body.page-service .service-case {
+    grid-template-columns: 34px 1fr;
+    gap: 12px;
+  }
+}
+
+/* =========================================================
+   V42 — Formulário do hero da página Trabalhista
+   Escopo isolado: somente body.page-service--trabalhista
+   ========================================================= */
+
+body.page-service--trabalhista .service-hero .hero-grid {
+  grid-template-columns: minmax(0, 1.02fr) minmax(380px, 0.72fr);
+  gap: clamp(32px, 5vw, 76px);
+}
+
+body.page-service--trabalhista .service-lead-form {
+  position: relative;
+  width: min(100%, 520px);
+  justify-self: end;
+  padding: clamp(24px, 2.6vw, 34px);
+  border: 1px solid rgba(94, 43, 90, 0.13);
+  border-radius: 18px;
+  background:
+    linear-gradient(180deg, rgba(255,255,255,0.97), rgba(255,255,255,0.92));
+  box-shadow:
+    0 24px 70px rgba(23, 16, 24, 0.18),
+    inset 0 1px 0 rgba(255,255,255,0.9);
+  overflow: hidden;
+}
+
+body.page-service--trabalhista .service-lead-form::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 26px;
+  width: 3px;
+  height: 54px;
+  border-radius: 999px;
+  background: #c9a24f;
+}
+
+body.page-service--trabalhista .service-lead-form__head {
+  margin-bottom: 18px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid rgba(94, 43, 90, 0.1);
+}
+
+body.page-service--trabalhista .service-lead-form__eyebrow {
+  display: block;
+  margin: 0 0 8px;
+  color: #c9a24f;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.11em;
+  line-height: 1.2;
+  text-transform: uppercase;
+}
+
+body.page-service--trabalhista .service-lead-form h3 {
+  margin: 0 0 8px;
+  color: #5e2b5a;
+  font-size: clamp(1.12rem, 1.4vw, 1.42rem);
+  line-height: 1.16;
+  font-weight: 650;
+  letter-spacing: -0.02em;
+}
+
+body.page-service--trabalhista .service-lead-form__head p {
+  max-width: 38ch;
+  margin: 0;
+  color: rgba(17, 20, 28, 0.62);
+  font-size: 0.88rem;
+  line-height: 1.45;
+}
+
+body.page-service--trabalhista .service-lead-form__form {
+  gap: 12px;
+}
+
+body.page-service--trabalhista .service-lead-form__row {
+  display: grid;
+  gap: 12px;
+}
+
+body.page-service--trabalhista .service-lead-form__row--2 {
+  grid-template-columns: 1fr 1fr;
+}
+
+body.page-service--trabalhista .service-lead-form label {
+  margin: 0;
+}
+
+body.page-service--trabalhista .service-lead-form label > span:first-child {
+  margin-bottom: 6px;
+  color: #5e2b5a;
+  font-size: 0.84rem;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+
+body.page-service--trabalhista .service-lead-form .input-wrap {
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  background: #fff;
+  box-shadow: 0 0 0 1px rgba(94, 43, 90, 0.14);
+  transition: box-shadow 0.2s ease, background 0.2s ease;
+}
+
+body.page-service--trabalhista .service-lead-form .input-wrap:focus-within {
+  background: #fff;
+  box-shadow:
+    0 0 0 1px rgba(201, 162, 79, 0.72),
+    0 10px 26px rgba(94, 43, 90, 0.08);
+}
+
+body.page-service--trabalhista .service-lead-form input,
+body.page-service--trabalhista .service-lead-form select,
+body.page-service--trabalhista .service-lead-form textarea {
+  width: 100%;
+  min-height: 46px;
+  padding: 12px 14px;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  color: #19161d;
+  font: inherit;
+  font-size: 0.92rem;
+  outline: none;
+  box-shadow: none;
+}
+
+body.page-service--trabalhista .service-lead-form select {
+  appearance: none;
+  padding-right: 38px;
+  cursor: pointer;
+}
+
+body.page-service--trabalhista .service-lead-form .input-wrap--select::after {
+  content: "";
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  width: 8px;
+  height: 8px;
+  border-right: 2px solid rgba(94, 43, 90, 0.72);
+  border-bottom: 2px solid rgba(94, 43, 90, 0.72);
+  transform: translateY(-64%) rotate(45deg);
+  pointer-events: none;
+}
+
+body.page-service--trabalhista .service-lead-form textarea {
+  min-height: 74px;
+  line-height: 1.45;
+  resize: vertical;
+}
+
+body.page-service--trabalhista .service-lead-form input::placeholder,
+body.page-service--trabalhista .service-lead-form textarea::placeholder {
+  color: rgba(17, 20, 28, 0.38);
+}
+
+body.page-service--trabalhista .service-lead-form .field-error {
+  display: none;
+  margin: 5px 0 0;
+  color: #9b2f42;
+  font-size: 0.74rem;
+  line-height: 1.2;
+}
+
+body.page-service--trabalhista .service-lead-form .input-wrap.is-error {
+  box-shadow: 0 0 0 1px rgba(155, 47, 66, 0.65);
+}
+
+body.page-service--trabalhista .service-lead-form .input-wrap.is-error + .field-error,
+body.page-service--trabalhista .service-lead-form label:has(.input-wrap.is-error) .field-error {
+  display: block;
+}
+
+body.page-service--trabalhista .service-lead-form .input-wrap.is-valid {
+  box-shadow: 0 0 0 1px rgba(94, 43, 90, 0.16);
+}
+
+body.page-service--trabalhista .service-lead-form__submit {
+  width: 100%;
+  min-height: 52px;
+  margin-top: 4px;
+  border-radius: 999px;
+  font-size: 0.82rem;
+  letter-spacing: 0.09em;
+}
+
+body.page-service--trabalhista .service-lead-form__note {
+  display: block;
+  margin: 2px 0 0;
+  color: rgba(94, 43, 90, 0.58);
+  font-size: 0.74rem;
+  line-height: 1.35;
+  text-align: center;
+}
+
+@media (max-width: 1100px) {
+  body.page-service--trabalhista .service-hero .hero-grid {
+    grid-template-columns: minmax(0, 1fr) minmax(340px, 0.82fr);
+    gap: 34px;
+  }
+
+  body.page-service--trabalhista .service-lead-form__row--2 {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 920px) {
+  body.page-service--trabalhista .service-lead-form {
+    justify-self: stretch;
+    width: 100%;
+  }
+}
+
+@media (max-width: 560px) {
+  body.page-service--trabalhista .service-lead-form {
+    padding: 22px 18px;
+    border-radius: 14px;
+  }
+}
+
+
+/* =========================================================
+   V43 — Hero Trabalhista compacto igual ao Figma
+   Escopo: somente Trabalhista.html
+   Reduz altura do hero e deixa o formulário mais horizontal/compacto.
+   ========================================================= */
+
+body.page-service--trabalhista .service-hero {
+  min-height: 0 !important;
+  height: auto !important;
+  padding: clamp(34px, 4vw, 54px) 0 clamp(32px, 3.6vw, 48px) !important;
+  display: flex !important;
+  align-items: center !important;
+}
+
+body.page-service--trabalhista .service-hero .hero-grid {
+  min-height: 0 !important;
+  height: auto !important;
+  align-items: center !important;
+  grid-template-columns: minmax(0, 1fr) minmax(360px, 0.58fr) !important;
+  gap: clamp(28px, 4.2vw, 62px) !important;
+}
+
+body.page-service--trabalhista .service-hero .hero-copy {
+  max-width: 760px !important;
+}
+
+body.page-service--trabalhista .service-eyebrow {
+  margin-bottom: 10px !important;
+  padding: 5px 12px !important;
+  font-size: 0.68rem !important;
+  letter-spacing: 0.09em !important;
+}
+
+body.page-service--trabalhista .service-hero .hero-copy h1 {
+  max-width: 760px !important;
+  margin-bottom: 10px !important;
+  font-size: clamp(2rem, 3.05vw, 3.35rem) !important;
+  line-height: 1.05 !important;
+  font-weight: 620 !important;
+  letter-spacing: -0.035em !important;
+}
+
+body.page-service--trabalhista .service-hero .subtitle {
+  max-width: 740px !important;
+  margin-bottom: 12px !important;
+  font-size: clamp(0.9rem, 1.03vw, 1.05rem) !important;
+  line-height: 1.42 !important;
+}
+
+body.page-service--trabalhista .service-hero .microbullets {
+  gap: 5px !important;
+}
+
+body.page-service--trabalhista .service-hero .microbullets .mbi {
+  font-size: 0.86rem !important;
+  line-height: 1.2 !important;
+}
+
+body.page-service--trabalhista .service-lead-form {
+  width: min(100%, 435px) !important;
+  padding: 18px 18px 16px !important;
+  border-radius: 14px !important;
+  box-shadow: 0 18px 46px rgba(23, 16, 24, 0.17), inset 0 1px 0 rgba(255,255,255,0.92) !important;
+}
+
+body.page-service--trabalhista .service-lead-form::before {
+  top: 18px !important;
+  height: 42px !important;
+}
+
+body.page-service--trabalhista .service-lead-form__head {
+  margin-bottom: 10px !important;
+  padding-bottom: 10px !important;
+}
+
+body.page-service--trabalhista .service-lead-form__eyebrow {
+  margin-bottom: 4px !important;
+  font-size: 0.62rem !important;
+  letter-spacing: 0.1em !important;
+}
+
+body.page-service--trabalhista .service-lead-form h3 {
+  margin-bottom: 4px !important;
+  font-size: 1.03rem !important;
+  line-height: 1.12 !important;
+}
+
+body.page-service--trabalhista .service-lead-form__head p {
+  max-width: 34ch !important;
+  font-size: 0.76rem !important;
+  line-height: 1.32 !important;
+}
+
+body.page-service--trabalhista .service-lead-form__form,
+body.page-service--trabalhista .form.service-lead-form__form {
+  gap: 8px !important;
+}
+
+body.page-service--trabalhista .service-lead-form__row {
+  gap: 8px !important;
+}
+
+body.page-service--trabalhista .service-lead-form label > span:first-child {
+  margin-bottom: 4px !important;
+  font-size: 0.72rem !important;
+  line-height: 1.1 !important;
+}
+
+body.page-service--trabalhista .service-lead-form .input-wrap {
+  border-radius: 8px !important;
+}
+
+body.page-service--trabalhista .service-lead-form input,
+body.page-service--trabalhista .service-lead-form select,
+body.page-service--trabalhista .service-lead-form textarea {
+  min-height: 34px !important;
+  padding: 8px 11px !important;
+  font-size: 0.78rem !important;
+  line-height: 1.2 !important;
+}
+
+body.page-service--trabalhista .service-lead-form textarea {
+  min-height: 50px !important;
+  max-height: 62px !important;
+  resize: none !important;
+}
+
+body.page-service--trabalhista .service-lead-form__submit {
+  min-height: 38px !important;
+  margin-top: 2px !important;
+  font-size: 0.67rem !important;
+  letter-spacing: 0.08em !important;
+}
+
+body.page-service--trabalhista .service-lead-form__note {
+  display: none !important;
+}
+
+@media (min-width: 1300px) {
+  body.page-service--trabalhista .service-hero {
+    padding-top: 38px !important;
+    padding-bottom: 38px !important;
+  }
+}
+
+@media (max-width: 1100px) {
+  body.page-service--trabalhista .service-hero .hero-grid {
+    grid-template-columns: minmax(0, 1fr) minmax(330px, 0.7fr) !important;
+  }
+
+  body.page-service--trabalhista .service-lead-form__row--2 {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+@media (max-width: 920px) {
+  body.page-service--trabalhista .service-hero {
+    padding: 38px 0 42px !important;
+  }
+
+  body.page-service--trabalhista .service-hero .hero-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  body.page-service--trabalhista .service-lead-form {
+    width: 100% !important;
+    max-width: 520px !important;
+    justify-self: start !important;
+  }
+}
+
+/* =========================================================
+   V44 — Trabalhista / identificação com carrossel horizontal
+   Escopo: somente Trabalhista.html
+   ========================================================= */
+
+body.page-service--trabalhista .service-intro--carousel {
+  position: relative;
+  padding: clamp(48px, 5.8vw, 78px) 0 clamp(50px, 5.6vw, 74px) !important;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 8% 8%, rgba(201, 162, 79, 0.10), transparent 22%),
+    radial-gradient(circle at 88% 85%, rgba(94, 43, 90, 0.08), transparent 28%),
+    #fbfaf8;
+}
+
+body.page-service--trabalhista .service-intro--carousel::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(201, 162, 79, 0.48), transparent);
+}
+
+body.page-service--trabalhista .service-intro__inner {
+  position: relative;
+  z-index: 1;
+}
+
+body.page-service--trabalhista .service-intro__head {
+  max-width: 780px;
+  margin: 0 0 clamp(24px, 3vw, 38px);
+}
+
+body.page-service--trabalhista .service-intro--carousel .service-section-label {
+  margin-bottom: 15px;
+}
+
+body.page-service--trabalhista .service-intro--carousel .pain-title {
+  max-width: 760px;
+  margin: 0 0 16px;
+  font-size: clamp(1.9rem, 2.45vw, 3rem) !important;
+  line-height: 1.08 !important;
+  font-weight: 620 !important;
+  letter-spacing: -0.035em !important;
+}
+
+body.page-service--trabalhista .service-intro--carousel .lead {
+  max-width: 760px !important;
+  margin: 0 !important;
+  color: rgba(17, 20, 28, 0.66);
+  font-size: clamp(0.96rem, 1vw, 1.05rem) !important;
+  line-height: 1.62 !important;
+}
+
+body.page-service--trabalhista .service-cases {
+  position: relative;
+  margin-left: calc((100vw - min(1180px, calc(100vw - 48px))) / -2);
+  margin-right: calc((100vw - min(1180px, calc(100vw - 48px))) / -2);
+  padding: 0 calc((100vw - min(1180px, calc(100vw - 48px))) / 2);
+}
+
+body.page-service--trabalhista .service-cases__top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  max-width: min(1180px, calc(100vw - 48px));
+  margin: 0 auto 16px;
+}
+
+body.page-service--trabalhista .service-cases__eyebrow {
+  color: rgba(94, 43, 90, 0.88);
+  font-size: 0.76rem;
+  font-weight: 700;
+  letter-spacing: 0.11em;
+  text-transform: uppercase;
+}
+
+body.page-service--trabalhista .service-cases__controls {
+  display: flex;
+  gap: 8px;
+}
+
+body.page-service--trabalhista .service-cases__btn {
+  display: grid;
+  place-items: center;
+  width: 38px;
+  height: 38px;
+  border: 1px solid rgba(94, 43, 90, 0.14);
+  border-radius: 999px;
+  background: rgba(255,255,255,0.82);
+  color: #5e2b5a;
+  box-shadow: 0 12px 32px rgba(33, 18, 31, 0.08);
+  cursor: pointer;
+  transition: transform 0.2s ease, border-color 0.2s ease, background 0.2s ease;
+}
+
+body.page-service--trabalhista .service-cases__btn:hover {
+  transform: translateY(-1px);
+  border-color: rgba(201, 162, 79, 0.62);
+  background: #fff;
+}
+
+body.page-service--trabalhista .service-cases__btn svg {
+  width: 18px;
+  height: 18px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2.2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+body.page-service--trabalhista .service-cases__viewport {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: clamp(230px, 18vw, 285px);
+  gap: 18px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  overscroll-behavior-x: contain;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  padding: 6px max(24px, calc((100vw - 1180px) / 2)) 18px;
+  scrollbar-width: none;
+  -webkit-overflow-scrolling: touch;
+}
+
+body.page-service--trabalhista .service-cases__viewport::-webkit-scrollbar {
+  display: none;
+}
+
+body.page-service--trabalhista .service-cases__viewport::after {
+  content: "";
+  width: 1px;
+}
+
+body.page-service--trabalhista .service-case-card {
+  position: relative;
+  min-height: 168px;
+  padding: 22px 20px 20px;
+  border: 1px solid rgba(94, 43, 90, 0.28);
+  border-radius: 0;
+  background:
+    linear-gradient(180deg, rgba(255,255,255,0.92), rgba(255,255,255,0.76));
+  box-shadow: 0 20px 58px rgba(33, 18, 31, 0.055);
+  scroll-snap-align: start;
+  transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease, background 0.25s ease;
+}
+
+body.page-service--trabalhista .service-case-card::before {
+  content: "";
+  position: absolute;
+  left: -1px;
+  top: 20px;
+  bottom: 20px;
+  width: 2px;
+  background: linear-gradient(to bottom, #c9a24f, rgba(201, 162, 79, 0.22));
+  opacity: 0;
+  transition: opacity 0.25s ease;
+}
+
+body.page-service--trabalhista .service-case-card:hover,
+body.page-service--trabalhista .service-case-card:focus-within {
+  transform: translateY(-4px);
+  border-color: rgba(201, 162, 79, 0.68);
+  background: #fff;
+  box-shadow: 0 28px 72px rgba(33, 18, 31, 0.11);
+}
+
+body.page-service--trabalhista .service-case-card:hover::before,
+body.page-service--trabalhista .service-case-card:focus-within::before {
+  opacity: 1;
+}
+
+body.page-service--trabalhista .service-case-card__icon {
+  display: grid;
+  place-items: center;
+  width: 32px;
+  height: 32px;
+  margin-bottom: 16px;
+  color: #5e2b5a;
+  border: 1px solid rgba(94, 43, 90, 0.15);
+  background: rgba(255,255,255,0.72);
+}
+
+body.page-service--trabalhista .service-case-card__icon svg {
+  width: 18px;
+  height: 18px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.7;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+body.page-service--trabalhista .service-case-card h3 {
+  max-width: 16ch;
+  margin: 0 0 10px;
+  color: #151720;
+  font-size: clamp(1.02rem, 1.08vw, 1.18rem);
+  line-height: 1.12;
+  font-weight: 620;
+  letter-spacing: -0.025em;
+}
+
+body.page-service--trabalhista .service-case-card p {
+  margin: 0;
+  color: rgba(17, 20, 28, 0.64);
+  font-size: 0.88rem;
+  line-height: 1.48;
+}
+
+@media (max-width: 900px) {
+  body.page-service--trabalhista .service-cases {
+    margin-left: -24px;
+    margin-right: -24px;
+    padding: 0;
+  }
+
+  body.page-service--trabalhista .service-cases__top {
+    padding: 0 24px;
+  }
+
+  body.page-service--trabalhista .service-cases__viewport {
+    grid-auto-columns: minmax(235px, 72vw);
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+}
+
+@media (max-width: 560px) {
+  body.page-service--trabalhista .service-intro--carousel {
+    padding: 42px 0 48px !important;
+  }
+
+  body.page-service--trabalhista .service-cases__controls {
+    display: none;
+  }
+
+  body.page-service--trabalhista .service-case-card {
+    min-height: 156px;
+  }
+}
+/* =====================================================
+   AJUSTE DO TÍTULO — SECTION IDENTIFICAÇÃO / TRABALHISTA
+   Deixa o título mais parecido com o hero
+===================================================== */
+
+#identificacao.service-intro h2,
+#identificacao.service-intro .section-title,
+#identificacao.service-intro .service-title,
+#identificacao.service-intro .service-intro__title,
+#identificacao.service-intro .service-carousel-title {
+  max-width: 980px !important;
+  font-size: clamp(2.3rem, 3.8vw, 1.4rem) !important;
+  line-height: 1.08 !important;
+  font-weight: 600 !important;
+  letter-spacing: -0.045em !important;
+  color: #10131a !important;
+  margin: 0 0 18px !important;
+  text-wrap: balance;
+}
+
+/* Ajusta o bloco do título para respirar igual ao hero */
+#identificacao.service-intro .service-intro__header,
+#identificacao.service-intro .service-intro__heading,
+#identificacao.service-intro .section-header,
+#identificacao.service-intro .service-header {
+  max-width: 260px !important;
+  margin-bottom: 34px !important;
+}
+
+/* Barrinha dourada lateral mais parecida com o hero */
+#identificacao.service-intro h2,
+#identificacao.service-intro .section-title,
+#identificacao.service-intro .service-title,
+#identificacao.service-intro .service-intro__title {
+  position: relative;
+  padding-left: 24px !important;
+}
+
+#identificacao.service-intro h2::before,
+#identificacao.service-intro .section-title::before,
+#identificacao.service-intro .service-title::before,
+#identificacao.service-intro .service-intro__title::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.14em;
+  width: 4px;
+  height: 1.55em;
+  border-radius: 999px;
+  background: #caa24d;
+}
+
+/* Subtítulo mais próximo da estética do hero */
+#identificacao.service-intro p,
+#identificacao.service-intro .section-lead,
+#identificacao.service-intro .service-intro__lead,
+#identificacao.service-intro .service-lead {
+  max-width: 860px !important;
+  font-size: clamp(1.02rem, 1.25vw, 1.25rem) !important;
+  line-height: 1.62 !important;
+  font-weight: 400 !important;
+  letter-spacing: -0.01em !important;
+  color: rgba(16, 19, 26, 0.72) !important;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  #identificacao.service-intro h2,
+  #identificacao.service-intro .section-title,
+  #identificacao.service-intro .service-title,
+  #identificacao.service-intro .service-intro__title,
+  #identificacao.service-intro .service-carousel-title {
+    font-size: clamp(2rem, 9vw, 3rem) !important;
+    line-height: 1.08 !important;
+    padding-left: 18px !important;
+  }
+
+  #identificacao.service-intro h2::before,
+  #identificacao.service-intro .section-title::before,
+  #identificacao.service-intro .service-title::before,
+  #identificacao.service-intro .service-intro__title::before {
+    width: 3px;
+    height: 1.45em;
+  }
+}
+
+/* =====================================================
+   V45 — cards do carrossel de ponta a ponta
+   Apenas ajusta a faixa dos cards da section #identificacao.
+===================================================== */
+body.page-service--trabalhista #identificacao.service-intro .service-cases {
+  width: 100vw !important;
+  max-width: none !important;
+  margin-left: calc(50% - 50vw) !important;
+  margin-right: calc(50% - 50vw) !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+  overflow: hidden !important;
+}
+
+body.page-service--trabalhista #identificacao.service-intro .service-cases__top {
+  width: min(100%, calc(100vw - clamp(48px, 7vw, 120px))) !important;
+  max-width: none !important;
+  margin: 0 auto 16px !important;
+  padding: 0 !important;
+}
+
+body.page-service--trabalhista #identificacao.service-intro .service-cases__viewport {
+  width: 100vw !important;
+  max-width: none !important;
+  margin: 0 !important;
+  grid-auto-columns: clamp(260px, 18.5vw, 340px) !important;
+  gap: clamp(14px, 1.25vw, 24px) !important;
+  padding: 6px clamp(24px, 4vw, 72px) 18px !important;
+  scroll-padding-left: clamp(24px, 4vw, 72px) !important;
+}
+
+body.page-service--trabalhista #identificacao.service-intro .service-case-card {
+  min-height: 178px !important;
+}
+
+@media (min-width: 1280px) {
+  body.page-service--trabalhista #identificacao.service-intro .service-cases__viewport {
+    grid-auto-columns: clamp(285px, 18vw, 355px) !important;
+  }
+}
+
+@media (max-width: 900px) {
+  body.page-service--trabalhista #identificacao.service-intro .service-cases {
+    width: 100vw !important;
+    margin-left: calc(50% - 50vw) !important;
+    margin-right: calc(50% - 50vw) !important;
+  }
+
+  body.page-service--trabalhista #identificacao.service-intro .service-cases__top {
+    width: calc(100vw - 48px) !important;
+    padding: 0 !important;
+  }
+
+  body.page-service--trabalhista #identificacao.service-intro .service-cases__viewport {
+    grid-auto-columns: minmax(245px, 76vw) !important;
+    padding-left: 24px !important;
+    padding-right: 24px !important;
+    scroll-padding-left: 24px !important;
+  }
+}
+
+
+/* =========================================================
+   V61 — service-intro organizada
+   Escopo: somente página trabalhista / carrossel de situações
+   ========================================================= */
+
+body.page-service--trabalhista #identificacao.service-intro--carousel {
+  padding: clamp(46px, 5vw, 72px) 0 clamp(42px, 4.8vw, 68px) !important;
+}
+
+body.page-service--trabalhista #identificacao.service-intro--carousel .service-intro__inner {
+  max-width: 1180px;
+  margin-inline: auto;
+  padding-inline: 24px;
+}
+
+body.page-service--trabalhista #identificacao.service-intro--carousel .service-intro__head {
+  max-width: 1180px;
+  margin: 0 auto clamp(30px, 3.2vw, 44px);
+  display: grid;
+  grid-template-columns: minmax(0, 0.92fr) minmax(320px, 0.78fr);
+  column-gap: clamp(42px, 7vw, 112px);
+  row-gap: 18px;
+  align-items: end;
+}
+
+body.page-service--trabalhista #identificacao.service-intro--carousel .service-section-label {
+  grid-column: 1 / -1;
+  width: fit-content;
+  margin: 0 0 4px !important;
+}
+
+body.page-service--trabalhista #identificacao.service-intro--carousel .pain-title {
+  max-width: 660px !important;
+  margin: 0 !important;
+  padding-left: 22px !important;
+  font-size: clamp(2rem, 2.65vw, 3.25rem) !important;
+  line-height: 1.08 !important;
+  font-weight: 600 !important;
+  letter-spacing: -0.045em !important;
+}
+
+body.page-service--trabalhista #identificacao.service-intro--carousel .lead {
+  max-width: 520px !important;
+  margin: 0 0 4px !important;
+  font-size: clamp(0.98rem, 1.05vw, 1.08rem) !important;
+  line-height: 1.62 !important;
+  color: rgba(17, 20, 28, 0.66) !important;
+}
+
+body.page-service--trabalhista #identificacao.service-intro--carousel .service-cases {
+  position: relative;
+  width: 100vw;
+  margin-left: calc(50% - 50vw) !important;
+  margin-right: calc(50% - 50vw) !important;
+  padding: 0 !important;
+}
+
+body.page-service--trabalhista #identificacao.service-intro--carousel .service-cases::before,
+body.page-service--trabalhista #identificacao.service-intro--carousel .service-cases::after {
+  content: "";
+  position: absolute;
+  z-index: 3;
+  top: 46px;
+  bottom: 18px;
+  width: min(9vw, 120px);
+  pointer-events: none;
+}
+
+body.page-service--trabalhista #identificacao.service-intro--carousel .service-cases::before {
+  left: 0;
+  background: linear-gradient(90deg, #fbfaf8 0%, rgba(251,250,248,0) 100%);
+}
+
+body.page-service--trabalhista #identificacao.service-intro--carousel .service-cases::after {
+  right: 0;
+  background: linear-gradient(270deg, #fbfaf8 0%, rgba(251,250,248,0) 100%);
+}
+
+body.page-service--trabalhista #identificacao.service-intro--carousel .service-cases__top {
+  max-width: 1180px !important;
+  margin: 0 auto 14px !important;
+  padding-inline: 24px !important;
+}
+
+body.page-service--trabalhista #identificacao.service-intro--carousel .service-cases__eyebrow {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  color: rgba(94, 43, 90, 0.88);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+body.page-service--trabalhista #identificacao.service-intro--carousel .service-cases__eyebrow::after {
+  content: "";
+  display: block;
+  width: 64px;
+  height: 1px;
+  background: rgba(201, 162, 79, 0.42);
+}
+
+body.page-service--trabalhista #identificacao.service-intro--carousel .service-cases__controls {
+  position: relative;
+  z-index: 5;
+}
+
+body.page-service--trabalhista #identificacao.service-intro--carousel .service-cases__viewport {
+  grid-auto-columns: clamp(260px, 20.5vw, 318px) !important;
+  gap: 16px !important;
+  padding: 4px max(24px, calc((100vw - 1180px) / 2)) 18px !important;
+  scroll-padding-left: max(24px, calc((100vw - 1180px) / 2));
+}
+
+body.page-service--trabalhista #identificacao.service-intro--carousel .service-case-card {
+  min-height: 218px !important;
+  padding: 24px 22px 22px !important;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  border-color: rgba(94, 43, 90, 0.18) !important;
+  background:
+    linear-gradient(180deg, rgba(255,255,255,0.96), rgba(255,255,255,0.82)) !important;
+  box-shadow: 0 18px 54px rgba(33, 18, 31, 0.045) !important;
+}
+
+body.page-service--trabalhista #identificacao.service-intro--carousel .service-case-card__number {
+  position: absolute;
+  top: 22px;
+  right: 22px;
+  color: rgba(201, 162, 79, 0.86);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+}
+
+body.page-service--trabalhista #identificacao.service-intro--carousel .service-case-card__icon {
+  width: 30px !important;
+  height: 30px !important;
+  margin-bottom: 18px !important;
+  color: #5e2b5a !important;
+  background: rgba(255,255,255,0.74) !important;
+  border-color: rgba(94, 43, 90, 0.13) !important;
+}
+
+body.page-service--trabalhista #identificacao.service-intro--carousel .service-case-card h3 {
+  max-width: 19ch !important;
+  margin-bottom: 12px !important;
+  font-size: clamp(1rem, 1.05vw, 1.14rem) !important;
+  line-height: 1.15 !important;
+  font-weight: 650 !important;
+  letter-spacing: -0.02em !important;
+}
+
+body.page-service--trabalhista #identificacao.service-intro--carousel .service-case-card p {
+  max-width: 28ch;
+  font-size: 0.9rem !important;
+  line-height: 1.52 !important;
+  color: rgba(17, 20, 28, 0.62) !important;
+}
+
+@media (max-width: 980px) {
+  body.page-service--trabalhista #identificacao.service-intro--carousel .service-intro__head {
+    grid-template-columns: 1fr;
+    max-width: 760px;
+    margin-left: 0;
+  }
+
+  body.page-service--trabalhista #identificacao.service-intro--carousel .lead {
+    max-width: 680px !important;
+  }
+
+  body.page-service--trabalhista #identificacao.service-intro--carousel .service-cases::before,
+  body.page-service--trabalhista #identificacao.service-intro--carousel .service-cases::after {
+    display: none;
+  }
+
+  body.page-service--trabalhista #identificacao.service-intro--carousel .service-cases__viewport {
+    grid-auto-columns: minmax(250px, 72vw) !important;
+    padding-inline: 24px !important;
+  }
+}
+
+@media (max-width: 560px) {
+  body.page-service--trabalhista #identificacao.service-intro--carousel {
+    padding: 40px 0 44px !important;
+  }
+
+  body.page-service--trabalhista #identificacao.service-intro--carousel .service-intro__inner {
+    padding-inline: 20px;
+  }
+
+  body.page-service--trabalhista #identificacao.service-intro--carousel .pain-title {
+    font-size: clamp(1.85rem, 8vw, 2.45rem) !important;
+    padding-left: 18px !important;
+  }
+
+  body.page-service--trabalhista #identificacao.service-intro--carousel .service-cases__top {
+    padding-inline: 20px !important;
+  }
+
+  body.page-service--trabalhista #identificacao.service-intro--carousel .service-cases__viewport {
+    grid-auto-columns: minmax(252px, 82vw) !important;
+    padding-inline: 20px !important;
+  }
+
+  body.page-service--trabalhista #identificacao.service-intro--carousel .service-case-card {
+    min-height: 206px !important;
+  }
+}
+
+
+/* =========================================================
+   V65 — ajuste desktop da página Trabalhista
+   Reduz a sobra lateral nas sections do meio sem alterar o design.
+   ========================================================= */
+@media (min-width: 1180px){
+  body.page-service--trabalhista #identificacao.service-intro--carousel .service-intro__inner,
+  body.page-service--trabalhista #identificacao.service-intro--carousel .service-intro__head,
+  body.page-service--trabalhista #identificacao.service-intro--carousel .service-cases__top{
+    max-width: 1440px !important;
+    width: min(100% - clamp(64px, 8vw, 144px), 1440px) !important;
+    padding-inline: 0 !important;
+  }
+
+  body.page-service--trabalhista #identificacao.service-intro--carousel .service-intro__head{
+    grid-template-columns: minmax(0, .95fr) minmax(360px, .85fr) !important;
+    column-gap: clamp(48px, 6vw, 110px) !important;
+  }
+
+  body.page-service--trabalhista #identificacao.service-intro--carousel .service-cases__viewport{
+    grid-auto-columns: clamp(270px, 18vw, 330px) !important;
+    padding-left: max(40px, calc((100vw - 1440px) / 2)) !important;
+    padding-right: max(40px, calc((100vw - 1440px) / 2)) !important;
+    scroll-padding-left: max(40px, calc((100vw - 1440px) / 2)) !important;
+  }
+}
+
+@media (min-width: 1500px){
+  body.page-service--trabalhista #identificacao.service-intro--carousel .service-intro__inner,
+  body.page-service--trabalhista #identificacao.service-intro--carousel .service-intro__head,
+  body.page-service--trabalhista #identificacao.service-intro--carousel .service-cases__top{
+    max-width: 1480px !important;
+    width: min(100% - 160px, 1480px) !important;
+  }
+
+  body.page-service--trabalhista #identificacao.service-intro--carousel .service-cases__viewport{
+    padding-left: max(80px, calc((100vw - 1480px) / 2)) !important;
+    padding-right: max(80px, calc((100vw - 1480px) / 2)) !important;
+    scroll-padding-left: max(80px, calc((100vw - 1480px) / 2)) !important;
+  }
+}
+
+
+/* =========================================================
+   V71 — Hero Trabalhista: checks em coluna + textos pequenos mais fortes
+   Escopo: somente Trabalhista.html / hero
+   ========================================================= */
+
+body.page-service--trabalhista .service-hero .hero-copy .subtitle,
+body.page-service--trabalhista .service-hero .hero-copy .service-hero__support-text {
+  font-weight: 500 !important;
+  opacity: 0.96 !important;
+  text-shadow: 0 1px 18px rgba(0, 0, 0, 0.18);
+}
+
+body.page-service--trabalhista .service-hero .microbullets,
+body.page-service--trabalhista .service-hero .microbullets--icons {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: flex-start !important;
+  flex-wrap: nowrap !important;
+  gap: 8px !important;
+  max-width: 720px !important;
+  margin-top: 14px !important;
+}
+
+body.page-service--trabalhista .service-hero .microbullets .mbi,
+body.page-service--trabalhista .service-hero .microbullets--icons .mbi {
+  display: grid !important;
+  grid-template-columns: 18px minmax(0, 1fr) !important;
+  align-items: start !important;
+  gap: 10px !important;
+  width: 100% !important;
+  max-width: 680px !important;
+  font-weight: 650 !important;
+  font-size: clamp(0.9rem, 1vw, 1.02rem) !important;
+  line-height: 1.28 !important;
+  color: #fff !important;
+  text-shadow: 0 1px 16px rgba(0, 0, 0, 0.22);
+}
+
+body.page-service--trabalhista .service-hero .microbullets .mbi svg,
+body.page-service--trabalhista .service-hero .microbullets--icons .mbi svg {
+  width: 15px !important;
+  height: 15px !important;
+  margin-top: 0.18em !important;
+  flex: 0 0 auto !important;
+  opacity: 0.98 !important;
+}
+
+@media (max-width: 760px) {
+  body.page-service--trabalhista .service-hero .hero-copy .subtitle,
+  body.page-service--trabalhista .service-hero .hero-copy .service-hero__support-text {
+    font-weight: 520 !important;
+  }
+
+  body.page-service--trabalhista .service-hero .microbullets .mbi,
+  body.page-service--trabalhista .service-hero .microbullets--icons .mbi {
+    font-size: 0.9rem !important;
+    line-height: 1.28 !important;
+  }
+}
+
+
+/* =========================================================
+   V72 — Hero trabalhista: blur roxo lateral para destacar texto
+   Escopo: somente Trabalhista.html / hero
+   ========================================================= */
+
+body.page-service--trabalhista .service-hero {
+  position: relative !important;
+  isolation: isolate;
+}
+
+body.page-service--trabalhista .service-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0 auto 0 0;
+  width: min(68vw, 980px);
+  pointer-events: none;
+  z-index: 0;
+  background:
+    radial-gradient(circle at 18% 44%,
+      rgba(94, 43, 90, 0.56) 0%,
+      rgba(94, 43, 90, 0.36) 28%,
+      rgba(94, 43, 90, 0.16) 52%,
+      rgba(94, 43, 90, 0) 74%),
+    linear-gradient(90deg,
+      rgba(42, 18, 40, 0.58) 0%,
+      rgba(94, 43, 90, 0.34) 42%,
+      rgba(94, 43, 90, 0.08) 72%,
+      rgba(94, 43, 90, 0) 100%);
+  filter: blur(10px);
+  transform: translateX(-6%);
+}
+
+body.page-service--trabalhista .service-hero::after {
+  content: "";
+  position: absolute;
+  inset: 0 auto 0 0;
+  width: min(52vw, 760px);
+  pointer-events: none;
+  z-index: 0;
+  background: radial-gradient(
+      circle at 18% 48%,
+      rgba(92, 38, 86, 0.72) 0%,
+      rgba(92, 38, 86, 0.48) 28%,
+      rgba(92, 38, 86, 0.18) 52%,
+      transparent 74%);
+}
+
+body.page-service--trabalhista .service-hero .hero-grid,
+body.page-service--trabalhista .service-hero .hero-copy,
+body.page-service--trabalhista .service-hero .hero-form {
+  position: relative;
+  z-index: 2;
+}
+
+body.page-service--trabalhista .service-hero .hero-copy h1,
+body.page-service--trabalhista .service-hero .hero-copy .subtitle,
+body.page-service--trabalhista .service-hero .hero-copy .service-hero__support-text,
+body.page-service--trabalhista .service-hero .microbullets .mbi {
+  text-shadow:
+    0 2px 18px rgba(0, 0, 0, 0.34),
+    0 10px 42px rgba(94, 43, 90, 0.24);
+}
+
+@media (max-width: 760px) {
+  body.page-service--trabalhista .service-hero::before {
+    width: 100%;
+    filter: blur(8px);
+    transform: none;
+    background:
+      radial-gradient(circle at 14% 35%,
+        rgba(94, 43, 90, 0.50) 0%,
+        rgba(94, 43, 90, 0.26) 44%,
+        rgba(94, 43, 90, 0) 78%),
+      linear-gradient(90deg,
+        rgba(42, 18, 40, 0.44) 0%,
+        rgba(94, 43, 90, 0.18) 58%,
+        rgba(94, 43, 90, 0) 100%);
+  }
+
+  body.page-service--trabalhista .service-hero::after {
+    width: 100%;
+    background: linear-gradient(90deg,
+      rgba(14, 10, 14, 0.26) 0%,
+      rgba(14, 10, 14, 0.12) 62%,
+      rgba(14, 10, 14, 0) 100%);
+  }
+}
+
+
+/* =====================================================
+   V74 — barra dourada no texto de apoio da direita
+   Section service-intro / carrossel trabalhista.
+   Não altera estrutura, textos nem carrossel.
+===================================================== */
+body.page-service--trabalhista #identificacao.service-intro--carousel .service-intro__head > .lead{
+  position: relative !important;
+  padding-left: 26px !important;
+  max-width: 560px !important;
+}
+
+body.page-service--trabalhista #identificacao.service-intro--carousel .service-intro__head > .lead::before{
+  content: "" !important;
+  position: absolute !important;
+  left: 0 !important;
+  top: .18em !important;
+  bottom: .18em !important;
+  width: 4px !important;
+  min-height: 100% !important;
+  border-radius: 999px !important;
+  background: #CDAA55 !important;
+  opacity: 1 !important;
+  box-shadow: 0 10px 24px rgba(201, 162, 79, .18) !important;
+}
+
+@media (max-width: 900px){
+  body.page-service--trabalhista #identificacao.service-intro--carousel .service-intro__head > .lead{
+    padding-left: 18px !important;
+  }
+
+  body.page-service--trabalhista #identificacao.service-intro--carousel .service-intro__head > .lead::before{
+    width: 3px !important;
+  }
+}
+
+
+/* =========================================================
+   V75 — Carrossel service-intro: evita espaço vazio no fim
+   Mantém layout, textos e cards; ajusta apenas o snap final.
+   ========================================================= */
+
+body.page-service--trabalhista #identificacao.service-intro--carousel .service-cases__viewport {
+  scroll-snap-type: x mandatory !important;
+  scroll-padding-right: max(24px, calc((100vw - 1180px) / 2)) !important;
+}
+
+body.page-service--trabalhista #identificacao.service-intro--carousel .service-case-card {
+  scroll-snap-align: start !important;
+}
+
+body.page-service--trabalhista #identificacao.service-intro--carousel .service-case-card:last-child {
+  scroll-snap-align: end !important;
+}
+
+
+/* =========================================================
+   V76 — Carrossel situações atendidas: arraste livre sem gap
+   Mantém o design, mas remove o espaço extra no fim e libera drag.
+   ========================================================= */
+
+body.page-service--trabalhista .service-cases {
+  margin-left: calc(50% - 50vw) !important;
+  margin-right: calc(50% - 50vw) !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+
+body.page-service--trabalhista .service-cases__top {
+  max-width: none !important;
+  width: 100% !important;
+  padding-left: clamp(24px, 5vw, 96px) !important;
+  padding-right: clamp(24px, 5vw, 96px) !important;
+}
+
+body.page-service--trabalhista .service-cases__viewport {
+  padding-left: clamp(24px, 5vw, 96px) !important;
+  padding-right: clamp(24px, 5vw, 96px) !important;
+  scroll-snap-type: x proximity !important;
+  cursor: grab;
+  user-select: none;
+  touch-action: pan-y;
+}
+
+body.page-service--trabalhista .service-cases__viewport.is-dragging {
+  cursor: grabbing;
+  scroll-behavior: auto !important;
+}
+
+body.page-service--trabalhista .service-cases__viewport::after {
+  content: none !important;
+  display: none !important;
+}
+
+body.page-service--trabalhista .service-cases__btn.is-disabled {
+  pointer-events: none;
+}
+
+body.page-service--trabalhista .service-case-card {
+  scroll-snap-align: start;
+  scroll-snap-stop: normal;
+}
+
+@media (max-width: 900px) {
+  body.page-service--trabalhista .service-cases__top,
+  body.page-service--trabalhista .service-cases__viewport {
+    padding-left: 24px !important;
+    padding-right: 24px !important;
+  }
+}

@@ -1,0 +1,236 @@
+/* =========================================================
+   V26 — títulos mais finos e consistentes no site inteiro
+   Mantém a fonte do projeto, mas reduz o peso visual dos títulos
+   sem alterar animações, grids ou comportamento das sections.
+   ========================================================= */
+
+:root{
+  --mesp-title-weight: 650;
+  --mesp-title-soft-weight: 600;
+  --mesp-label-weight: 650;
+}
+
+/* Hero + títulos principais das sections */
+.hero h1,
+.section h1,
+.section h2,
+.section .section-title,
+.section .pain-title,
+.section .split-title,
+.section .da-title,
+.section .authority-title,
+.section .cta-title,
+.section .demandas-slide__title,
+.section .demandas-right__title,
+.section .demandas-card__title,
+.section .identificacao-slide__title,
+.section .identificacao-info__title,
+.section .atendimento-pin__copy h2,
+.section .atendimento-panel__inner h3,
+.section .how-service__title,
+.section .how-service__heading{
+  font-family: inherit !important;
+  font-weight: var(--mesp-title-weight) !important;
+  letter-spacing: -0.018em !important;
+  text-wrap: balance;
+}
+
+/* Subtítulos/cards — ainda destacados, mas sem parecerem pesados demais */
+.section h3,
+.card h3,
+.faq-item h3,
+.section .step-title,
+.section .how-step__title,
+.section .included-card h3,
+.section .service-card h3,
+.section .atendimento-panel__quote,
+.section .demandas-panel__title,
+.section .demandas-slide__headline,
+.section .identificacao-slide__headline{
+  font-weight: var(--mesp-title-soft-weight) !important;
+  letter-spacing: -0.01em !important;
+}
+
+/* Eyebrows/labels continuam premium, mas menos agressivos */
+.section .eyebrow,
+.section .section-kicker,
+.section .kicker,
+.section .tag,
+.section .pill,
+.section .label,
+.section .atendimento-pin__eyebrow,
+.section .demandas-kicker,
+.section .demandas-count,
+.section .how-service__eyebrow,
+.section .how-service__number{
+  font-weight: var(--mesp-label-weight) !important;
+  letter-spacing: 0.08em !important;
+}
+
+/* Correções específicas de sections novas que tinham font-weight 800/900 */
+#atendimento .atendimento-pin__copy h2,
+#atendimento .atendimento-panel__inner h3,
+#atendimento .atendimento-panel__quote,
+#demandas .demandas-slide__title,
+#demandas .demandas-info__title,
+#demandas .demandas-summary__title,
+#identificacao .identificacao-slide__title,
+#identificacao .identificacao-info__title,
+#como-funciona h2,
+#como-funciona h3,
+#sobre h2,
+#faq h2,
+#contato h2{
+  font-weight: var(--mesp-title-weight) !important;
+}
+
+/* Texto normal não fica negritado por herança acidental */
+.section p,
+.section li,
+.section .lead,
+.section .subtitle,
+.section .text,
+.section .copy{
+  font-weight: 400;
+}
+
+@media (max-width: 760px){
+  .hero h1,
+  .section h1,
+  .section h2,
+  .section .section-title,
+  .section .pain-title,
+  .section .split-title,
+  .section .da-title,
+  .section .demandas-slide__title,
+  .section .atendimento-pin__copy h2{
+    letter-spacing: -0.012em !important;
+  }
+}
+
+/* =====================================================
+   PADRÃO GLOBAL — TÍTULOS DAS SECTIONS MENORES
+   Igual ao site online
+===================================================== */
+
+.section h2,
+.section-title,
+.how-service__title,
+.atendimento-pin__title,
+.demandas-slider__title,
+.demandas-slide__title,
+.about-title,
+.profile-title {
+  font-size: clamp(1.85rem, 0.35vw, 1.75rem) !important;
+  line-height: 1.12 !important;
+  font-weight: 100 !important;
+  letter-spacing: 0.035em !important;
+}
+
+/* Títulos muito grandes dentro de slides */
+.demandas-slide__title,
+.demandas-slider__title {
+  font-size: clamp(1.85rem, 0.35vw, 1.75rem) !important;
+  line-height: 1.12 !important;
+}
+
+/* Título da section atendimento */
+.atendimento-pin__title {
+  font-size: clamp(1.85rem, 0.35vw, 1.75rem) !important;
+  line-height: 1.12 !important;
+}
+
+/* Título do como funciona */
+.how-service__title,
+#como-funciona h2 {
+  font-size: clamp(1.85rem, 0.35vw, 1.75rem) !important;
+  line-height: 1.14 !important;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .section h2,
+  .section-title,
+  .how-service__title,
+  .atendimento-pin__title,
+  .demandas-slider__title,
+  .demandas-slide__title,
+  .about-title,
+  .profile-title {
+    font-size: clamp(1.85rem, 0.35vw, 1.75rem) !important;
+    line-height: 1.12 !important;
+  }
+}
+/* =====================================================
+   HERO — força título mais fino e menor
+   ===================================================== */
+
+.hero-title,
+.hero__title,
+.hero-content h1,
+.hero-copy h1,
+.hero h1,
+#hero h1,
+.main-hero h1,
+.landing-hero h1 {
+  font-weight: 500 !important;
+  font-size: clamp(2.35rem, 3.6vw, 4.2rem) !important;
+  line-height: 1.08 !important;
+  letter-spacing: -0.035em !important;
+  text-wrap: balance;
+}
+
+
+/* =====================================================
+   V39 — HERO TOPO: sobrescreve compact.css com seletor correto
+   O hero usa <section class="section hero" id="topo">,
+   então .hero h1 não vencia o seletor .hero#topo h1.
+   ===================================================== */
+.hero#topo h1,
+#topo.hero h1,
+section.hero#topo .hero-copy h1,
+section#topo.hero .hero-copy h1 {
+  font-family: inherit !important;
+  font-weight: 700 !important;
+  font-size: clamp(1rem, 1.88vw, 2.62rem) !important;
+  line-height: 1.16 !important;
+  letter-spacing: -0.024em !important;
+  max-width: 760px !important;
+  text-wrap: balance;
+}
+
+.hero#topo .hero-copy,
+#topo.hero .hero-copy {
+  max-width: 760px !important;
+}
+
+@media (min-width: 1280px) {
+  .hero#topo h1,
+  #topo.hero h1,
+  section.hero#topo .hero-copy h1,
+  section#topo.hero .hero-copy h1 {
+    width: 760px !important;
+  }
+}
+
+@media (max-width: 980px) {
+  .hero#topo h1,
+  #topo.hero h1,
+  section.hero#topo .hero-copy h1,
+  section#topo.hero .hero-copy h1 {
+    width: auto !important;
+    max-width: 720px !important;
+    font-size: clamp(1.85rem, 5.2vw, 2.45rem) !important;
+  }
+}
+
+@media (max-width: 620px) {
+  .hero#topo h1,
+  #topo.hero h1,
+  section.hero#topo .hero-copy h1,
+  section#topo.hero .hero-copy h1 {
+    max-width: 100% !important;
+    font-size: clamp(1.65rem, 7.2vw, 2.1rem) !important;
+    line-height: 1.14 !important;
+  }
+}

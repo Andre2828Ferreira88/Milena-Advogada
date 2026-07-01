@@ -1,0 +1,653 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>MESP Advocacia — Suporte Jurídico Empresarial</title>
+
+  <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap">
+
+  <link rel="stylesheet" href="assets/css/base.css" />
+  <link rel="stylesheet" href="assets/css/layout.css" />
+  <link rel="stylesheet" href="assets/css/components/buttons.css?v=buttons-premium-v66" />
+  <link rel="stylesheet" href="assets/css/components/cards.css" />
+  <link rel="stylesheet" href="assets/css/components/form.css" />
+  <link rel="stylesheet" href="assets/css/sections/hero.css" />
+  <link rel="stylesheet" href="assets/css/sections/pain.css" />
+  <link rel="stylesheet" href="assets/css/sections/steps.css?v=typo-global-v23" />
+  <link rel="stylesheet" href="assets/css/components/rail.css" />
+  <link rel="stylesheet" href="assets/css/sections/authority.css?v=authority-mobile-v48" />
+  <link rel="stylesheet" href="assets/css/sections/cta-final.css" />
+  <link rel="stylesheet" href="assets/css/sections/included.css">
+  <link rel="stylesheet" href="assets/css/compact.css?v=mobile-hero-fix-v47" />
+  <link rel="stylesheet" href="assets/css/sections/atendimento-pin.css?v=button-premium-v66" />
+  <link rel="stylesheet" href="assets/css/sections/demandas-slider.css?v=textos-v52" />
+  <link rel="stylesheet" href="./assets/css/typography-fine.css?v=hero-topo-fino-v39">
+  <link rel="stylesheet" href="assets/css/sections/authority-stats-premium.css?v=authority-v55" />
+
+  <link rel="stylesheet" href="assets/css/remove-label-icons.css?v=sem-icones-v60" />
+  <link rel="stylesheet" href="assets/css/sections/page-rhythm.css?v=desktop-width-v65" />
+  <link rel="stylesheet" href="assets/css/visual-colors.css?v=visual-v68" />
+  <link rel="stylesheet" href="assets/css/sections/faq-accordion.css?v=faq-accordion-v70" />
+  <link rel="stylesheet" href="assets/css/title-bars-full.css?v=title-bars-v73" />
+</head>
+
+<body id="topo">
+
+<div class="preloader" id="preloader" aria-hidden="true">
+  <div class="preloader__bg"></div>
+  <div class="preloader__card">
+    <div class="preloader__logoWrap">
+      <img class="preloader__logo" src="assets/img/logo.png" alt="MESP Advocacia" />
+      <div class="preloader__shine" aria-hidden="true"></div>
+    </div>
+    <div class="preloader__meta">
+      <div class="preloader__dots" aria-hidden="true">
+        <span></span><span></span><span></span>
+      </div>
+      <p class="preloader__text">Carregando…</p>
+    </div>
+    <div class="preloader__bar">
+      <div class="preloader__fill" id="preloaderFill"></div>
+    </div>
+  </div>
+</div>
+
+  <div class="topbar">
+    <div class="container topbar-row">
+      <div class="topbar-left">
+        <a class="topbar-pill" href="#" aria-label="WhatsApp">
+          <img class="topbar-img" src="assets/img/whatsapp.svg" alt="" />
+        </a>
+        <a class="topbar-phone" href="tel:+5511933082223">(11) 93308-2223</a>
+      </div>
+      <div class="topbar-right">
+        <a class="topbar-pill" href="#" aria-label="Instagram">
+          <img class="topbar-img" src="assets/img/instagram.svg" alt="" />
+        </a>
+        <a class="topbar-pill" href="#" aria-label="LinkedIn">
+          <img class="topbar-img" src="assets/img/linkedin.svg" alt="" />
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <header class="site-header">
+    <div class="container header-row">
+      <a class="brand" href="#topo" aria-label="Página inicial">
+        <img src="assets/img/logo.png" alt="MESP Advocacia" />
+      </a>
+      <nav class="nav" aria-label="Navegação principal">
+        <a href="#como-funciona">Como funciona</a>
+        <a href="#sobre">Sobre</a>
+        <a href="#faq">Dúvidas</a>
+        <a class="nav-cta" href="#contato">Falar com a advogada</a>
+      </nav>
+      <button class="nav-toggle" type="button"
+              aria-label="Abrir menu"
+              aria-controls="mobile-menu"
+              aria-expanded="false"
+              data-nav-toggle>
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <div class="mobile-menu" id="mobile-menu" data-mobile-menu aria-hidden="true">
+    <div class="mobile-menu__panel" role="dialog" aria-modal="true" aria-label="Menu">
+      <div class="mobile-menu__head">
+        <img class="mobile-menu__logo" src="assets/img/logo.png" alt="MESP Advocacia" />
+        <button class="mobile-menu__close" type="button" aria-label="Fechar menu" data-nav-close>×</button>
+      </div>
+      <nav class="mobile-menu__nav" aria-label="Links do menu">
+        <a href="#como-funciona" data-nav-link>Como funciona</a>
+        <a href="#sobre" data-nav-link>Sobre</a>
+        <a href="#faq" data-nav-link>Dúvidas</a>
+        <a href="#contato" class="is-cta" data-nav-link>Falar com a advogada</a>
+      </nav>
+    </div>
+  </div>
+
+  <!-- HERO -->
+  <section class="section hero" id="topo">
+    <div class="container hero-grid">
+
+      <div class="hero-copy reveal">
+        <h1>Segurança jurídica para sua empresa tomar decisões com respaldo</h1>
+
+        <p class="subtitle">
+          Apoio jurídico empresarial
+          <span class="typing-wrap"><span class="typing-text" id="typingText">pontual, esporádico ou contínuo.</span></span>
+        </p>
+
+        <div class="microbullets microbullets--icons">
+          <span class="mbi">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 12a4 4 0 1 0-4-4a4 4 0 0 0 4 4Zm0 2c-4.4 0-8 2.2-8 5v1h16v-1c0-2.8-3.6-5-8-5Z" fill="currentColor"/></svg>
+            Atendimento direto com advogada
+          </span>
+          <span class="mbi">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 3h10v2H7V3Zm-2 4h14v14H5V7Zm2 2v10h10V9H7Z" fill="currentColor"/></svg>
+            Sem necessidade de contrato mensal
+          </span>
+          <span class="mbi">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a7 7 0 0 0-7 7c0 5 7 13 7 13s7-8 7-13a7 7 0 0 0-7-7Zm0 9a2 2 0 1 1 2-2a2 2 0 0 1-2 2Z" fill="currentColor"/></svg>
+            Online e presencial — Osasco e SP
+          </span>
+        </div>
+      </div>
+
+      <aside class="hero-form card reveal">
+        <h3>Fale com a advogada</h3>
+        <form class="form js-wa-form" id="heroForm" novalidate>
+          <label>
+            <span>Nome</span>
+            <div class="input-wrap">
+              <input id="fieldNome" name="nome" type="text" placeholder="Seu nome" required autocomplete="name" />
+              <span class="input-check" aria-hidden="true"></span>
+            </div>
+            <span class="field-error" id="errorNome">Preencha seu nome</span>
+          </label>
+          <label>
+            <span>WhatsApp</span>
+            <div class="input-wrap">
+              <input id="fieldWa" name="whatsapp" type="tel" placeholder="(11) 91234-5678" required autocomplete="tel" />
+              <span class="input-check" aria-hidden="true"></span>
+            </div>
+            <span class="field-error" id="errorWa">Preencha seu WhatsApp</span>
+          </label>
+          <button class="btn btn-primary" type="submit" id="heroSubmit">
+            Quero falar com a advogada
+          </button>
+        </form>
+      </aside>
+
+    </div>
+  </section>
+
+  <!-- BLOCO 2 — IDENTIFICAÇÃO (condensado) -->
+  <section class="section alt-soft" id="identificacao">
+    <div class="container">
+
+      <div class="section-head reveal">
+        <h2 class="pain-title">
+          Sua empresa não precisa de assessoria mensal para ter respaldo jurídico
+        </h2>
+      </div>
+
+      <p class="lead reveal" style="max-width:72ch; margin-bottom:20px;">
+        Contratos sem proteção, desligamentos sem orientação, inadimplência sem estratégia — muitos prejuízos surgem por falta de suporte no momento certo.
+      </p>
+
+      <ul class="demand-list reveal" style="margin-bottom:24px;">
+        <li>contratos firmados sem proteção adequada;</li>
+        <li>contratação ou desligamento sem orientação;</li>
+        <li>inadimplência sem estratégia de cobrança;</li>
+        <li>decisões importantes tomadas sem análise jurídica.</li>
+      </ul>
+
+      <div class="center reveal">
+        <a class="btn btn-primary js-wa-cta" data-wa-source="identificacao" href="#">
+          Entender como o escritório pode ajudar
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- BLOCO 3 — FORMAS DE ATENDIMENTO / GSAP PIN -->
+    <!-- BLOCO 3 — FORMAS DE ATENDIMENTO -->
+  <section class="section atendimento-formats" id="atendimento">
+    <div class="atendimento-formats__wrap">
+
+      <div class="atendimento-formats__copy">
+        <span class="atendimento-formats__kicker">Atendimento jurídico empresarial</span>
+        <h2>Sua empresa pode contar com a MESP em diferentes áreas e formatos</h2>
+        <p>
+          Nem toda demanda exige uma assessoria mensal. Em alguns casos, a empresa precisa resolver
+          uma situação específica com segurança. Em outros, o ideal é contar com acompanhamento
+          jurídico contínuo para prevenir riscos, organizar documentos, estruturar decisões e proteger o negócio.
+        </p>
+        <p>
+          A MESP atende empresas e empresários em demandas pontuais ou por meio de assessoria jurídica
+          mensal, com atuação estratégica em diferentes áreas do Direito Empresarial, Civil, Trabalhista e Preventivo.
+        </p>
+        <a class="atendimento-formats__btn js-wa-cta" data-wa-source="atendimento-formatos" href="#">
+          Entender o melhor formato para minha empresa
+        </a>
+        <span class="atendimento-formats__footnote">
+          Atendimento online para empresas de todo o Brasil ou presencialmente no escritório, em Osasco/SP, mediante agendamento.
+        </span>
+      </div>
+
+      <div class="atendimento-formats__cards" aria-label="Formatos de atendimento">
+        <article class="atendimento-format-card">
+          <span class="atendimento-format-card__label">Formato de atendimento</span>
+          <h3>Atendimento pontual</h3>
+          <p>
+            Para empresas que precisam resolver uma demanda específica, receber orientação antes de uma decisão
+            importante ou tratar um problema jurídico já existente com segurança.
+          </p>
+          <strong>
+            Indicado para quem precisa de uma solução objetiva, sem necessariamente contratar uma assessoria mensal.
+          </strong>
+        </article>
+
+        <article class="atendimento-format-card atendimento-format-card--featured">
+          <span class="atendimento-format-card__label">Formato de atendimento</span>
+          <h3>Assessoria jurídica mensal</h3>
+          <p>
+            Para empresas que desejam acompanhamento contínuo, prevenção de riscos, suporte nas decisões do dia a dia
+            e organização jurídica da rotina empresarial.
+          </p>
+          <strong>
+            Indicado para quem quer reduzir passivos, agir com mais segurança e contar com suporte jurídico recorrente.
+          </strong>
+        </article>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- BLOCO 4+5 — DEMANDAS + BENEFÍCIOS (lado a lado) -->
+  <section class="section demandas-slider" id="demandas">
+    <div class="demandas-slider__wrap">
+
+      <div class="demandas-slider__left" aria-label="Áreas de atuação jurídica">
+        <div class="demandas-slider__rail" aria-hidden="true">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+
+        <div class="demandas-slider__content">
+          <span class="demandas-slider__eyebrow">Soluções jurídicas</span>
+
+          <div class="demandas-slider__viewport" aria-live="polite">
+            <article class="demandas-slide is-active" data-demandas-slide>
+              <span class="demandas-slide__number">01</span>
+              <h2>Direito Empresarial e Societário</h2>
+              <p>Suporte jurídico para empresas, sócios e empresários em contratos sociais, reorganizações, responsabilidades societárias, governança e decisões estratégicas do negócio.</p>
+            </article>
+
+            <article class="demandas-slide" data-demandas-slide>
+              <span class="demandas-slide__number">02</span>
+              <h2>Contratos Empresariais e Cíveis</h2>
+              <p>Elaboração, revisão e análise de contratos para reduzir riscos, proteger interesses comerciais e dar mais segurança às relações com clientes, fornecedores, parceiros e prestadores.</p>
+            </article>
+
+            <article class="demandas-slide" data-demandas-slide>
+              <span class="demandas-slide__number">03</span>
+              <h2>Direito Trabalhista Empresarial</h2>
+              <p>Atuação preventiva e contenciosa em admissões, desligamentos, advertências, suspensões, acordos, notificações, reclamações trabalhistas e gestão de riscos com empregados e prestadores.</p>
+            </article>
+
+            <article class="demandas-slide" data-demandas-slide>
+              <span class="demandas-slide__number">04</span>
+              <h2>Compliance Trabalhista e Gestão de Passivos</h2>
+              <p>Organização de documentos, procedimentos internos, políticas e práticas trabalhistas para prevenir conflitos, reduzir passivos e fortalecer a segurança jurídica da empresa.</p>
+            </article>
+
+            <article class="demandas-slide" data-demandas-slide>
+              <span class="demandas-slide__number">05</span>
+              <h2>Marcas, Patentes e Propriedade Intelectual</h2>
+              <p>Apoio jurídico para proteção da identidade, dos ativos intangíveis, marcas, patentes e diferenciais competitivos da empresa perante terceiros e órgãos competentes.</p>
+            </article>
+
+            <article class="demandas-slide" data-demandas-slide>
+              <span class="demandas-slide__number">06</span>
+              <h2>Recuperação de Crédito e Cobranças</h2>
+              <p>Estratégias extrajudiciais e judiciais para cobrança de valores, negociação com inadimplentes e recuperação de créditos da operação empresarial.</p>
+            </article>
+
+            <article class="demandas-slide" data-demandas-slide>
+              <span class="demandas-slide__number">07</span>
+              <h2>Defesa perante PROCON e Órgãos Administrativos</h2>
+              <p>Atuação em notificações, autos de infração, reclamações administrativas e procedimentos envolvendo consumidores, fornecedores e órgãos fiscalizadores.</p>
+            </article>
+
+            <article class="demandas-slide" data-demandas-slide>
+              <span class="demandas-slide__number">08</span>
+              <h2>Análise de Riscos e Decisões Estratégicas</h2>
+              <p>Orientação jurídica para avaliar contratos, conflitos, cenários e decisões relevantes antes que gerem prejuízos, insegurança ou passivos para a empresa.</p>
+            </article>
+
+            <article class="demandas-slide" data-demandas-slide>
+              <span class="demandas-slide__number">09</span>
+              <h2>Contencioso Cível e Empresarial</h2>
+              <p>Atuação em conflitos, notificações, disputas contratuais, responsabilidades civis, cobranças e demandas judiciais ou extrajudiciais envolvendo a empresa.</p>
+            </article>
+          </div>
+
+          <div class="demandas-slider__counter">
+            <span data-demandas-current>01</span>
+            <i></i>
+            <span>09</span>
+          </div>
+        </div>
+
+        <div class="demandas-slider__controls" aria-label="Controles do slider">
+          <button class="demandas-slider__arrow" type="button" data-demandas-prev aria-label="Slide anterior">
+            <span></span>
+          </button>
+          <button class="demandas-slider__arrow demandas-slider__arrow--down" type="button" data-demandas-next aria-label="Próximo slide">
+            <span></span>
+          </button>
+        </div>
+      </div>
+
+      <aside class="demandas-slider__right">
+        <div class="demandas-slider__right-inner">
+          <span class="demandas-slider__right-kicker">Atuação jurídica completa para empresas e empresários</span>
+          <h3>Soluções jurídicas para diferentes necessidades da sua empresa</h3>
+          <div class="demandas-slider__right-line">
+            <p>A MESP Advocacia atua no suporte jurídico a empresas e empresários em demandas preventivas, consultivas e contenciosas, com foco em segurança jurídica, organização, redução de riscos e tomada de decisões mais estratégicas.</p>
+          </div>
+          <ul class="demandas-slider__mini-list">
+            <li>Atuação preventiva</li>
+            <li>Consultoria estratégica</li>
+            <li>Demandas contenciosas</li>
+          </ul>
+        </div>
+      </aside>
+
+    </div>
+  </section>
+
+  <!-- BLOCO 6 — COMO FUNCIONA -->
+  <section class="section steps how-service" id="como-funciona">
+    <div class="container how-service__container">
+
+      <div class="how-service__left reveal">
+        <span class="how-service__eyebrow">Atendimento jurídico empresarial</span>
+        <h2 class="how-service__title">Decisões empresariais sem orientação podem custar caro</h2>
+
+        <p class="how-service__lead">
+          Na rotina de uma empresa, decisões rápidas fazem parte do dia a dia. Mas quando envolvem funcionários, contratos, clientes, sócios ou cobranças, uma escolha sem respaldo jurídico pode gerar prejuízos, conflitos e processos.
+        </p>
+
+        <div class="how-service__benefits">
+          <h3>Com apoio jurídico, sua empresa ganha:</h3>
+          <ul>
+            <li>Mais segurança antes de tomar decisões sensíveis</li>
+            <li>Melhor organização de contratos e documentos</li>
+            <li>Redução de riscos trabalhistas e cíveis</li>
+            <li>Apoio para lidar com inadimplência e conflitos</li>
+            <li>Clareza sobre os caminhos possíveis antes de agir</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="how-service__divider" aria-hidden="true"></div>
+
+      <aside class="how-service__right reveal" aria-label="Etapas do atendimento">
+        <div class="how-service__right-head">
+          <span class="how-service__eyebrow how-service__eyebrow--light">Processo de atendimento</span>
+          <h2 class="how-service__steps-title">Como funciona o atendimento</h2>
+        </div>
+
+        <div class="how-service__steps">
+          <article class="how-service__step">
+            <span class="how-service__number">01</span>
+            <div>
+              <h3>Entendimento da demanda</h3>
+              <p>A empresa apresenta a situação e o escritório identifica o tipo de apoio necessário.</p>
+            </div>
+          </article>
+
+          <article class="how-service__step">
+            <span class="how-service__number">02</span>
+            <div>
+              <h3>Análise jurídica</h3>
+              <p>A MESP avalia documentos, riscos e possibilidades de atuação conforme o caso.</p>
+            </div>
+          </article>
+
+          <article class="how-service__step">
+            <span class="how-service__number">03</span>
+            <div>
+              <h3>Definição do melhor caminho</h3>
+              <p>A demanda pode ser tratada de forma pontual ou dentro de uma assessoria mensal.</p>
+            </div>
+          </article>
+
+          <article class="how-service__step">
+            <span class="how-service__number">04</span>
+            <div>
+              <h3>Atuação e acompanhamento</h3>
+              <p>O escritório orienta, elabora documentos, conduz negociações ou atua na defesa da empresa, conforme o escopo contratado.</p>
+            </div>
+          </article>
+        </div>
+      </aside>
+
+      <div class="how-service__cta reveal">
+        <a class="btn btn-primary js-wa-cta" data-wa-source="como-funciona" href="#">
+          Solicitar atendimento empresarial
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- BLOCO 9 — AUTORIDADE -->
+  <section class="section authority alt-soft" id="sobre">
+    <div class="container authority-grid">
+
+      <div class="reveal">
+        <div class="authority-stats authority-stats--premium reveal" aria-label="Indicadores da atuação da MESP Advocacia">
+          <div class="stat-item">
+            <span class="stat-value"><span class="stat-num" data-target="10">0</span><span class="stat-suffix">+</span></span>
+            <span class="stat-label">anos de experiência</span>
+            <span class="stat-line" aria-hidden="true"></span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-value"><span class="stat-num" data-target="5">0</span><span class="stat-suffix">+</span></span>
+            <span class="stat-label">segmentos atendidos</span>
+            <span class="stat-line" aria-hidden="true"></span>
+          </div>
+          <div class="stat-item stat-item--brasil">
+            <span class="stat-value"><span class="stat-num stat-num--text">BRASIL</span></span>
+            <span class="stat-label">atendimento online</span>
+            <span class="stat-line" aria-hidden="true"></span>
+          </div>
+        </div>
+        <h2>Dra. Milena Esperandio</h2>
+        <p class="authority-oab"><strong>OAB/SP 372.279</strong></p>
+        <p>
+          Advogada pós-graduada em Direito Empresarial e Cível pela FGV, com mais de 10 anos de
+          experiência no suporte jurídico a empresas e empresários. Atua de forma técnica,
+          estratégica e preventiva, auxiliando negócios na redução de riscos, organização jurídica
+          e tomada de decisões com mais segurança.
+        </p>
+        <div style="margin-top:20px;">
+          <a class="btn btn-primary js-wa-cta" data-wa-source="sobre" href="#">
+            Quero falar com a advogada
+          </a>
+        </div>
+      </div>
+
+      <div class="authority-photo reveal">
+        <img src="assets/img/milena.jpg" alt="Dra. Milena Esperandio" width="400" />
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="section alt-warm" id="faq">
+    <div class="container">
+
+      <div class="section-head reveal">
+        <h2>Dúvidas frequentes</h2>
+      </div>
+
+      <div class="faq-list reveal">
+
+        <div class="faq-item card">
+          <h3>Preciso contratar assessoria mensal para receber atendimento?</h3>
+          <p>Não. A MESP atende tanto demandas pontuais quanto empresas que precisam de acompanhamento jurídico contínuo. A assessoria mensal é indicada quando a empresa deseja apoio recorrente nas decisões trabalhistas do dia a dia.</p>
+        </div>
+
+        <div class="faq-item card">
+          <h3>A NR-1 pode gerar risco trabalhista para minha empresa?</h3>
+          <p>Sim. A falta de organização, documentação e prevenção em temas como assédio, sobrecarga, pressão excessiva, conflitos internos e saúde mental pode aumentar o risco de reclamações trabalhistas. A MESP orienta empresas na prevenção jurídica e na estruturação de medidas internas mais seguras.</p>
+        </div>
+
+        <div class="faq-item card">
+          <h3>Vou demitir um funcionário. Posso consultar antes de tomar a decisão?</h3>
+          <p>Sim. O ideal é buscar orientação antes do desligamento, especialmente em casos de faltas, advertências, afastamentos, estabilidade, justa causa, acordo ou situações sensíveis. Isso ajuda a empresa a agir com mais segurança e reduzir riscos futuros.</p>
+        </div>
+
+        <div class="faq-item card">
+          <h3>Minha empresa recebeu uma reclamação trabalhista. A MESP atua na defesa?</h3>
+          <p>Sim. O escritório analisa o processo, os documentos da empresa, os riscos envolvidos e define a melhor estratégia de defesa, sempre com foco na proteção jurídica da empresa.</p>
+        </div>
+
+        <div class="faq-item card">
+          <h3>Posso contratar prestador PJ ou autônomo sem risco trabalhista?</h3>
+          <p>Depende da forma como essa relação acontece na prática. A MESP orienta empresas na análise de contratos, rotina de trabalho e documentos para reduzir riscos de reconhecimento de vínculo empregatício.</p>
+        </div>
+
+        <div class="faq-item card">
+          <h3>A empresa pode aplicar advertência ou suspensão sem orientação jurídica?</h3>
+          <p>Pode, mas é recomendável avaliar antes. Medidas disciplinares mal aplicadas podem gerar questionamentos futuros. A orientação jurídica ajuda a definir a medida adequada, a forma correta de documentar e os limites legais da situação.</p>
+        </div>
+
+        <div class="faq-item card">
+          <h3>Que tipo de demanda trabalhista pode ser tratada de forma pontual?</h3>
+          <p>Demissões, advertências, suspensões, acordos, análise de contratos, dúvidas sobre funcionários, prestadores PJ, notificações, reclamações trabalhistas e organização de documentos internos.</p>
+        </div>
+
+        <div class="faq-item card">
+          <h3>Qual é o formato de atendimento da MESP?</h3>
+          <p>O atendimento pode ser realizado de forma online, para empresas de todo o Brasil, ou presencialmente no escritório, em Osasco/SP, mediante agendamento. Em ambos os formatos a empresa recebe uma análise individualizada da demanda e orientação jurídica adequada ao caso.</p>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FECHAMENTO + FOOTER -->
+  <section class="section cta-final" id="contato">
+    <div class="container cta-box reveal">
+      <h2>Mais segurança para decidir. Mais estratégia para proteger o seu negócio</h2>
+      <a class="btn btn-primary btn-lg js-wa-cta" data-wa-source="final" href="#">
+        Quero falar com a advogada
+      </a>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container">
+
+      <div class="footer-top">
+
+        <!-- Coluna 1 — Logo + navegação -->
+        <div class="footer-col footer-col--nav">
+          <img class="footer-logo" src="assets/img/logo.png" alt="MESP Advocacia" />
+          <nav class="footer-nav">
+            <a href="#atendimento">Formas de atendimento</a>
+            <a href="#demandas">Áreas de atuação</a>
+            <a href="#como-funciona">Como funciona</a>
+            <a href="#sobre">Sobre a advogada</a>
+            <a href="#faq">Dúvidas frequentes</a>
+            <a href="./Trabalhista.html">Advocacia Trabalhista</a>
+          </nav>
+        </div>
+
+        <!-- Coluna 2 — CTA secundária -->
+        <div class="footer-col footer-col--cta">
+          <p class="footer-col__label">Fale com o escritório</p>
+          <p class="footer-col__sub">Entenda o melhor formato de atendimento para sua empresa.</p>
+        </div>
+
+        <!-- Coluna 3 — Contato -->
+        <div class="footer-col footer-col--contact">
+          <p class="footer-col__label">Contato</p>
+          <ul class="footer-contact-list">
+            <li>
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347zM12.004 2C6.48 2 2 6.48 2 12c0 1.89.52 3.656 1.427 5.168L2 22l4.979-1.404A9.956 9.956 0 0 0 12.004 22C17.524 22 22 17.52 22 12S17.524 2 12.004 2z"/></svg>
+              <a href="tel:+5511933082223">(11) 93308-2223</a>
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M3 8l7.89 5.26a2 2 0 0 0 2.22 0L21 8M5 19h14a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2Z"/></svg>
+              <a href="mailto:contato@mespadvocacia.com.br">milena@mespadvocacia.com.br</a>
+            </li>
+            <li>
+              <span>online e presencial</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Coluna 4 — Horários -->
+        <div class="footer-col footer-col--hours">
+          <p class="footer-col__label">Horário de atendimento</p>
+          <p class="footer-hours__line">Segunda a sexta</p>
+          <p class="footer-hours__value">das 9h às 18h</p>
+          <p class="footer-hours__note">Atendimento online em todo o Brasil.</p>
+        </div>
+
+      </div>
+
+      <div class="footer-divider"></div>
+
+      <div class="footer-bottom">
+        <p class="footer-address">
+          OAB/SP 372.279 · MESP Advocacia &amp; Consultoria<br>
+          Osasco/SP · Brasil
+        </p>
+        <div class="footer-bottom-right">
+          <p class="footer-copy">© 2025, MESP Advocacia. Todos os direitos reservados.</p>
+          <div class="footer-social">
+            <a href="#" aria-label="Instagram" class="footer-social__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".5" fill="currentColor" stroke="none"/></svg>
+            </a>
+            <a href="#" aria-label="LinkedIn" class="footer-social__icon">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>
+            </a>
+            <a href="#" aria-label="WhatsApp" class="footer-social__icon">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347zM12.004 2C6.48 2 2 6.48 2 12c0 1.89.52 3.656 1.427 5.168L2 22l4.979-1.404A9.956 9.956 0 0 0 12.004 22C17.524 22 22 17.52 22 12S17.524 2 12.004 2z"/></svg>
+            </a>
+            
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+
+  <!-- Barra progresso scroll -->
+  <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+
+  <!-- Botão flutuante WhatsApp -->
+  <a class="wa-float js-wa-cta" data-wa-source="float" href="#" aria-label="Falar pelo WhatsApp">
+    <svg viewBox="0 0 24 24" fill="white" width="28" height="28"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347zM12.004 2C6.48 2 2 6.48 2 12c0 1.89.52 3.656 1.427 5.168L2 22l4.979-1.404A9.956 9.956 0 0 0 12.004 22C17.524 22 22 17.52 22 12S17.524 2 12.004 2z"/></svg>
+  </a>
+
+  <!-- Barra CTA mobile -->
+  <div class="wa-bottom" id="waBottom">
+    <a class="btn btn-primary wa-bottom__btn js-wa-cta" data-wa-source="mobile-bar" href="#">
+      Falar com a advogada
+    </a>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="assets/js/atendimento-pin.js?v=mobile-no-pin-v46"></script>
+  <script src="assets/js/demandas-slider.js?v=textos-v52" defer></script>
+
+  <script src="assets/js/animations.js"></script>
+  <script src="assets/js/rail.js"></script>
+  <script src="assets/js/whatsapp.js"></script>
+  <script src="assets/js/main.js" defer></script>
+  <script src="assets/js/enhancements.js" defer></script>
+  <script src="assets/js/faq-accordion.js?v=faq-accordion-v70" defer></script>
+
+</body>
+</html>

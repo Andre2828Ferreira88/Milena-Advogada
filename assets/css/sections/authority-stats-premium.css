@@ -1,0 +1,274 @@
+/* =========================================================
+   V28 — Authority stats minimal/editorial
+   Área de números sem card/retângulo, com visual mais premium
+   ========================================================= */
+
+#sobre .authority-stats--premium{
+  width: 100%;
+  max-width: 720px;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  align-items: start;
+  gap: 0;
+  margin: 0 0 34px;
+  padding: 0 0 18px;
+  border: 0;
+  border-radius: 0;
+  overflow: visible;
+  background: transparent;
+  box-shadow: none;
+}
+
+#sobre .authority-stats--premium .stat-item{
+  position: relative;
+  min-height: auto;
+  padding: 0 30px 0 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  border-right: 0;
+  isolation: isolate;
+}
+
+#sobre .authority-stats--premium .stat-item:not(:last-child){
+  margin-right: 30px;
+}
+
+#sobre .authority-stats--premium .stat-item:not(:last-child)::after{
+  content: "";
+  position: absolute;
+  top: 7px;
+  right: 0;
+  width: 1px;
+  height: 72px;
+  background: linear-gradient(180deg, rgba(209,170,88,.88), rgba(94,42,84,.12));
+}
+
+#sobre .authority-stats--premium .stat-item:last-child{
+  padding-right: 0;
+  margin-right: 0;
+  border-right: 0;
+}
+
+#sobre .authority-stats--premium .stat-item::before{
+  display: none;
+}
+
+#sobre .authority-stats--premium .stat-value{
+  display: inline-flex;
+  align-items: flex-start;
+  gap: 4px;
+  margin: 0 0 12px;
+  color: #caa24d;
+  letter-spacing: -0.045em;
+  line-height: .86;
+}
+
+#sobre .authority-stats--premium .stat-num{
+  font-size: clamp(2.75rem, 4.15vw, 4rem);
+  font-weight: 650 !important;
+  color: #caa24d;
+  line-height: .86;
+  font-variant-numeric: tabular-nums;
+}
+
+#sobre .authority-stats--premium .stat-suffix{
+  font-size: clamp(1.05rem, 1.55vw, 1.45rem);
+  font-weight: 650 !important;
+  color: #caa24d;
+  line-height: 1;
+  margin-top: 4px;
+  letter-spacing: -.02em;
+}
+
+#sobre .authority-stats--premium .stat-label{
+  max-width: 155px;
+  font-size: .78rem;
+  line-height: 1.35;
+  font-weight: 520 !important;
+  letter-spacing: .095em;
+  text-transform: uppercase;
+  color: rgba(94, 42, 84, .82);
+}
+
+#sobre .authority-stats--premium .stat-line{
+  display: block;
+  width: 32px;
+  height: 1px;
+  margin-top: 14px;
+  background: linear-gradient(90deg, rgba(209,170,88,.95), rgba(209,170,88,0));
+}
+
+#sobre .authority-stats--premium .stat-item:hover{
+  background: transparent;
+}
+
+#sobre .authority-grid h2{
+  margin-top: 0;
+}
+
+@media (max-width: 980px){
+  #sobre .authority-stats--premium{
+    max-width: 100%;
+    margin-bottom: 28px;
+  }
+
+  #sobre .authority-stats--premium .stat-item{
+    padding-right: 22px;
+  }
+
+  #sobre .authority-stats--premium .stat-item:not(:last-child){
+    margin-right: 22px;
+  }
+
+  #sobre .authority-stats--premium .stat-num{
+    font-size: clamp(2.35rem, 5vw, 3.2rem);
+  }
+}
+
+@media (max-width: 700px){
+  #sobre .authority-stats--premium{
+    grid-template-columns: 1fr;
+    gap: 18px;
+    padding-bottom: 0;
+    margin-bottom: 28px;
+  }
+
+  #sobre .authority-stats--premium .stat-item{
+    padding: 0 0 17px;
+    margin-right: 0 !important;
+    border-bottom: 1px solid rgba(94,42,84,.12);
+  }
+
+  #sobre .authority-stats--premium .stat-item:not(:last-child)::after{
+    display: none;
+  }
+
+  #sobre .authority-stats--premium .stat-item:last-child{
+    border-bottom: 0;
+    padding-bottom: 0;
+  }
+
+  #sobre .authority-stats--premium .stat-label{
+    max-width: none;
+  }
+}
+
+/* =========================================================
+   V48 — Stats mobile editorial/minimalista
+   Corrige contraste e remove aparência pesada no celular.
+   ========================================================= */
+@media (max-width: 700px){
+  #sobre .authority-stats--premium{
+    width: 100% !important;
+    max-width: 100% !important;
+    display: grid !important;
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+    gap: 0 !important;
+    margin: 0 0 20px !important;
+    padding: 15px 0 17px !important;
+    border-top: 1px solid rgba(94, 42, 84, .12) !important;
+    border-bottom: 1px solid rgba(94, 42, 84, .12) !important;
+    background: transparent !important;
+    box-shadow: none !important;
+  }
+
+  #sobre .authority-stats--premium .stat-item{
+    min-height: auto !important;
+    padding: 0 10px !important;
+    margin: 0 !important;
+    border: 0 !important;
+    display: flex !important;
+    align-items: flex-start !important;
+    justify-content: flex-start !important;
+  }
+
+  #sobre .authority-stats--premium .stat-item:first-child{
+    padding-left: 0 !important;
+  }
+
+  #sobre .authority-stats--premium .stat-item:last-child{
+    padding-right: 0 !important;
+  }
+
+  #sobre .authority-stats--premium .stat-item:not(:last-child)::after{
+    display: block !important;
+    top: 4px !important;
+    right: 0 !important;
+    height: 48px !important;
+    background: rgba(94, 42, 84, .13) !important;
+  }
+
+  #sobre .authority-stats--premium .stat-value{
+    margin: 0 0 7px !important;
+    gap: 2px !important;
+    color: #caa24d !important;
+    line-height: .9 !important;
+  }
+
+  #sobre .authority-stats--premium .stat-num{
+    font-size: clamp(1.85rem, 9vw, 2.35rem) !important;
+    line-height: .9 !important;
+    font-weight: 650 !important;
+    color: #caa24d !important;
+  }
+
+  #sobre .authority-stats--premium .stat-suffix{
+    font-size: .78rem !important;
+    margin-top: 3px !important;
+    font-weight: 650 !important;
+    color: #caa24d !important;
+  }
+
+  #sobre .authority-stats--premium .stat-label{
+    max-width: 96px !important;
+    font-size: .58rem !important;
+    line-height: 1.28 !important;
+    font-weight: 600 !important;
+    letter-spacing: .075em !important;
+    text-transform: uppercase !important;
+    color: rgba(94, 42, 84, .72) !important;
+    opacity: 1 !important;
+  }
+
+  #sobre .authority-stats--premium .stat-line{
+    display: none !important;
+  }
+}
+
+/* =========================================================
+   V55 — Authority copy update: Brasil / OAB separado
+   ========================================================= */
+#sobre .authority-stats--premium .stat-num--text{
+  font-size: clamp(1.55rem, 2.3vw, 2.35rem) !important;
+  line-height: .96 !important;
+  letter-spacing: -.035em !important;
+  font-weight: 650 !important;
+  color: #caa24d !important;
+  white-space: nowrap;
+}
+
+#sobre .authority-oab{
+  margin: -4px 0 18px !important;
+  color: #10131a !important;
+  font-size: clamp(1rem, 1.1vw, 1.12rem) !important;
+  line-height: 1.35 !important;
+}
+
+#sobre .authority-oab strong{
+  font-weight: 650 !important;
+}
+
+@media (max-width: 700px){
+  #sobre .authority-stats--premium .stat-num--text{
+    font-size: clamp(1.05rem, 5vw, 1.35rem) !important;
+    line-height: 1 !important;
+    letter-spacing: -.02em !important;
+  }
+
+  #sobre .authority-oab{
+    margin: -2px 0 14px !important;
+    font-size: .98rem !important;
+  }
+}

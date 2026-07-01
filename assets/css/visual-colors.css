@@ -1,0 +1,301 @@
+/* =========================================================
+   V67 — Refinamento visual de cores
+   Objetivo: dar mais presença visual à página sem alterar
+   textos, estrutura, grids, animações ou responsividade.
+   ========================================================= */
+
+:root{
+  --mesp-purple: #5f2b58;
+  --mesp-purple-deep: #3f173b;
+  --mesp-purple-soft: rgba(95, 43, 88, .075);
+  --mesp-gold: #cda758;
+  --mesp-gold-soft: rgba(205, 167, 88, .16);
+  --mesp-cream: #fbf7ef;
+  --mesp-cream-2: #f7efe4;
+  --mesp-ink: #12131a;
+}
+
+/* Base visual das sections: mais profundidade, sem mexer em layout */
+.section:not(.hero):not(.cta-final){
+  position: relative;
+  isolation: isolate;
+}
+
+.section:not(.hero):not(.cta-final)::after{
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  opacity: .85;
+  background:
+    radial-gradient(520px 240px at 11% 18%, rgba(205,167,88,.075), transparent 62%),
+    radial-gradient(560px 260px at 88% 78%, rgba(95,43,88,.055), transparent 65%);
+}
+
+/* Alternância sutil para não parecer uma página toda igual */
+#identificacao,
+#sobre{
+  background:
+    linear-gradient(180deg, #fff 0%, var(--mesp-cream) 100%) !important;
+}
+
+#atendimento,
+#como-funciona{
+  background:
+    radial-gradient(720px 320px at 8% 18%, rgba(205,167,88,.10), transparent 60%),
+    radial-gradient(760px 360px at 92% 82%, rgba(95,43,88,.08), transparent 62%),
+    linear-gradient(180deg, #fffdf9 0%, #fff 100%) !important;
+}
+
+#demandas{
+  background:
+    linear-gradient(90deg, rgba(251,247,239,.88) 0%, #fff 48%, rgba(95,43,88,.045) 100%) !important;
+}
+
+#faq{
+  background:
+    radial-gradient(620px 260px at 20% 12%, rgba(95,43,88,.08), transparent 58%),
+    linear-gradient(180deg, #fff 0%, #fbf7ef 100%) !important;
+}
+
+/* Labels/eyebrows com mais identidade, sem os ícones decorativos */
+.service-eyebrow,
+.service-section-label,
+.section-kicker,
+.eyebrow,
+.kicker,
+.atendimento-pin__kicker,
+.atendimento-formats__kicker,
+.demandas-slider__eyebrow,
+.how-service__eyebrow{
+  border-color: rgba(95,43,88,.20) !important;
+  color: var(--mesp-purple) !important;
+  background:
+    linear-gradient(180deg, rgba(255,255,255,.94), rgba(251,247,239,.86)) !important;
+  box-shadow: 0 14px 36px rgba(95,43,88,.055) !important;
+}
+
+/* Barras douradas dos títulos mais refinadas */
+.section h2::before,
+.section .pain-title::before,
+.section .how-service__title::before,
+.section .how-service__steps-title::before,
+.section .atendimento-formats__title::before,
+.section .demandas-slider__title::before{
+  background: linear-gradient(180deg, #e0bd70, #b78d3f) !important;
+  box-shadow: 0 0 0 1px rgba(205,167,88,.12) !important;
+}
+
+/* Cards: mais variação visual, mantendo estrutura */
+.card,
+.service-card,
+.how-step,
+.how-service__step,
+.atendimento-format-card,
+.demandas-card,
+.service-case-card,
+.authority-photo img,
+.service-intro__card,
+.service-intro__panel{
+  border-color: rgba(95,43,88,.16) !important;
+  background:
+    linear-gradient(145deg, rgba(255,255,255,.96) 0%, rgba(251,247,239,.78) 100%) !important;
+  box-shadow:
+    0 20px 60px rgba(49,31,48,.055),
+    inset 0 1px 0 rgba(255,255,255,.82) !important;
+}
+
+/* Cards específicos dos formatos: destaque sem mudar estrutura */
+#atendimento .atendimento-format-card{
+  position: relative;
+  overflow: hidden;
+}
+
+#atendimento .atendimento-format-card::before{
+  content: "";
+  position: absolute;
+  inset: 0 auto 0 0;
+  width: 4px;
+  background: linear-gradient(180deg, var(--mesp-gold), rgba(95,43,88,.65));
+  opacity: .9;
+  pointer-events: none;
+}
+
+#atendimento .atendimento-format-card:nth-child(2){
+  background:
+    radial-gradient(360px 180px at 100% 0%, rgba(95,43,88,.08), transparent 58%),
+    linear-gradient(145deg, #fff 0%, #faf3e8 100%) !important;
+}
+
+/* Section de soluções: dar mais presença ao lado dos slides */
+#demandas .demandas-slider__right,
+#demandas .demandas-slider__left,
+#demandas .demandas-summary,
+#demandas .demandas-slider__panel{
+  background-color: transparent !important;
+}
+
+#demandas .demandas-slide,
+#demandas .demandas-slider__right{
+  color: var(--mesp-ink);
+}
+
+#demandas .demandas-slider__controls button,
+.service-carousel__controls button,
+.service-intro__arrow{
+  border-color: rgba(95,43,88,.18) !important;
+  background:
+    linear-gradient(180deg, #fff 0%, #fbf7ef 100%) !important;
+  color: var(--mesp-purple) !important;
+  box-shadow: 0 14px 34px rgba(95,43,88,.10) !important;
+}
+
+#demandas .demandas-slider__controls button:hover,
+.service-carousel__controls button:hover,
+.service-intro__arrow:hover{
+  border-color: rgba(205,167,88,.45) !important;
+  color: var(--mesp-purple-deep) !important;
+  box-shadow: 0 18px 42px rgba(95,43,88,.14) !important;
+}
+
+/* Como funciona: cards mais claros e numerais com tom da marca */
+#como-funciona .how-service__step,
+#como-funciona .how-step{
+  background:
+    linear-gradient(145deg, rgba(255,255,255,.97), rgba(251,247,239,.82)) !important;
+}
+
+#como-funciona .how-service__number,
+#como-funciona .how-step__number{
+  color: var(--mesp-gold) !important;
+  background: rgba(205,167,88,.12) !important;
+  border-color: rgba(205,167,88,.22) !important;
+}
+
+/* Authority: foto e contadores mais integrados à paleta */
+#sobre .authority-photo img{
+  border-color: rgba(205,167,88,.30) !important;
+  box-shadow: 0 24px 70px rgba(95,43,88,.12) !important;
+}
+
+#sobre .authority-stat,
+#sobre .about-stat-item{
+  border-color: rgba(95,43,88,.14) !important;
+}
+
+#sobre .authority-stat strong,
+#sobre .about-stat-number,
+#sobre [data-count]{
+  color: var(--mesp-gold) !important;
+}
+
+/* FAQ/alt-warm: melhorar leitura e separar melhor as perguntas */
+#faq .faq-item,
+#faq details,
+.alt-warm .faq-item,
+.alt-warm details{
+  border-color: rgba(95,43,88,.14) !important;
+  background:
+    linear-gradient(180deg, rgba(255,255,255,.90), rgba(251,247,239,.72)) !important;
+  box-shadow: 0 16px 44px rgba(95,43,88,.05) !important;
+}
+
+#faq strong,
+#faq summary{
+  color: var(--mesp-purple-deep) !important;
+}
+
+/* CTA final mais sofisticado, ainda dentro da identidade */
+.cta-final{
+  background:
+    radial-gradient(680px 300px at 88% 20%, rgba(205,167,88,.18), transparent 62%),
+    linear-gradient(100deg, #4a1f45 0%, #642e5d 48%, #7a4a73 100%) !important;
+}
+
+.cta-final::after{
+  background:
+    linear-gradient(90deg, rgba(74,31,69,.98) 0%, rgba(100,46,93,.76) 62%, rgba(205,167,88,.16) 100%) !important;
+}
+
+/* Formulários: borda com tom da marca e foco mais premium */
+input,
+textarea,
+select{
+  border-color: rgba(95,43,88,.18) !important;
+}
+
+input:focus,
+textarea:focus,
+select:focus{
+  border-color: rgba(205,167,88,.62) !important;
+  box-shadow:
+    0 0 0 4px rgba(205,167,88,.12),
+    0 14px 32px rgba(95,43,88,.07) !important;
+}
+
+/* Mobile: preservar leveza, sem excesso de gradientes */
+@media (max-width: 760px){
+  .section:not(.hero):not(.cta-final)::after{
+    opacity: .45;
+  }
+
+  #identificacao,
+  #atendimento,
+  #demandas,
+  #como-funciona,
+  #sobre,
+  #faq{
+    background:
+      linear-gradient(180deg, #fff 0%, #fbf7ef 100%) !important;
+  }
+}
+
+/* =========================================================
+   V68 — Correção de contraste: card "Assessoria jurídica mensal"
+   Mantém a estrutura e textos, apenas recupera legibilidade do card direito.
+   ========================================================= */
+#atendimento .atendimento-format-card--featured,
+#atendimento .atendimento-formats__cards .atendimento-format-card--featured,
+#atendimento .atendimento-formats__cards .atendimento-format-card:nth-child(2){
+  background:
+    radial-gradient(420px 220px at 92% 6%, rgba(255,255,255,.16), transparent 58%),
+    radial-gradient(360px 220px at 0% 100%, rgba(199,163,91,.18), transparent 62%),
+    linear-gradient(145deg, #5b2c55 0%, #67345f 52%, #4a2447 100%) !important;
+  border-color: rgba(199,163,91,.34) !important;
+  color: #fff !important;
+  box-shadow:
+    0 24px 72px rgba(91,44,85,.18),
+    inset 0 1px 0 rgba(255,255,255,.16) !important;
+}
+
+#atendimento .atendimento-format-card--featured .atendimento-format-card__label,
+#atendimento .atendimento-formats__cards .atendimento-format-card:nth-child(2) .atendimento-format-card__label{
+  color: rgba(255,255,255,.72) !important;
+}
+
+#atendimento .atendimento-format-card--featured h3,
+#atendimento .atendimento-format-card--featured p,
+#atendimento .atendimento-format-card--featured strong,
+#atendimento .atendimento-formats__cards .atendimento-format-card:nth-child(2) h3,
+#atendimento .atendimento-formats__cards .atendimento-format-card:nth-child(2) p,
+#atendimento .atendimento-formats__cards .atendimento-format-card:nth-child(2) strong{
+  color: #fff !important;
+}
+
+#atendimento .atendimento-format-card--featured p,
+#atendimento .atendimento-formats__cards .atendimento-format-card:nth-child(2) p{
+  color: rgba(255,255,255,.84) !important;
+}
+
+#atendimento .atendimento-format-card--featured strong,
+#atendimento .atendimento-formats__cards .atendimento-format-card:nth-child(2) strong{
+  border-top-color: rgba(255,255,255,.18) !important;
+  color: rgba(255,255,255,.96) !important;
+}
+
+#atendimento .atendimento-format-card--featured::before,
+#atendimento .atendimento-formats__cards .atendimento-format-card:nth-child(2)::before{
+  background: linear-gradient(180deg, #d8b45d, rgba(255,255,255,.36)) !important;
+  opacity: 1 !important;
+}

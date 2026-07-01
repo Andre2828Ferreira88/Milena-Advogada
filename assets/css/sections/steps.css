@@ -1,0 +1,655 @@
+/* =========================================================
+   COMO FUNCIONA — Atendimento empresarial
+   Section substituída por layout institucional 2 colunas
+   ========================================================= */
+
+#como-funciona.how-service{
+  position: relative;
+  overflow: hidden;
+  padding: clamp(64px, 7vw, 92px) 0;
+  background:
+    radial-gradient(760px 320px at 12% 12%, rgba(199, 163, 91, .10), transparent 62%),
+    radial-gradient(820px 360px at 92% 78%, rgba(91, 44, 85, .10), transparent 60%),
+    linear-gradient(180deg, #fff 0%, rgba(91, 44, 85, .025) 100%);
+  border-top: 1px solid rgba(199, 163, 91, .22);
+  border-bottom: 1px solid rgba(199, 163, 91, .18);
+}
+
+#como-funciona.how-service::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  pointer-events:none;
+  background:
+    linear-gradient(90deg, rgba(255,255,255,.92), transparent 38%, transparent 62%, rgba(255,255,255,.82)),
+    radial-gradient(circle at 52% 38%, rgba(199,163,91,.15) 0 4px, transparent 5px),
+    radial-gradient(circle at 80% 18%, rgba(91,44,85,.10) 0 13px, transparent 14px);
+  opacity:.9;
+}
+
+#como-funciona .how-service__container{
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 1px minmax(0, 1fr);
+  gap: clamp(34px, 4.5vw, 64px);
+  align-items: center;
+}
+
+#como-funciona .how-service__left,
+#como-funciona .how-service__right{
+  min-width: 0;
+}
+
+#como-funciona .how-service__left{
+  max-width: 600px;
+}
+
+#como-funciona .how-service__eyebrow{
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  width: fit-content;
+  margin-bottom: 18px;
+  padding: 8px 16px;
+  border: 1px solid rgba(91,44,85,.16);
+  border-radius: 999px;
+  background: rgba(255,255,255,.76);
+  box-shadow: 0 18px 38px rgba(91,44,85,.06);
+  color: var(--brand-1);
+  font-size: .76rem;
+  line-height: 1;
+  font-weight: 800;
+  letter-spacing: .10em;
+  text-transform: uppercase;
+}
+
+#como-funciona .how-service__eyebrow::before{
+  content:"";
+  width: 7px;
+  height: 7px;
+  border-radius: 999px;
+  background: var(--brand-2);
+  box-shadow: 0 0 0 5px rgba(199,163,91,.14);
+}
+
+#como-funciona .how-service__eyebrow--light{
+  margin-bottom: 14px;
+  color: rgba(255,255,255,.86);
+  border-color: rgba(255,255,255,.16);
+  background: rgba(255,255,255,.06);
+  box-shadow: none;
+}
+
+#como-funciona .how-service__title,
+#como-funciona .how-service__steps-title{
+  position: relative;
+  margin: 0;
+  padding-left: 16px;
+  color: #151515;
+  font-size: clamp(1.9rem, 3.05vw, 3.05rem);
+  line-height: 1.08;
+  letter-spacing: -.055em;
+  font-weight: 780;
+}
+
+#como-funciona .how-service__title::before,
+#como-funciona .how-service__steps-title::before{
+  content:"";
+  position:absolute;
+  left:0;
+  top:.18em;
+  width:4px;
+  height:1.45em;
+  border-radius:999px;
+  background:var(--brand-2);
+}
+
+#como-funciona .how-service__lead{
+  margin: 26px 0 0;
+  max-width: 58ch;
+  color: rgba(31,31,31,.72);
+  font-size: clamp(1rem, 1.12vw, 1.12rem);
+  line-height: 1.65;
+  font-weight: 500;
+}
+
+#como-funciona .how-service__benefits{
+  margin-top: 34px;
+  padding: 28px;
+  border: 1px solid rgba(91,44,85,.12);
+  border-radius: 24px;
+  background: rgba(255,255,255,.76);
+  box-shadow: 0 24px 70px rgba(91,44,85,.08);
+  backdrop-filter: blur(12px);
+}
+
+#como-funciona .how-service__benefits h3{
+  margin: 0 0 18px;
+  color: var(--brand-1);
+  font-size: clamp(1.24rem, 1.55vw, 1.55rem);
+  line-height: 1.22;
+  letter-spacing: -.025em;
+  font-weight: 720;
+}
+
+#como-funciona .how-service__benefits ul{
+  display: grid;
+  gap: 12px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+#como-funciona .how-service__benefits li{
+  position: relative;
+  padding-left: 24px;
+  color: rgba(31,31,31,.76);
+  font-size: .98rem;
+  line-height: 1.45;
+  font-weight: 500;
+}
+
+#como-funciona .how-service__benefits li::before{
+  content:"";
+  position: absolute;
+  left: 0;
+  top: .56em;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--brand-2);
+  box-shadow: 0 0 0 5px rgba(199,163,91,.14);
+}
+
+#como-funciona .how-service__divider{
+  width: 1px;
+  height: min(420px, 72%);
+  background: linear-gradient(180deg, transparent, rgba(91,44,85,.34), transparent);
+  justify-self: center;
+}
+
+#como-funciona .how-service__right{
+  position: relative;
+  padding: clamp(28px, 3.4vw, 42px);
+  border: 1px solid rgba(255,255,255,.14);
+  border-radius: 28px;
+  background:
+    linear-gradient(135deg, rgba(91,44,85,.98), rgba(91,44,85,.90)),
+    radial-gradient(420px 220px at 85% 12%, rgba(199,163,91,.16), transparent 60%);
+  color: #fff;
+  box-shadow: 0 30px 90px rgba(91,44,85,.20);
+  overflow: hidden;
+}
+
+#como-funciona .how-service__right::before{
+  content:"";
+  position:absolute;
+  inset:18px;
+  border:1px solid rgba(255,255,255,.10);
+  border-radius:22px;
+  pointer-events:none;
+}
+
+#como-funciona .how-service__right::after{
+  content:"";
+  position:absolute;
+  right:-90px;
+  bottom:-90px;
+  width:240px;
+  height:240px;
+  border:1px solid rgba(199,163,91,.25);
+  border-radius:50%;
+  pointer-events:none;
+}
+
+#como-funciona .how-service__right-head,
+#como-funciona .how-service__steps{
+  position: relative;
+  z-index: 1;
+}
+
+#como-funciona .how-service__steps-title{
+  color: #fff;
+  max-width: 520px;
+  font-size: clamp(1.8rem, 2.55vw, 2.65rem);
+}
+
+#como-funciona .how-service__steps{
+  display: grid;
+  gap: 14px;
+  margin-top: 30px;
+}
+
+#como-funciona .how-service__step{
+  display: grid;
+  grid-template-columns: 54px 1fr;
+  gap: 18px;
+  align-items: start;
+  padding: 18px 18px 18px 16px;
+  border: 1px solid rgba(255,255,255,.16);
+  border-radius: 18px;
+  background: rgba(255,255,255,.075);
+  transition: transform .25s ease, background-color .25s ease, border-color .25s ease;
+}
+
+#como-funciona .how-service__step:hover{
+  transform: translateY(-2px);
+  background: rgba(255,255,255,.105);
+  border-color: rgba(199,163,91,.35);
+}
+
+#como-funciona .how-service__number{
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 14px;
+  background: rgba(199,163,91,.18);
+  color: #f4d793;
+  font-weight: 850;
+  letter-spacing: .04em;
+  font-size: .88rem;
+  box-shadow: inset 0 0 0 1px rgba(199,163,91,.25);
+}
+
+#como-funciona .how-service__step h3{
+  margin: 0 0 5px;
+  color: #fff;
+  font-size: clamp(1rem, 1.1vw, 1.14rem);
+  line-height: 1.22;
+  letter-spacing: -.02em;
+  font-weight: 780;
+}
+
+#como-funciona .how-service__step p{
+  margin: 0;
+  color: rgba(255,255,255,.76);
+  font-size: .9rem;
+  line-height: 1.48;
+  font-weight: 500;
+}
+
+#como-funciona .how-service__cta{
+  grid-column: 1 / -1;
+  display: flex;
+  justify-content: center;
+  margin-top: clamp(6px, 1.2vw, 14px);
+}
+
+#como-funciona .how-service__cta .btn{
+  min-width: min(100%, 330px);
+  justify-content: center;
+  box-shadow: 0 18px 36px rgba(199,163,91,.28);
+}
+
+@media (max-width: 980px){
+  #como-funciona .how-service__container{
+    grid-template-columns: 1fr;
+    gap: 34px;
+  }
+
+  #como-funciona .how-service__left{
+    max-width: 760px;
+  }
+
+  #como-funciona .how-service__divider{
+    width: 100%;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(91,44,85,.22), transparent);
+  }
+
+  #como-funciona .how-service__cta{
+    margin-top: 0;
+  }
+}
+
+@media (max-width: 640px){
+  #como-funciona.how-service{
+    padding: 54px 0;
+  }
+
+  #como-funciona .how-service__container{
+    gap: 26px;
+  }
+
+  #como-funciona .how-service__title,
+  #como-funciona .how-service__steps-title{
+    font-size: clamp(1.65rem, 8vw, 2.2rem);
+  }
+
+  #como-funciona .how-service__benefits,
+  #como-funciona .how-service__right{
+    border-radius: 20px;
+    padding: 22px;
+  }
+
+  #como-funciona .how-service__step{
+    grid-template-columns: 42px 1fr;
+    gap: 14px;
+    padding: 16px;
+  }
+
+  #como-funciona .how-service__number{
+    width: 38px;
+    height: 38px;
+    border-radius: 12px;
+    font-size: .78rem;
+  }
+}
+
+/* =========================================================
+   V23 — Como funciona com tipografia igual ao hero
+   Section mais enxuta e visual diferente sem roxo dominante.
+   ========================================================= */
+#como-funciona.how-service{
+  padding: clamp(42px, 5vw, 68px) 0;
+  background:
+    radial-gradient(640px 280px at 10% 16%, rgba(199,163,91,.10), transparent 62%),
+    radial-gradient(760px 330px at 92% 80%, rgba(91,44,85,.055), transparent 64%),
+    linear-gradient(180deg, #fff 0%, #fffbf6 100%);
+}
+
+#como-funciona .how-service__container{
+  grid-template-columns: minmax(0, .96fr) 1px minmax(0, 1.04fr);
+  gap: clamp(28px, 4vw, 52px);
+  align-items: center;
+}
+
+#como-funciona .how-service__title,
+#como-funciona .how-service__steps-title{
+  font-family: inherit;
+  font-size: clamp(1.5rem, 3.2vw, 2.2rem) !important;
+  line-height: 1.25 !important;
+  letter-spacing: 0 !important;
+  font-weight: 700 !important;
+  color: var(--text, #1f1f1f) !important;
+}
+
+#como-funciona .how-service__lead,
+#como-funciona .how-service__benefits li,
+#como-funciona .how-service__step p{
+  font-family: inherit;
+  font-size: clamp(.9rem, 1.4vw, 1.05rem) !important;
+  line-height: 1.6 !important;
+  font-weight: 400 !important;
+  color: var(--muted, #6b6b6b) !important;
+}
+
+#como-funciona .how-service__eyebrow{
+  font-family: inherit;
+  font-size: .72rem !important;
+  line-height: 1 !important;
+  font-weight: 700 !important;
+  letter-spacing: .08em !important;
+}
+
+#como-funciona .how-service__benefits{
+  margin-top: 24px;
+  padding: 22px;
+  border-radius: 18px;
+  box-shadow: 0 18px 46px rgba(91,44,85,.06);
+}
+
+#como-funciona .how-service__benefits h3,
+#como-funciona .how-service__step h3{
+  font-family: inherit;
+  font-size: clamp(1rem, 1.45vw, 1.18rem) !important;
+  line-height: 1.3 !important;
+  letter-spacing: 0 !important;
+  font-weight: 700 !important;
+  color: var(--brand-1, #5b2c55) !important;
+}
+
+#como-funciona .how-service__right{
+  padding: clamp(22px, 3vw, 34px);
+  border: 1px solid rgba(91,44,85,.13);
+  border-radius: 22px;
+  background:
+    linear-gradient(180deg, rgba(255,255,255,.94), rgba(255,250,244,.96)),
+    radial-gradient(420px 220px at 85% 12%, rgba(199,163,91,.12), transparent 60%);
+  color: var(--text, #1f1f1f);
+  box-shadow: 0 20px 60px rgba(91,44,85,.08);
+}
+
+#como-funciona .how-service__right::before{
+  inset: 14px;
+  border-color: rgba(199,163,91,.20);
+  border-radius: 18px;
+}
+
+#como-funciona .how-service__right::after{
+  border-color: rgba(199,163,91,.24);
+}
+
+#como-funciona .how-service__eyebrow--light{
+  color: var(--brand-1, #5b2c55);
+  border-color: rgba(91,44,85,.14);
+  background: rgba(255,255,255,.76);
+}
+
+#como-funciona .how-service__steps{
+  margin-top: 22px;
+  gap: 10px;
+}
+
+#como-funciona .how-service__step{
+  grid-template-columns: 44px 1fr;
+  gap: 14px;
+  padding: 14px;
+  border-color: rgba(91,44,85,.12);
+  border-radius: 14px;
+  background: rgba(255,255,255,.72);
+}
+
+#como-funciona .how-service__step:hover{
+  background: #fff;
+  border-color: rgba(199,163,91,.38);
+}
+
+#como-funciona .how-service__number{
+  width: 38px;
+  height: 38px;
+  border-radius: 12px;
+  color: var(--brand-1, #5b2c55);
+  background: rgba(199,163,91,.16);
+  font-size: .78rem;
+}
+
+@media (max-width: 920px){
+  #como-funciona .how-service__container{
+    grid-template-columns: 1fr;
+  }
+  #como-funciona .how-service__divider{
+    display: none;
+  }
+}
+
+
+/* =========================================================
+   V25 — Como funciona ULTRA COMPACTO
+   Pedido: diminuir o máximo possível sem perder leitura.
+   ========================================================= */
+#como-funciona.how-service{
+  padding: clamp(28px, 3.4vw, 44px) 0 !important;
+  min-height: auto !important;
+  background:
+    radial-gradient(520px 220px at 9% 16%, rgba(199,163,91,.08), transparent 62%),
+    linear-gradient(180deg, #fff 0%, #fffaf5 100%) !important;
+}
+
+#como-funciona.how-service::before{
+  opacity: .48 !important;
+}
+
+#como-funciona .how-service__container{
+  grid-template-columns: minmax(0, .95fr) minmax(0, 1.05fr) !important;
+  gap: clamp(22px, 3.2vw, 42px) !important;
+  align-items: center !important;
+}
+
+#como-funciona .how-service__divider,
+#como-funciona .how-service__cta{
+  display: none !important;
+}
+
+#como-funciona .how-service__left{
+  max-width: 590px !important;
+}
+
+#como-funciona .how-service__eyebrow{
+  margin-bottom: 12px !important;
+  padding: 7px 14px !important;
+  font-size: .7rem !important;
+  letter-spacing: .08em !important;
+}
+
+#como-funciona .how-service__title,
+#como-funciona .how-service__steps-title{
+  font-size: clamp(1.55rem, 2.35vw, 2.18rem) !important;
+  line-height: 1.16 !important;
+  font-weight: 700 !important;
+  letter-spacing: 0 !important;
+  padding-left: 14px !important;
+}
+
+#como-funciona .how-service__title::before,
+#como-funciona .how-service__steps-title::before{
+  width: 3px !important;
+  height: 1.28em !important;
+  top: .12em !important;
+}
+
+#como-funciona .how-service__lead{
+  margin-top: 14px !important;
+  max-width: 58ch !important;
+  font-size: clamp(.88rem, .95vw, .98rem) !important;
+  line-height: 1.48 !important;
+}
+
+#como-funciona .how-service__benefits{
+  margin-top: 16px !important;
+  padding: 0 !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  backdrop-filter: none !important;
+}
+
+#como-funciona .how-service__benefits h3{
+  margin: 0 0 10px !important;
+  font-size: clamp(1rem, 1.05vw, 1.12rem) !important;
+  line-height: 1.22 !important;
+}
+
+#como-funciona .how-service__benefits ul{
+  display: grid !important;
+  grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  gap: 8px 18px !important;
+}
+
+#como-funciona .how-service__benefits li{
+  padding-left: 17px !important;
+  font-size: .86rem !important;
+  line-height: 1.28 !important;
+}
+
+#como-funciona .how-service__benefits li::before{
+  width: 6px !important;
+  height: 6px !important;
+  top: .48em !important;
+  box-shadow: 0 0 0 3px rgba(199,163,91,.12) !important;
+}
+
+#como-funciona .how-service__button{
+  margin-top: 18px !important;
+  min-width: 0 !important;
+  padding: 13px 24px !important;
+  font-size: .78rem !important;
+  box-shadow: 0 14px 30px rgba(199,163,91,.24) !important;
+}
+
+#como-funciona .how-service__right{
+  padding: clamp(18px, 2.2vw, 26px) !important;
+  border-radius: 18px !important;
+  box-shadow: 0 18px 48px rgba(91,44,85,.07) !important;
+}
+
+#como-funciona .how-service__right::before{
+  inset: 10px !important;
+  border-radius: 14px !important;
+}
+
+#como-funciona .how-service__right::after{
+  width: 160px !important;
+  height: 160px !important;
+  right: -68px !important;
+  bottom: -68px !important;
+}
+
+#como-funciona .how-service__right-head{
+  margin-bottom: 14px !important;
+}
+
+#como-funciona .how-service__steps-title{
+  max-width: 100% !important;
+}
+
+#como-funciona .how-service__steps{
+  grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  gap: 10px !important;
+  margin-top: 16px !important;
+}
+
+#como-funciona .how-service__step{
+  grid-template-columns: 34px 1fr !important;
+  gap: 10px !important;
+  min-height: 0 !important;
+  padding: 12px !important;
+  border-radius: 13px !important;
+}
+
+#como-funciona .how-service__number{
+  width: 30px !important;
+  height: 30px !important;
+  border-radius: 10px !important;
+  font-size: .68rem !important;
+}
+
+#como-funciona .how-service__step h3{
+  margin-bottom: 4px !important;
+  font-size: .92rem !important;
+  line-height: 1.18 !important;
+}
+
+#como-funciona .how-service__step p{
+  font-size: .78rem !important;
+  line-height: 1.35 !important;
+}
+
+@media (max-width: 980px){
+  #como-funciona.how-service{
+    padding: 42px 0 !important;
+  }
+  #como-funciona .how-service__container{
+    grid-template-columns: 1fr !important;
+    gap: 22px !important;
+  }
+  #como-funciona .how-service__benefits ul{
+    grid-template-columns: 1fr !important;
+  }
+}
+
+@media (max-width: 640px){
+  #como-funciona.how-service{
+    padding: 36px 0 !important;
+  }
+  #como-funciona .how-service__steps{
+    grid-template-columns: 1fr !important;
+  }
+  #como-funciona .how-service__title,
+  #como-funciona .how-service__steps-title{
+    font-size: clamp(1.42rem, 7vw, 1.9rem) !important;
+  }
+}

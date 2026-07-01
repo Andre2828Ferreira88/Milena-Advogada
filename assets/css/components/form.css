@@ -1,0 +1,60 @@
+.form{
+  display:flex;
+  flex-direction:column;
+  gap: 12px;
+}
+
+.form label span{
+  display:block;
+  font-weight: 500;
+  margin-bottom: 6px;
+  color: var(--brand-1);
+}
+
+.form input{
+  width:100%;
+  padding: 14px 14px;
+  border-radius: 12px;
+  border: 1px solid rgba(0,0,0,.12);
+  outline: none;
+}
+
+.form input:focus{
+  border-color: rgba(0,0,0,.22);
+}
+
+.seg{
+  border: 0;
+  padding: 0;
+  margin: 4px 0 0;
+
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 16px;
+  align-items: center;
+}
+
+.seg legend{
+  flex: 0 0 100%;
+  padding: 0;
+  margin: 0 0 8px;
+  font-weight: 500;
+  color: var(--brand-1);
+}
+
+.seg label{
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin: 0;              /* remove margin-right que varia no iOS */
+  color: var(--muted);
+}
+
+.seg input[type="radio"]{
+  margin: 0;              /* evita “deslocamento” padrão do Safari */
+}
+
+
+.hero-form small{
+  color: var(--muted);
+}

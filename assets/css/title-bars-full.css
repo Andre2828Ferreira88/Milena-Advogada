@@ -1,0 +1,91 @@
+/* =========================================================
+   V73 — Barras douradas dos títulos com altura completa
+   Mantém textos e layout. Ajusta apenas os marcadores verticais
+   para acompanharem a altura total dos títulos em múltiplas linhas.
+   ========================================================= */
+
+:root{
+  --mesp-title-bar-color: var(--brand-2, #c7a35b);
+  --mesp-title-bar-width: 4px;
+  --mesp-title-bar-gap: 18px;
+}
+
+/* Títulos principais com barrinha vertical */
+.section h2,
+.section .section-title,
+.section .pain-title,
+.section .split-title,
+.section .da-title,
+.section .authority-title,
+.section .cta-title,
+#atendimento .atendimento-formats__copy h2,
+#atendimento .atendimento-pin__copy h2,
+#demandas .demandas-slide h2,
+#demandas .demandas-slider__right h3,
+#identificacao.service-intro h2,
+#identificacao.service-intro .service-intro__title,
+#como-funciona h2,
+#sobre h2,
+#faq h2,
+#contato h2{
+  
+  position: relative !important;
+  padding-left: var(--mesp-title-bar-gap) !important;
+}
+
+.section h2::before,
+.section .section-title::before,
+.section .pain-title::before,
+.section .split-title::before,
+.section .da-title::before,
+.section .authority-title::before,
+.section .cta-title::before,
+#atendimento .atendimento-formats__copy h2::before,
+#atendimento .atendimento-pin__copy h2::before,
+#demandas .demandas-slide h2::before,
+#demandas .demandas-slider__right h3::before,
+#identificacao.service-intro h2::before,
+#identificacao.service-intro .service-intro__title::before,
+#como-funciona h2::before,
+#sobre h2::before,
+#faq h2::before,
+#contato h2::before{
+  content: "" !important;
+  position: absolute !important;
+  left: 0 !important;
+  top: .08em !important;
+  bottom: .08em !important;
+  width: var(--mesp-title-bar-width) !important;
+  height: auto !important;
+  min-height: 1.15em !important;
+  border-radius: 999px !important;
+background: #CDAA55 !important;
+}
+
+/* Títulos muito grandes precisam de uma barra um pouco mais afastada e estável */
+#demandas .demandas-slide h2,
+#identificacao.service-intro h2,
+#identificacao.service-intro .service-intro__title{
+  padding-left: 22px !important;
+}
+
+#demandas .demandas-slide h2::before,
+#identificacao.service-intro h2::before,
+#identificacao.service-intro .service-intro__title::before{
+  top: .06em !important;
+  bottom: .08em !important;
+}
+
+/* No mobile a barra acompanha o título, mas fica levemente mais fina */
+@media (max-width: 768px){
+  :root{
+    --mesp-title-bar-width: 3px;
+    --mesp-title-bar-gap: 15px;
+  }
+
+  #demandas .demandas-slide h2,
+  #identificacao.service-intro h2,
+  #identificacao.service-intro .service-intro__title{
+    padding-left: 18px !important;
+  }
+}

@@ -1,0 +1,300 @@
+/* ═══════════════════════════════════════════
+   BUTTONS — MESP Advocacia
+   ═══════════════════════════════════════════ */
+
+/* ── Base ── */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  border-radius: 999px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  font-size: .82rem;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  padding: 15px 28px;
+  min-height: 50px;
+  cursor: pointer;
+  border: 1.5px solid transparent;
+  text-decoration: none;
+  position: relative;
+  overflow: hidden;
+  transition:
+    background .22s ease,
+    color .22s ease,
+    border-color .22s ease,
+    box-shadow .22s ease,
+    transform .15s ease;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ripple ao clicar */
+.btn::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(255,255,255,.12);
+  opacity: 0;
+  border-radius: inherit;
+  transition: opacity .2s;
+}
+.btn:active::after { opacity: 1; }
+.btn:active { transform: scale(.97); }
+
+/* ── Primário (dourado) ── */
+.btn-primary {
+  background: var(--brand-2);
+  color: #fff;
+  border-color: var(--brand-2);
+  box-shadow:
+    0 4px 14px rgba(199,163,91,.30),
+    0 1px 3px rgba(0,0,0,.10);
+}
+.btn-primary:hover {
+  background: #b8903e;
+  border-color: #b8903e;
+  box-shadow:
+    0 8px 24px rgba(199,163,91,.40),
+    0 2px 6px rgba(0,0,0,.12);
+  transform: translateY(-2px);
+}
+
+/* ── Grande ── */
+.btn-lg {
+  font-size: .875rem;
+  padding: 17px 36px;
+  min-height: 56px;
+  letter-spacing: .1em;
+}
+
+/* ── Outline roxo ── */
+.btn-outline {
+  background: transparent;
+  color: var(--brand-1);
+  border-color: var(--brand-1);
+}
+.btn-outline:hover {
+  background: var(--brand-1);
+  color: #fff;
+  box-shadow: 0 8px 20px rgba(91,44,85,.20);
+  transform: translateY(-2px);
+}
+
+/* ── Link CTA simples ── */
+.link-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 10px;
+  color: var(--brand-1);
+  font-size: .85rem;
+  font-weight: 600;
+  letter-spacing: .04em;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(91,44,85,.3);
+  padding-bottom: 2px;
+  transition: border-color .18s, color .18s;
+}
+.link-cta:hover {
+  color: var(--brand-2);
+  border-color: var(--brand-2);
+}
+
+
+
+/* ── Footer WhatsApp link ── */
+.footer-wa-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  font-size: .78rem;
+  font-weight: 700;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  color: var(--brand-2);
+  border: 1.5px solid rgba(199,163,91,.5);
+  padding: 10px 20px;
+  border-radius: 999px;
+  text-decoration: none;
+  transition: background .2s, color .2s, box-shadow .2s, transform .15s;
+}
+.footer-wa-link:hover {
+  background: var(--brand-2);
+  color: #fff;
+  border-color: var(--brand-2);
+  box-shadow: 0 6px 18px rgba(199,163,91,.30);
+  transform: translateY(-1px);
+}
+
+/* ── DA cards CTA ── */
+.da-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  font-size: .76rem;
+  font-weight: 700;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  padding: 10px 20px;
+  border-radius: 999px;
+  text-decoration: none;
+  transition: background .2s, color .2s, box-shadow .2s, transform .15s;
+  margin-top: auto;
+  cursor: pointer;
+}
+.da-card--primary .da-cta {
+  background: var(--brand-2);
+  color: #fff;
+  border: 1.5px solid var(--brand-2);
+  box-shadow: 0 4px 12px rgba(199,163,91,.25);
+}
+.da-card--primary .da-cta:hover {
+  background: #b8903e;
+  border-color: #b8903e;
+  box-shadow: 0 8px 20px rgba(199,163,91,.35);
+  transform: translateY(-2px);
+}
+.da-card--secondary .da-cta {
+  background: transparent;
+  color: var(--brand-1);
+  border: 1.5px solid var(--brand-1);
+}
+.da-card--secondary .da-cta:hover {
+  background: var(--brand-1);
+  color: #fff;
+  box-shadow: 0 6px 16px rgba(91,44,85,.20);
+  transform: translateY(-2px);
+}
+
+/* ── Mobile ── */
+@media (max-width: 600px) {
+  .btn { font-size: .78rem; padding: 14px 22px; min-height: 46px; }
+  .btn-lg { font-size: .82rem; padding: 15px 26px; min-height: 50px; }
+}
+
+/* =========================================================
+   V66 — Botões premium MESP
+   Ajuste visual sem alterar textos, links ou estrutura HTML.
+   ========================================================= */
+
+.btn,
+.nav-cta,
+.is-cta,
+.footer-wa-link,
+.wa-bottom__btn {
+  -webkit-tap-highlight-color: transparent;
+}
+
+.btn-primary,
+.hero-form .btn-primary,
+.cta-final .btn-primary,
+.wa-bottom__btn {
+  isolation: isolate;
+  border: 1px solid rgba(151, 109, 41, .34) !important;
+  background:
+    linear-gradient(135deg, #d9b864 0%, #caa24d 48%, #b88b35 100%) !important;
+  color: #fff !important;
+  box-shadow:
+    0 18px 38px rgba(184, 139, 53, .22),
+    0 4px 12px rgba(33, 18, 31, .10),
+    inset 0 1px 0 rgba(255, 255, 255, .32) !important;
+}
+
+.btn-primary::before,
+.hero-form .btn-primary::before,
+.cta-final .btn-primary::before,
+.wa-bottom__btn::before {
+  content: "";
+  position: absolute;
+  inset: 1px;
+  border-radius: inherit;
+  background:
+    linear-gradient(180deg, rgba(255,255,255,.24), transparent 42%),
+    radial-gradient(circle at 20% 0%, rgba(255,255,255,.30), transparent 28%);
+  opacity: .72;
+  pointer-events: none;
+  z-index: -1;
+}
+
+.btn-primary:hover,
+.hero-form .btn-primary:hover,
+.cta-final .btn-primary:hover,
+.wa-bottom__btn:hover {
+  background:
+    linear-gradient(135deg, #e0c06c 0%, #cda550 44%, #ad8030 100%) !important;
+  border-color: rgba(151, 109, 41, .48) !important;
+  box-shadow:
+    0 22px 46px rgba(184, 139, 53, .28),
+    0 8px 18px rgba(33, 18, 31, .14),
+    inset 0 1px 0 rgba(255,255,255,.34) !important;
+  transform: translateY(-2px);
+}
+
+.btn-primary:focus-visible,
+.nav-cta:focus-visible,
+.is-cta:focus-visible,
+.atendimento-formats__btn:focus-visible,
+.footer-wa-link:focus-visible {
+  outline: 3px solid rgba(199, 163, 91, .30);
+  outline-offset: 3px;
+}
+
+/* Botões de navegação/menus com acabamento mais institucional */
+.nav-cta,
+.is-cta {
+  border-color: rgba(91,44,85,.16) !important;
+  background:
+    linear-gradient(180deg, rgba(255,255,255,.98), rgba(255,255,255,.90)) !important;
+  box-shadow:
+    0 10px 28px rgba(33,18,31,.055),
+    inset 0 1px 0 rgba(255,255,255,.92);
+}
+
+.nav-cta:hover,
+.is-cta:hover {
+  border-color: rgba(199,163,91,.38) !important;
+  color: var(--brand-1, #5b2c55) !important;
+  box-shadow:
+    0 14px 34px rgba(33,18,31,.075),
+    inset 0 -2px 0 rgba(199,163,91,.22);
+  transform: translateY(-1px);
+}
+
+/* Link do rodapé com cara de CTA, sem virar card pesado */
+.footer-wa-link {
+  position: relative;
+  color: var(--brand-1, #5b2c55) !important;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.footer-wa-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -4px;
+  height: 1px;
+  background: linear-gradient(90deg, var(--brand-2, #c7a35b), transparent);
+  transform: scaleX(.72);
+  transform-origin: left;
+  transition: transform .24s ease;
+}
+
+.footer-wa-link:hover::after {
+  transform: scaleX(1);
+}
+
+@media (max-width: 700px) {
+  .btn-primary,
+  .hero-form .btn-primary,
+  .cta-final .btn-primary,
+  .wa-bottom__btn {
+    box-shadow:
+      0 14px 28px rgba(184, 139, 53, .20),
+      0 4px 10px rgba(33, 18, 31, .10),
+      inset 0 1px 0 rgba(255,255,255,.30) !important;
+  }
+}

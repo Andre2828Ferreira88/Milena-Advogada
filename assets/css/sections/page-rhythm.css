@@ -1,0 +1,637 @@
+/* =========================================================
+   V63 — Padrão visual entre blocos centrais
+   Objetivo: tirar a sensação de uma section gigante seguida de blocos pequenos.
+   Aplica o mesmo ritmo de largura, altura, espaçamento e escala visual em:
+   atendimento, demandas e como funciona.
+   ========================================================= */
+
+:root{
+  --mesp-section-max: 1180px;
+  --mesp-section-pad-x: clamp(22px, 5vw, 72px);
+  --mesp-section-pad-y: clamp(64px, 7vw, 92px);
+  --mesp-panel-border: rgba(91,44,85,.12);
+  --mesp-panel-bg: rgba(255,255,255,.72);
+  --mesp-panel-shadow: 0 24px 70px rgba(91,44,85,.055);
+}
+
+/* Base de ritmo para as três sections do meio */
+#atendimento.atendimento-formats,
+#demandas.demandas-slider,
+#como-funciona.how-service{
+  padding: var(--mesp-section-pad-y) var(--mesp-section-pad-x) !important;
+  background:
+    radial-gradient(680px 300px at 12% 12%, rgba(199,163,91,.08), transparent 60%),
+    radial-gradient(760px 340px at 92% 82%, rgba(91,44,85,.055), transparent 62%),
+    linear-gradient(180deg, #fff 0%, #fbfaf8 100%) !important;
+  border-top: 1px solid rgba(199,163,91,.22) !important;
+  border-bottom: 1px solid rgba(199,163,91,.22) !important;
+  overflow: hidden !important;
+}
+
+/* Containers com a mesma largura visual */
+#atendimento .atendimento-formats__wrap,
+#demandas .demandas-slider__wrap,
+#como-funciona .how-service__container{
+  width: min(100%, var(--mesp-section-max)) !important;
+  max-width: var(--mesp-section-max) !important;
+  margin: 0 auto !important;
+  display: grid !important;
+  grid-template-columns: minmax(0, .94fr) minmax(0, 1.06fr) !important;
+  gap: clamp(36px, 5vw, 68px) !important;
+  align-items: center !important;
+  min-height: clamp(470px, 52vh, 570px) !important;
+}
+
+/* Remove a sensação de bloco solto gigante/full-screen */
+#atendimento.atendimento-formats::before,
+#demandas.demandas-slider::before,
+#como-funciona.how-service::before{
+  opacity: .55 !important;
+}
+
+/* =========================================================
+   ATENDIMENTO — volta para layout editorial compacto
+   ========================================================= */
+#atendimento .atendimento-formats__copy{
+  max-width: 560px !important;
+}
+
+#atendimento .atendimento-formats__copy h2,
+#demandas .demandas-slider__right h3,
+#como-funciona .how-service__title,
+#como-funciona .how-service__steps-title{
+  font-size: clamp(1.75rem, 2.35vw, 2.45rem) !important;
+  line-height: 1.15 !important;
+  font-weight: 650 !important;
+  letter-spacing: -0.028em !important;
+}
+
+#atendimento .atendimento-formats__copy p,
+#demandas .demandas-slider__right p,
+#como-funciona .how-service__lead{
+  font-size: clamp(.94rem, 1vw, 1.02rem) !important;
+  line-height: 1.62 !important;
+  color: rgba(28,28,32,.70) !important;
+}
+
+#atendimento .atendimento-formats__cards{
+  display: grid !important;
+  grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  gap: 16px !important;
+}
+
+#atendimento .atendimento-format-card{
+  min-height: 260px !important;
+  padding: clamp(24px, 2.5vw, 32px) !important;
+  border: 1px solid var(--mesp-panel-border) !important;
+  background: rgba(255,255,255,.78) !important;
+  box-shadow: var(--mesp-panel-shadow) !important;
+}
+
+#atendimento .atendimento-format-card--featured{
+  background:
+    radial-gradient(circle at 92% 10%, rgba(255,255,255,.10), transparent 30%),
+    linear-gradient(135deg, #5b2c55 0%, #62305c 100%) !important;
+  color: #fff !important;
+}
+
+#atendimento .atendimento-format-card h3{
+  font-size: clamp(1.2rem, 1.45vw, 1.55rem) !important;
+  line-height: 1.16 !important;
+}
+
+#atendimento .atendimento-format-card p{
+  font-size: .92rem !important;
+  line-height: 1.58 !important;
+}
+
+#atendimento .atendimento-format-card strong{
+  font-size: .86rem !important;
+  line-height: 1.42 !important;
+}
+
+/* =========================================================
+   DEMANDAS — mesma escala do atendimento, sem parecer pequeno
+   ========================================================= */
+#demandas.demandas-slider{
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+
+#demandas .demandas-slider__wrap{
+  border: 1px solid rgba(91,44,85,.10) !important;
+  background: rgba(255,255,255,.74) !important;
+  box-shadow: 0 18px 60px rgba(91,44,85,.045) !important;
+}
+
+#demandas .demandas-slider__left,
+#demandas .demandas-slider__right{
+  min-height: 100% !important;
+}
+
+#demandas .demandas-slider__left{
+  padding: clamp(44px, 4.6vw, 66px) clamp(42px, 5vw, 70px) !important;
+}
+
+#demandas .demandas-slider__right{
+  padding: clamp(26px, 3vw, 36px) !important;
+  background: transparent !important;
+  color: #151515 !important;
+}
+
+#demandas .demandas-slider__right::before{
+  inset: 0 !important;
+  border-color: rgba(91,44,85,.10) !important;
+}
+
+#demandas .demandas-slider__right::after{
+  opacity: .45 !important;
+}
+
+#demandas .demandas-slider__right-inner{
+  padding: clamp(36px, 4vw, 56px) !important;
+  justify-content: center !important;
+  background:
+    radial-gradient(420px 220px at 86% 20%, rgba(199,163,91,.08), transparent 62%),
+    rgba(255,255,255,.58) !important;
+}
+
+#demandas .demandas-slider__right-kicker{
+  color: var(--brand-1, #5b2c55) !important;
+}
+
+#demandas .demandas-slider__right h3{
+  max-width: 24ch !important;
+  color: #151515 !important;
+  margin-bottom: 18px !important;
+}
+
+#demandas .demandas-slider__right-line{
+  max-width: 58ch !important;
+}
+
+#demandas .demandas-slider__right-line::before{
+  background: rgba(199,163,91,.82) !important;
+}
+
+#demandas .demandas-slider__right p{
+  color: rgba(28,28,32,.72) !important;
+}
+
+#demandas .demandas-slider__mini-list li{
+  color: var(--brand-1, #5b2c55) !important;
+  background: #fff !important;
+  border-color: rgba(91,44,85,.14) !important;
+}
+
+#demandas .demandas-slider__viewport{
+  min-height: clamp(250px, 27vh, 320px) !important;
+}
+
+#demandas .demandas-slide h2{
+  font-size: clamp(1.55rem, 2.2vw, 2.15rem) !important;
+  line-height: 1.16 !important;
+  max-width: 22ch !important;
+  font-weight: 650 !important;
+}
+
+#demandas .demandas-slide p{
+  font-size: clamp(.94rem, 1vw, 1.02rem) !important;
+  line-height: 1.62 !important;
+}
+
+#demandas .demandas-slider__controls{
+  right: -24px !important;
+}
+
+/* =========================================================
+   COMO FUNCIONA — tira aparência pequena e cria paridade
+   ========================================================= */
+#como-funciona .how-service__container{
+  grid-template-columns: minmax(0, .95fr) minmax(0, 1.05fr) !important;
+}
+
+#como-funciona .how-service__divider{
+  display: none !important;
+}
+
+#como-funciona .how-service__left{
+  max-width: 560px !important;
+}
+
+#como-funciona .how-service__benefits{
+  margin-top: 24px !important;
+  padding: 0 !important;
+  border: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+}
+
+#como-funciona .how-service__benefits h3{
+  font-size: clamp(1rem, 1.2vw, 1.18rem) !important;
+  margin-bottom: 12px !important;
+}
+
+#como-funciona .how-service__benefits ul{
+  display: grid !important;
+  grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  gap: 8px 18px !important;
+}
+
+#como-funciona .how-service__benefits li{
+  font-size: .9rem !important;
+  line-height: 1.42 !important;
+}
+
+#como-funciona .how-service__right{
+  padding: clamp(28px, 3.2vw, 42px) !important;
+  border: 1px solid rgba(91,44,85,.12) !important;
+  border-radius: 0 !important;
+  background:
+    radial-gradient(440px 230px at 86% 14%, rgba(199,163,91,.10), transparent 62%),
+    rgba(255,255,255,.72) !important;
+  color: #151515 !important;
+  box-shadow: 0 22px 70px rgba(91,44,85,.055) !important;
+}
+
+#como-funciona .how-service__right::before{
+  inset: 16px !important;
+  border-color: rgba(91,44,85,.08) !important;
+  border-radius: 0 !important;
+}
+
+#como-funciona .how-service__right::after{
+  opacity: .38 !important;
+}
+
+#como-funciona .how-service__eyebrow--light{
+  color: var(--brand-1, #5b2c55) !important;
+  border-color: rgba(91,44,85,.14) !important;
+  background: rgba(255,255,255,.82) !important;
+}
+
+#como-funciona .how-service__steps-title{
+  color: #151515 !important;
+}
+
+#como-funciona .how-service__steps{
+  display: grid !important;
+  grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  gap: 14px !important;
+  margin-top: 24px !important;
+}
+
+#como-funciona .how-service__step{
+  grid-template-columns: 38px 1fr !important;
+  gap: 12px !important;
+  padding: 16px !important;
+  border: 1px solid rgba(91,44,85,.12) !important;
+  border-radius: 0 !important;
+  background: rgba(255,255,255,.86) !important;
+}
+
+#como-funciona .how-service__number{
+  width: 34px !important;
+  height: 34px !important;
+  border-radius: 0 !important;
+  background: rgba(199,163,91,.13) !important;
+  color: var(--brand-1, #5b2c55) !important;
+  font-size: .72rem !important;
+}
+
+#como-funciona .how-service__step h3{
+  color: #151515 !important;
+  font-size: .95rem !important;
+  line-height: 1.18 !important;
+}
+
+#como-funciona .how-service__step p{
+  color: rgba(28,28,32,.68) !important;
+  font-size: .84rem !important;
+  line-height: 1.42 !important;
+}
+
+#como-funciona .how-service__cta{
+  grid-column: 1 / -1 !important;
+  margin-top: 0 !important;
+}
+
+/* Responsivo consistente */
+@media (max-width: 980px){
+  #atendimento .atendimento-formats__wrap,
+  #demandas .demandas-slider__wrap,
+  #como-funciona .how-service__container{
+    grid-template-columns: 1fr !important;
+    min-height: auto !important;
+    gap: 32px !important;
+  }
+
+  #demandas.demandas-slider{
+    padding-left: var(--mesp-section-pad-x) !important;
+    padding-right: var(--mesp-section-pad-x) !important;
+  }
+
+  #demandas .demandas-slider__controls{
+    right: 24px !important;
+  }
+
+  #atendimento .atendimento-formats__cards,
+  #como-funciona .how-service__steps{
+    grid-template-columns: 1fr !important;
+  }
+}
+
+@media (max-width: 640px){
+  :root{
+    --mesp-section-pad-y: 52px;
+    --mesp-section-pad-x: 20px;
+  }
+
+  #atendimento .atendimento-format-card{
+    min-height: 0 !important;
+  }
+
+  #demandas .demandas-slider__wrap{
+    border-left: 0 !important;
+    border-right: 0 !important;
+  }
+
+  #demandas .demandas-slider__left,
+  #demandas .demandas-slider__right,
+  #demandas .demandas-slider__right-inner{
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+  }
+}
+
+
+/* =========================================================
+   V64 — Correção da section #demandas após padronização
+   Mantém o padrão visual sem quebrar o slider: texto fixo à esquerda,
+   slides à direita e controles compactos no encontro dos blocos.
+   ========================================================= */
+#demandas.demandas-slider{
+  padding: clamp(58px, 6vw, 84px) clamp(22px, 5vw, 72px) !important;
+  overflow: hidden !important;
+}
+
+#demandas .demandas-slider__wrap{
+  width: min(100%, 1180px) !important;
+  max-width: 1180px !important;
+  margin: 0 auto !important;
+  display: grid !important;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) !important;
+  gap: 0 !important;
+  align-items: stretch !important;
+  min-height: clamp(430px, 50vh, 560px) !important;
+  border: 1px solid rgba(91,44,85,.10) !important;
+  background: rgba(255,255,255,.72) !important;
+  box-shadow: 0 18px 58px rgba(91,44,85,.045) !important;
+  overflow: visible !important;
+}
+
+#demandas .demandas-slider__right{
+  order: 1 !important;
+  grid-column: 1 !important;
+  min-width: 0 !important;
+  min-height: 100% !important;
+  display: flex !important;
+  align-items: center !important;
+  padding: clamp(32px, 4vw, 56px) !important;
+  border-right: 1px solid rgba(199,163,91,.22) !important;
+  border-left: 0 !important;
+  background:
+    radial-gradient(560px 260px at 15% 18%, rgba(199,163,91,.08), transparent 64%),
+    linear-gradient(180deg, #fff 0%, #fffaf5 100%) !important;
+}
+
+#demandas .demandas-slider__right-inner{
+  width: min(100%, 520px) !important;
+  margin: 0 auto !important;
+  padding: 0 !important;
+  background: transparent !important;
+  justify-content: center !important;
+}
+
+#demandas .demandas-slider__right::before{
+  inset: 22px !important;
+  border: 1px solid rgba(91,44,85,.08) !important;
+}
+
+#demandas .demandas-slider__right h3{
+  max-width: 22ch !important;
+  font-size: clamp(1.85rem, 2.75vw, 2.55rem) !important;
+  line-height: 1.14 !important;
+  font-weight: 600 !important;
+  color: #12151b !important;
+  margin: 0 0 18px !important;
+}
+
+#demandas .demandas-slider__right p{
+  max-width: 52ch !important;
+  font-size: clamp(.95rem, 1vw, 1.04rem) !important;
+  line-height: 1.65 !important;
+  color: rgba(31,31,31,.70) !important;
+}
+
+#demandas .demandas-slider__left{
+  order: 2 !important;
+  grid-column: 2 !important;
+  position: relative !important;
+  min-width: 0 !important;
+  min-height: 100% !important;
+  display: flex !important;
+  align-items: center !important;
+  padding: clamp(32px, 4vw, 56px) clamp(42px, 5vw, 74px) !important;
+  background:
+    radial-gradient(520px 260px at 88% 16%, rgba(199,163,91,.08), transparent 64%),
+    radial-gradient(520px 280px at 18% 84%, rgba(91,44,85,.04), transparent 66%),
+    #fff !important;
+  overflow: visible !important;
+}
+
+#demandas .demandas-slider__content{
+  width: min(100%, 560px) !important;
+  max-width: 560px !important;
+  margin: 0 auto !important;
+  padding: 0 0 0 clamp(12px, 1.4vw, 20px) !important;
+}
+
+#demandas .demandas-slider__viewport{
+  min-height: clamp(260px, 32vh, 350px) !important;
+  overflow: hidden !important;
+}
+
+#demandas .demandas-slide{
+  inset: 0 !important;
+  justify-content: center !important;
+  padding: 0 !important;
+}
+
+#demandas .demandas-slide h2{
+  max-width: 18ch !important;
+  font-size: clamp(1.7rem, 2.65vw, 2.35rem) !important;
+  line-height: 1.16 !important;
+  font-weight: 600 !important;
+  letter-spacing: -0.018em !important;
+  margin-bottom: 16px !important;
+}
+
+#demandas .demandas-slide p{
+  max-width: 52ch !important;
+  font-size: clamp(.94rem, 1vw, 1.02rem) !important;
+  line-height: 1.62 !important;
+  color: rgba(31,31,31,.70) !important;
+}
+
+#demandas .demandas-slider__controls{
+  position: absolute !important;
+  left: 0 !important;
+  right: auto !important;
+  top: 50% !important;
+  z-index: 20 !important;
+  width: auto !important;
+  min-width: 0 !important;
+  max-width: none !important;
+  height: auto !important;
+  transform: translate(-50%, -50%) !important;
+  display: grid !important;
+  grid-template-columns: 1fr !important;
+  gap: 10px !important;
+  padding: 8px !important;
+  border-radius: 999px !important;
+  background: rgba(255,255,255,.88) !important;
+  border: 1px solid rgba(91,44,85,.10) !important;
+  box-shadow: 0 18px 44px rgba(34,18,31,.13) !important;
+  backdrop-filter: blur(8px) !important;
+}
+
+#demandas .demandas-slider__arrow{
+  width: 42px !important;
+  min-width: 42px !important;
+  max-width: 42px !important;
+  height: 42px !important;
+  min-height: 42px !important;
+  max-height: 42px !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  border-radius: 50% !important;
+  flex: 0 0 42px !important;
+}
+
+@media (max-width: 980px){
+  #demandas .demandas-slider__wrap{
+    grid-template-columns: 1fr !important;
+    min-height: auto !important;
+  }
+
+  #demandas .demandas-slider__right,
+  #demandas .demandas-slider__left{
+    grid-column: auto !important;
+    min-height: auto !important;
+  }
+
+  #demandas .demandas-slider__right{
+    border-right: 0 !important;
+    border-bottom: 1px solid rgba(199,163,91,.22) !important;
+  }
+
+  #demandas .demandas-slider__content{
+    max-width: none !important;
+    width: 100% !important;
+    padding-left: 0 !important;
+    padding-right: 74px !important;
+  }
+
+  #demandas .demandas-slider__controls{
+    left: auto !important;
+    right: 24px !important;
+    transform: translateY(-50%) !important;
+  }
+}
+
+@media (max-width: 640px){
+  #demandas.demandas-slider{
+    padding: 46px 20px !important;
+  }
+
+  #demandas .demandas-slider__right,
+  #demandas .demandas-slider__left{
+    padding: 34px 20px !important;
+  }
+
+  #demandas .demandas-slider__content{
+    padding-right: 0 !important;
+  }
+
+  #demandas .demandas-slider__viewport{
+    min-height: 330px !important;
+  }
+
+  #demandas .demandas-slider__controls{
+    position: static !important;
+    transform: none !important;
+    display: flex !important;
+    width: max-content !important;
+    margin-top: 22px !important;
+  }
+}
+
+/* =========================================================
+   V65 — adaptação desktop / telas largas
+   Objetivo: reduzir espaços laterais em monitores grandes sem
+   alterar textos, hierarquia visual ou componentes existentes.
+   ========================================================= */
+@media (min-width: 1180px){
+  :root{
+    --mesp-section-max: 1440px;
+    --mesp-section-pad-x: clamp(40px, 4.8vw, 96px);
+  }
+
+  #atendimento .atendimento-formats__wrap,
+  #demandas .demandas-slider__wrap,
+  #como-funciona .how-service__container,
+  #sobre .authority-grid{
+    width: min(100% - clamp(64px, 8vw, 144px), 1440px) !important;
+    max-width: 1440px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+
+  #atendimento .atendimento-formats__wrap,
+  #demandas .demandas-slider__wrap,
+  #como-funciona .how-service__container{
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) !important;
+    gap: clamp(42px, 5vw, 86px) !important;
+  }
+
+  #demandas .demandas-slider__wrap{
+    min-height: clamp(430px, 48vh, 560px) !important;
+  }
+
+  #demandas .demandas-slider__right-inner,
+  #demandas .demandas-slider__content,
+  #como-funciona .how-service__left,
+  #atendimento .atendimento-formats__copy{
+    max-width: 620px !important;
+  }
+
+  #demandas .demandas-slider__left,
+  #demandas .demandas-slider__right,
+  #como-funciona .how-service__left,
+  #como-funciona .how-service__right,
+  #atendimento .atendimento-formats__copy,
+  #atendimento .atendimento-formats__cards{
+    min-width: 0 !important;
+  }
+}
+
+@media (min-width: 1500px){
+  #atendimento .atendimento-formats__wrap,
+  #demandas .demandas-slider__wrap,
+  #como-funciona .how-service__container,
+  #sobre .authority-grid{
+    width: min(100% - 160px, 1480px) !important;
+    max-width: 1480px !important;
+  }
+}

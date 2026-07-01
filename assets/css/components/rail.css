@@ -1,0 +1,52 @@
+.section-head{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:16px;
+  margin-bottom: 14px;
+}
+
+.rail{
+  overflow:hidden;
+}
+
+.rail-track{
+  display:flex;
+  gap:18px;
+  overflow:auto;
+  padding: 6px 2px 14px;
+  scroll-snap-type:x mandatory;
+  scroll-behavior:smooth;
+  -webkit-overflow-scrolling: touch;
+}
+
+.rail-track::-webkit-scrollbar{ height: 8px; }
+.rail-track::-webkit-scrollbar-thumb{
+  background: rgba(0,0,0,.15);
+  border-radius: 999px;
+}
+
+.rail-card{
+  min-width: 320px;
+  scroll-snap-align: start;
+}
+
+.rail-controls{
+  display:flex;
+  gap: 10px;
+}
+
+.rail-btn{
+  height: 42px;
+  width: 42px;
+  border-radius: 999px;
+  border: 1px solid rgba(0,0,0,.10);
+  background: #fff;
+  cursor: pointer;
+}
+
+@media (max-width: 768px){
+  .rail-card{ min-width: 78vw; }
+  .rail-controls{ display:none; }
+}
+

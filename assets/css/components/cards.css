@@ -1,0 +1,14 @@
+.card{
+  padding: 22px;
+}
+
+.card h3{
+  margin-top: 0;
+  color: var(--brand-1);
+}
+
+.card ul{
+  margin: 10px 0 0;
+  padding-left: 18px;
+  color: var(--muted);
+}

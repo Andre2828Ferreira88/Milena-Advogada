@@ -1,0 +1,116 @@
+.authority-grid{
+  display:grid;
+  grid-template-columns: 58% 42%;
+  gap: 18px;
+  align-items:center;
+}
+
+.signature{
+  margin-top: 12px;
+  color: var(--brand-1);
+}
+
+.authority-photo img{
+  border-radius: var(--radius);
+  border: 1px solid rgba(0,0,0,.08);
+}
+
+@media (max-width: 920px){
+  .authority-grid{ grid-template-columns: 1fr; }
+}
+
+@media (max-width: 920px){
+  .authority-photo{
+    order: -1;
+    max-width: 280px;
+    margin: 0 auto;
+  }
+}
+
+/* =========================================================
+   V48 — Authority mobile profissional
+   Ajusta somente a section da advogada no celular.
+   ========================================================= */
+@media (max-width: 700px){
+  #sobre.section.authority{
+    padding: 34px 0 46px !important;
+    overflow: hidden;
+  }
+
+  #sobre .authority-grid{
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 0 !important;
+    align-items: stretch !important;
+    padding-inline: 20px !important;
+  }
+
+  #sobre .authority-photo{
+    order: -1 !important;
+    width: 100% !important;
+    max-width: none !important;
+    margin: 0 0 22px !important;
+  }
+
+  #sobre .authority-photo img{
+    display: block !important;
+    width: 100% !important;
+    height: auto !important;
+    max-height: 390px !important;
+    object-fit: cover !important;
+    object-position: center top !important;
+    border-radius: 10px !important;
+    border: 1px solid rgba(94, 42, 84, .12) !important;
+    box-shadow: 0 18px 44px rgba(38, 26, 38, .10) !important;
+  }
+
+  #sobre .authority-grid > .reveal{
+    width: 100% !important;
+  }
+
+  #sobre .authority-grid h2{
+    position: relative;
+    margin: 22px 0 16px !important;
+    padding-left: 16px !important;
+    max-width: 330px !important;
+    font-size: clamp(1.62rem, 7.2vw, 2.05rem) !important;
+    line-height: 1.08 !important;
+    font-weight: 600 !important;
+    letter-spacing: -0.035em !important;
+    color: #10131a !important;
+  }
+
+  #sobre .authority-grid h2::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    top: .15em;
+    width: 3px;
+    height: 1.6em;
+    border-radius: 99px;
+    background: #caa24d;
+  }
+
+  #sobre .authority-grid p{
+    max-width: 100% !important;
+    margin: 0 0 14px !important;
+    font-size: .96rem !important;
+    line-height: 1.62 !important;
+    color: rgba(16, 19, 26, .76) !important;
+  }
+
+  #sobre .authority-grid p strong{
+    display: block;
+    margin-top: 8px;
+    color: #10131a !important;
+    font-weight: 650 !important;
+  }
+
+  #sobre .authority-grid .btn{
+    width: 100% !important;
+    max-width: 330px !important;
+    min-height: 50px !important;
+    margin-top: 10px !important;
+    justify-content: center !important;
+  }
+}

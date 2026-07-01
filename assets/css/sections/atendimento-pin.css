@@ -1,0 +1,952 @@
+/* =========================================================
+   ATENDIMENTO PIN — V38 ESTÁVEL
+   Correção: mantém a section fixa até o fim da animação sem
+   abrir espaço branco no meio do scroll.
+   Estratégia: pin nativo do ScrollTrigger em section 100svh.
+   ========================================================= */
+
+#atendimento.atendimento-pin{
+  --atendimento-header-h: calc(var(--topbar-h, 64px) + var(--header-h, 84px));
+  --atendimento-safe-top: calc(var(--atendimento-header-h) + 34px);
+  position: relative;
+  width: 100%;
+  height: 100svh;
+  min-height: 720px;
+  max-height: none;
+  margin: 0;
+  padding: 0 !important;
+  overflow: hidden !important;
+  background: #fff;
+  border-top: 1px solid rgba(91,44,85,.08);
+  border-bottom: 1px solid rgba(199,163,91,.58);
+  z-index: 3;
+  isolation: isolate;
+  transform: translateZ(0);
+  backface-visibility: hidden;
+}
+
+#atendimento.atendimento-pin::before,
+#atendimento.atendimento-pin::after{
+  content: none !important;
+}
+
+/* Quando o ScrollTrigger cria o spacer, ele não pode herdar overflow estranho. */
+.pin-spacer:has(#atendimento.atendimento-pin){
+  overflow: visible !important;
+  background: #fff;
+}
+
+#atendimento .atendimento-pin__grid{
+  position: relative;
+  width: 100%;
+  height: 100%;
+  min-height: 100%;
+  display: grid;
+  grid-template-columns: minmax(0, 50%) minmax(0, 50%);
+  overflow: hidden;
+  background: #fff;
+  transform: translateZ(0);
+  backface-visibility: hidden;
+  will-change: transform;
+}
+
+#atendimento .atendimento-pin__left{
+  position: relative;
+  min-width: 0;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--atendimento-safe-top) clamp(42px, 5.5vw, 92px) 54px;
+  background:
+    radial-gradient(circle at 83% 48%, rgba(91,44,85,.055) 0 9px, transparent 10px),
+    radial-gradient(circle at 87% 34%, rgba(199,163,91,.18) 0 4px, transparent 5px),
+    radial-gradient(circle at 76% 63%, rgba(91,44,85,.04) 0 8px, transparent 9px),
+    linear-gradient(135deg, #fff 0%, #fff 68%, #fbfaf8 100%);
+  z-index: 2;
+}
+
+#atendimento .atendimento-pin__left::after{
+  content: "";
+  position: absolute;
+  right: 0;
+  top: var(--atendimento-safe-top);
+  bottom: 54px;
+  width: 1px;
+  background: linear-gradient(180deg, transparent, rgba(199,163,91,.34), transparent);
+  pointer-events: none;
+}
+
+#atendimento .atendimento-pin__copy{
+  width: min(100%, 620px);
+  margin: 0 auto;
+  transform: translateZ(0);
+  backface-visibility: hidden;
+}
+
+#atendimento .atendimento-pin__kicker{
+  display: inline-flex;
+  align-items: center;
+  width: fit-content;
+  margin: 0 0 18px;
+  padding: 7px 15px;
+  border: 1px solid rgba(91,44,85,.16);
+  border-radius: 999px;
+  color: var(--brand-1, #5b2c55);
+  background: rgba(255,255,255,.9);
+  box-shadow: 0 10px 28px rgba(91,44,85,.055);
+  font-size: .72rem;
+  line-height: 1;
+  font-weight: 700;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+
+#atendimento .atendimento-pin__copy h2{
+  position: relative;
+  max-width: 660px;
+  margin: 0 0 22px;
+  padding-left: 18px;
+  color: #111;
+  font-family: inherit;
+  font-size: clamp(1.65rem, 3.15vw, 2.35rem);
+  line-height: 1.18;
+  letter-spacing: 0;
+  font-weight: 700;
+}
+
+#atendimento .atendimento-pin__copy h2::before{
+  content: "" !important;
+  position: absolute;
+  left: 0;
+  top: .18em;
+  width: 4px;
+  height: 1.35em;
+  border-radius: 2px;
+  background: var(--brand-2, #c7a35b);
+}
+
+#atendimento .atendimento-pin__copy p{
+  max-width: 640px;
+  margin: 0 0 28px;
+  color: rgba(28,28,32,.72);
+  font-family: inherit;
+  font-size: clamp(.92rem, 1.35vw, 1.04rem);
+  line-height: 1.6;
+  font-weight: 400;
+}
+
+#atendimento .atendimento-pin__btn{
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 220px;
+  min-height: 52px;
+  padding: 14px 26px;
+  border-radius: 13px;
+  background: #dedede;
+  color: #111;
+  border: 1px solid rgba(0,0,0,.06);
+  box-shadow: 0 14px 34px rgba(0,0,0,.07);
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  text-decoration: none;
+  transition: transform .25s ease, background .25s ease, box-shadow .25s ease;
+}
+
+#atendimento .atendimento-pin__btn:hover{
+  transform: translateY(-2px);
+  background: #d4d4d4;
+  box-shadow: 0 18px 42px rgba(0,0,0,.1);
+}
+
+#atendimento .atendimento-pin__copy p + p{
+  margin-top: -12px;
+}
+
+#atendimento .atendimento-pin__footnote{
+  display: block;
+  max-width: 600px;
+  margin-top: 18px;
+  color: rgba(28,28,32,.58);
+  font-size: .84rem;
+  line-height: 1.55;
+}
+
+#atendimento .atendimento-pin__right{
+  position: relative;
+  height: 100%;
+  min-width: 0;
+  overflow: hidden;
+  background: #5b2c55;
+  isolation: isolate;
+}
+
+#atendimento .atendimento-pin__right::before{
+  content: "";
+  position: absolute;
+  inset: max(18px, var(--atendimento-header-h)) 18px 18px;
+  border: 1px solid rgba(255,255,255,.1);
+  pointer-events: none;
+  z-index: 8;
+  opacity: .52;
+}
+
+#atendimento .atendimento-pin__right::after{
+  content: "";
+  position: absolute;
+  inset: auto 0 0 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, rgba(199,163,91,.96), transparent);
+  z-index: 9;
+}
+
+#atendimento .atendimento-panel{
+  position: absolute !important;
+  inset: 0 !important;
+  min-height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  pointer-events: none;
+  will-change: opacity, transform;
+  transform: translate3d(0,0,0);
+  backface-visibility: hidden;
+  contain: paint;
+}
+
+#atendimento .atendimento-panel.is-active{ pointer-events: auto; }
+
+#atendimento .atendimento-panel--demand{
+  opacity: 1;
+  visibility: visible;
+  z-index: 4;
+  background:
+    radial-gradient(circle at 78% 18%, rgba(255,255,255,.08), transparent 26%),
+    radial-gradient(circle at 18% 80%, rgba(199,163,91,.10), transparent 32%),
+    linear-gradient(135deg, #5b2c55 0%, #66325f 55%, #4e2449 100%);
+}
+
+#atendimento .atendimento-panel--monthly{
+  opacity: 0;
+  visibility: visible;
+  z-index: 5;
+  background: #151016;
+}
+
+#atendimento .atendimento-panel__bg{
+  position: absolute;
+  inset: -4%;
+  background: url('../../img/hero-bg.jpg') center center / cover no-repeat;
+  z-index: -2;
+  transform: translate3d(0,0,0) scale(1.08);
+  will-change: transform;
+  backface-visibility: hidden;
+}
+
+#atendimento .atendimento-panel__shade{
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background:
+    linear-gradient(90deg, rgba(0,0,0,.72), rgba(0,0,0,.34) 50%, rgba(0,0,0,.48)),
+    linear-gradient(180deg, rgba(0,0,0,.22), rgba(0,0,0,.64));
+}
+
+#atendimento .atendimento-panel__inner{
+  width: min(100%, 780px);
+  min-height: 100%;
+  margin: 0 auto;
+  padding: var(--atendimento-safe-top) clamp(42px, 5.2vw, 86px) 54px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: clamp(16px, 1.8vw, 24px);
+}
+
+#atendimento .atendimento-panel__eyebrow,
+#atendimento .atendimento-panel__inner--monthly p{
+  max-width: 650px;
+  margin: 0;
+  color: rgba(255,255,255,.9);
+  font-family: inherit;
+  font-size: clamp(.9rem, 1.2vw, 1.02rem);
+  line-height: 1.55;
+  font-weight: 600;
+}
+
+#atendimento .atendimento-panel__listWrap{
+  position: relative;
+  margin-left: clamp(20px, 2.5vw, 38px);
+  padding-left: clamp(22px, 1.8vw, 30px);
+}
+
+#atendimento .atendimento-panel__listWrap::before{
+  content: "";
+  position: absolute;
+  left: 0;
+  top: -12px;
+  bottom: -12px;
+  width: 2px;
+  background: rgba(255,255,255,.74);
+}
+
+#atendimento .atendimento-panel__list{
+  margin: 0;
+  padding-left: 18px;
+  color: #fff;
+  font-family: inherit;
+  font-size: clamp(.98rem, 1.4vw, 1.22rem);
+  line-height: 1.35;
+  font-weight: 400;
+  letter-spacing: 0;
+}
+
+#atendimento .atendimento-panel__list li{
+  margin: 0;
+  padding-left: 3px;
+}
+
+#atendimento .atendimento-panel__highlight{
+  display: block;
+  max-width: 680px;
+  margin-top: clamp(16px, 2vw, 26px);
+  padding: 18px 0 0;
+  border-top: 1px solid rgba(255,255,255,.14);
+  color: #fff;
+  font-size: clamp(.9rem, 1.2vw, 1.02rem);
+  line-height: 1.38;
+  font-weight: 700;
+}
+
+#atendimento .atendimento-panel__inner h3{
+  position: relative;
+  max-width: 720px;
+  margin: 0 0 6px;
+  padding-left: 18px;
+  color: #fff;
+  font-family: inherit;
+  font-size: clamp(1.55rem, 3.1vw, 2.25rem);
+  line-height: 1.18;
+  letter-spacing: 0;
+  font-weight: 700;
+}
+
+#atendimento .atendimento-panel__inner h3::before{
+  content: "" !important;
+  position: absolute;
+  left: 0;
+  top: .23em;
+  width: 4px;
+  height: 1.25em;
+  border-radius: 2px;
+  background: var(--brand-2, #c7a35b);
+}
+
+#atendimento .atendimento-panel__quote{
+  position: relative;
+  max-width: 720px;
+  margin-top: clamp(18px, 2.4vw, 30px);
+  margin-left: clamp(18px, 2.7vw, 38px);
+  padding-left: clamp(20px, 1.7vw, 26px);
+  color: #fff;
+  font-family: inherit;
+  font-size: clamp(1.45rem, 2.8vw, 2.15rem);
+  line-height: 1.22;
+  letter-spacing: 0;
+  font-weight: 700;
+}
+
+#atendimento .atendimento-panel__quote::before{
+  content: "";
+  position: absolute;
+  left: 0;
+  top: -12px;
+  bottom: -12px;
+  width: 2px;
+  background: rgba(255,255,255,.82);
+}
+
+
+#atendimento .atendimento-panel__card{
+  width: min(100%, 680px);
+  padding: clamp(28px, 4vw, 48px);
+  border: 1px solid rgba(255,255,255,.18);
+  background: rgba(255,255,255,.055);
+  box-shadow: 0 22px 70px rgba(0,0,0,.12);
+}
+
+#atendimento .atendimento-panel__card--glass{
+  background: rgba(10,8,12,.34);
+  border-color: rgba(255,255,255,.16);
+  backdrop-filter: blur(2px);
+}
+
+#atendimento .atendimento-panel__card .atendimento-panel__eyebrow{
+  display: inline-block;
+  margin: 0 0 18px;
+  color: rgba(255,255,255,.78);
+  font-size: .74rem;
+  line-height: 1;
+  font-weight: 700;
+  letter-spacing: .11em;
+  text-transform: uppercase;
+}
+
+#atendimento .atendimento-panel__card h3{
+  margin-bottom: 18px;
+}
+
+#atendimento .atendimento-panel__card p{
+  max-width: 620px;
+  margin: 0;
+  color: rgba(255,255,255,.88);
+  font-size: clamp(.98rem, 1.25vw, 1.08rem);
+  line-height: 1.65;
+  font-weight: 400;
+}
+
+#atendimento .atendimento-panel__card .atendimento-panel__highlight,
+#atendimento .atendimento-panel__card .atendimento-panel__quote{
+  margin-top: 26px;
+}
+
+#atendimento .atendimento-pin__progress{
+  position: absolute;
+  left: 50%;
+  right: 0;
+  bottom: 0;
+  width: 50%;
+  height: 3px;
+  background: rgba(255,255,255,.22);
+  z-index: 12;
+  overflow: hidden;
+}
+
+#atendimento .atendimento-pin__progress span{
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: var(--brand-2, #c7a35b);
+  transform-origin: left center;
+  transform: scaleX(0);
+  will-change: transform;
+}
+
+#atendimento.atendimento-pin.is-pin-active{
+  box-shadow: 0 1px 0 rgba(199,163,91,.32);
+}
+
+@media (max-width: 1200px){
+  #atendimento.atendimento-pin{ min-height: 680px; }
+  #atendimento .atendimento-pin__left,
+  #atendimento .atendimento-panel__inner{
+    padding-left: clamp(32px, 4vw, 58px);
+    padding-right: clamp(32px, 4vw, 58px);
+  }
+}
+
+@media (max-width: 900px){
+  /* MOBILE: sem pin, sem fixed, sem sticky e sem scrub. A section vira conteúdo normal. */
+  #atendimento.atendimento-pin,
+  #atendimento.atendimento-pin.is-gsap-ready,
+  #atendimento.atendimento-pin.is-mobile-static{
+    position: relative !important;
+    width: 100% !important;
+    height: auto !important;
+    min-height: 0 !important;
+    max-height: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    overflow: visible !important;
+    transform: none !important;
+    background: #fff;
+  }
+
+  .pin-spacer:has(#atendimento.atendimento-pin){
+    height: auto !important;
+    min-height: 0 !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    overflow: visible !important;
+  }
+
+  #atendimento .atendimento-pin__grid{
+    position: relative !important;
+    top: auto !important;
+    left: auto !important;
+    right: auto !important;
+    bottom: auto !important;
+    width: 100% !important;
+    height: auto !important;
+    min-height: 0 !important;
+    display: block !important;
+    overflow: visible !important;
+    transform: none !important;
+    will-change: auto !important;
+    background: #fff;
+  }
+
+  #atendimento .atendimento-pin__left{
+    height: auto !important;
+    min-height: 0 !important;
+    padding: 48px 5vw 36px !important;
+    display: block !important;
+  }
+
+  #atendimento .atendimento-pin__left::after{ display: none !important; }
+  #atendimento .atendimento-pin__copy{ width: 100%; margin: 0; }
+  #atendimento .atendimento-pin__copy h2{ font-size: 30px; line-height: 1.12; }
+  #atendimento .atendimento-pin__copy p{ font-size: 13px; line-height: 1.48; }
+  #atendimento .atendimento-pin__btn{ width: 100%; min-height: 54px; }
+
+  #atendimento .atendimento-pin__right{
+    position: relative !important;
+    height: auto !important;
+    min-height: 0 !important;
+    display: block !important;
+    overflow: visible !important;
+    background: #fff !important;
+  }
+
+  #atendimento .atendimento-pin__right::before,
+  #atendimento .atendimento-pin__right::after{ display: none !important; }
+
+  #atendimento .atendimento-panel,
+  #atendimento .atendimento-panel--demand,
+  #atendimento .atendimento-panel--monthly{
+    position: relative !important;
+    inset: auto !important;
+    width: 100% !important;
+    min-height: 0 !important;
+    height: auto !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    transform: none !important;
+    pointer-events: auto !important;
+    z-index: 1 !important;
+    display: block !important;
+    contain: none !important;
+    will-change: auto !important;
+  }
+
+  #atendimento .atendimento-panel--demand{
+    background:
+      radial-gradient(circle at 80% 18%, rgba(255,255,255,.08), transparent 26%),
+      linear-gradient(135deg, #5b2c55 0%, #63305d 100%);
+  }
+
+  #atendimento .atendimento-panel--monthly{
+    margin-top: 0;
+    background: #151016;
+  }
+
+  #atendimento .atendimento-panel__inner{
+    width: 100%;
+    min-height: 0 !important;
+    height: auto !important;
+    padding: 42px 24px !important;
+    display: block !important;
+  }
+
+  #atendimento .atendimento-panel__bg{
+    position: absolute !important;
+    inset: 0 !important;
+    transform: none !important;
+  }
+
+  #atendimento .atendimento-panel__listWrap{ margin-left: 0; }
+  #atendimento .atendimento-panel__quote{ margin-left: 0; font-size: 23px; line-height: 1.13; }
+  
+#atendimento .atendimento-panel__card{
+  width: min(100%, 680px);
+  padding: clamp(28px, 4vw, 48px);
+  border: 1px solid rgba(255,255,255,.18);
+  background: rgba(255,255,255,.055);
+  box-shadow: 0 22px 70px rgba(0,0,0,.12);
+}
+
+#atendimento .atendimento-panel__card--glass{
+  background: rgba(10,8,12,.34);
+  border-color: rgba(255,255,255,.16);
+  backdrop-filter: blur(2px);
+}
+
+#atendimento .atendimento-panel__card .atendimento-panel__eyebrow{
+  display: inline-block;
+  margin: 0 0 18px;
+  color: rgba(255,255,255,.78);
+  font-size: .74rem;
+  line-height: 1;
+  font-weight: 700;
+  letter-spacing: .11em;
+  text-transform: uppercase;
+}
+
+#atendimento .atendimento-panel__card h3{
+  margin-bottom: 18px;
+}
+
+#atendimento .atendimento-panel__card p{
+  max-width: 620px;
+  margin: 0;
+  color: rgba(255,255,255,.88);
+  font-size: clamp(.98rem, 1.25vw, 1.08rem);
+  line-height: 1.65;
+  font-weight: 400;
+}
+
+#atendimento .atendimento-panel__card .atendimento-panel__highlight,
+#atendimento .atendimento-panel__card .atendimento-panel__quote{
+  margin-top: 26px;
+}
+
+#atendimento .atendimento-pin__progress{ display: none !important; }
+}
+
+/* =========================================================
+   V62 — Formatos de atendimento compacto
+   Novo layout sem pin/sem palco grande, seguindo o padrão das demais sections.
+   ========================================================= */
+#atendimento.atendimento-formats{
+  position: relative;
+  width: 100%;
+  padding: clamp(72px, 8vw, 112px) clamp(24px, 5vw, 72px);
+  background:
+    radial-gradient(circle at 12% 10%, rgba(199,163,91,.08), transparent 28%),
+    radial-gradient(circle at 88% 76%, rgba(91,44,85,.055), transparent 30%),
+    linear-gradient(180deg, #fff 0%, #fbfaf8 100%);
+  border-top: 1px solid rgba(91,44,85,.08);
+  border-bottom: 1px solid rgba(199,163,91,.30);
+  overflow: hidden;
+}
+
+#atendimento.atendimento-formats::before{
+  content: "";
+  position: absolute;
+  left: clamp(24px, 5vw, 72px);
+  right: clamp(24px, 5vw, 72px);
+  top: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(199,163,91,.45), transparent);
+  pointer-events: none;
+}
+
+#atendimento .atendimento-formats__wrap{
+  width: min(100%, 1180px);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: minmax(0, .95fr) minmax(420px, 1.05fr);
+  gap: clamp(42px, 6vw, 84px);
+  align-items: center;
+}
+
+#atendimento .atendimento-formats__copy{
+  max-width: 560px;
+}
+
+#atendimento .atendimento-formats__kicker{
+  display: inline-flex;
+  align-items: center;
+  width: fit-content;
+  margin: 0 0 18px;
+  padding: 7px 15px;
+  border: 1px solid rgba(91,44,85,.16);
+  border-radius: 999px;
+  color: var(--brand-1, #5b2c55);
+  background: rgba(255,255,255,.92);
+  box-shadow: 0 10px 28px rgba(91,44,85,.045);
+  font-size: .72rem;
+  line-height: 1;
+  font-weight: 700;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+
+#atendimento .atendimento-formats__copy h2{
+  position: relative;
+  margin: 0 0 22px;
+  padding-left: 18px;
+  color: #111;
+  font-family: inherit;
+  font-size: clamp(1.95rem, 3vw, 2.75rem);
+  line-height: 1.12;
+  letter-spacing: -0.025em;
+  font-weight: 650;
+}
+
+#atendimento .atendimento-formats__copy h2::before{
+  content: "";
+  position: absolute;
+  left: 0;
+  top: .15em;
+  width: 4px;
+  height: 1.45em;
+  border-radius: 2px;
+  background: var(--brand-2, #c7a35b);
+}
+
+#atendimento .atendimento-formats__copy p{
+  margin: 0 0 18px;
+  color: rgba(28,28,32,.70);
+  font-size: clamp(.96rem, 1.15vw, 1.05rem);
+  line-height: 1.62;
+  font-weight: 400;
+}
+
+#atendimento .atendimento-formats__btn{
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10px;
+  min-height: 50px;
+  padding: 14px 22px;
+  border-radius: 12px;
+  background: #dedede;
+  color: #111;
+  border: 1px solid rgba(0,0,0,.06);
+  box-shadow: 0 12px 30px rgba(0,0,0,.065);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: -0.015em;
+  text-decoration: none;
+  transition: transform .25s ease, background .25s ease, box-shadow .25s ease;
+}
+
+#atendimento .atendimento-formats__btn:hover{
+  transform: translateY(-2px);
+  background: #d5d5d5;
+  box-shadow: 0 16px 38px rgba(0,0,0,.09);
+}
+
+#atendimento .atendimento-formats__footnote{
+  display: block;
+  max-width: 520px;
+  margin-top: 16px;
+  color: rgba(28,28,32,.52);
+  font-size: .82rem;
+  line-height: 1.5;
+}
+
+#atendimento .atendimento-formats__cards{
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+
+#atendimento .atendimento-format-card{
+  position: relative;
+  min-height: 300px;
+  padding: clamp(26px, 3vw, 34px);
+  border: 1px solid rgba(91,44,85,.14);
+  background: rgba(255,255,255,.72);
+  box-shadow: 0 24px 70px rgba(91,44,85,.055);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  overflow: hidden;
+}
+
+#atendimento .atendimento-format-card::before{
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 28px;
+  width: 4px;
+  height: 42px;
+  background: var(--brand-2, #c7a35b);
+}
+
+#atendimento .atendimento-format-card--featured{
+  background:
+    radial-gradient(circle at 88% 10%, rgba(255,255,255,.12), transparent 30%),
+    linear-gradient(135deg, #5b2c55 0%, #62305c 100%);
+  color: #fff;
+  border-color: rgba(91,44,85,.24);
+  box-shadow: 0 28px 80px rgba(91,44,85,.16);
+}
+
+#atendimento .atendimento-format-card__label{
+  display: block;
+  margin: 0 0 18px;
+  color: var(--brand-1, #5b2c55);
+  font-size: .72rem;
+  line-height: 1;
+  font-weight: 700;
+  letter-spacing: .11em;
+  text-transform: uppercase;
+}
+
+#atendimento .atendimento-format-card--featured .atendimento-format-card__label{
+  color: rgba(255,255,255,.72);
+}
+
+#atendimento .atendimento-format-card h3{
+  margin: 0 0 16px;
+  color: inherit;
+  font-size: clamp(1.35rem, 2vw, 1.85rem);
+  line-height: 1.12;
+  letter-spacing: -0.025em;
+  font-weight: 650;
+}
+
+#atendimento .atendimento-format-card p{
+  margin: 0 0 22px;
+  color: rgba(28,28,32,.68);
+  font-size: .96rem;
+  line-height: 1.58;
+}
+
+#atendimento .atendimento-format-card--featured p{
+  color: rgba(255,255,255,.86);
+}
+
+#atendimento .atendimento-format-card strong{
+  display: block;
+  margin-top: auto;
+  padding-top: 18px;
+  border-top: 1px solid rgba(91,44,85,.12);
+  color: var(--brand-1, #5b2c55);
+  font-size: .9rem;
+  line-height: 1.42;
+  font-weight: 700;
+}
+
+#atendimento .atendimento-format-card--featured strong{
+  border-top-color: rgba(255,255,255,.16);
+  color: #fff;
+}
+
+@media (max-width: 980px){
+  #atendimento.atendimento-formats{
+    padding: 64px 22px;
+  }
+
+  #atendimento .atendimento-formats__wrap{
+    grid-template-columns: 1fr;
+    gap: 34px;
+  }
+
+  #atendimento .atendimento-formats__copy{
+    max-width: 720px;
+  }
+}
+
+@media (max-width: 700px){
+  #atendimento.atendimento-formats{
+    padding: 52px 20px;
+  }
+
+  #atendimento .atendimento-formats__cards{
+    grid-template-columns: 1fr;
+  }
+
+  #atendimento .atendimento-format-card{
+    min-height: 0;
+    padding: 26px 24px;
+  }
+
+  #atendimento .atendimento-formats__btn{
+    width: 100%;
+  }
+}
+
+/* =========================================================
+   V66 — Botão da section formatos de atendimento
+   Personalização premium sem mudar texto/estrutura.
+   ========================================================= */
+
+#atendimento .atendimento-formats__btn {
+  position: relative !important;
+  isolation: isolate;
+  overflow: hidden;
+  min-height: 54px !important;
+  padding: 15px 24px !important;
+  border-radius: 14px !important;
+  border: 1px solid rgba(151, 109, 41, .32) !important;
+  background:
+    linear-gradient(135deg, #d9b864 0%, #caa24d 46%, #b98d38 100%) !important;
+  color: #fff !important;
+  box-shadow:
+    0 18px 42px rgba(184,139,53,.22),
+    0 6px 18px rgba(33,18,31,.10),
+    inset 0 1px 0 rgba(255,255,255,.32) !important;
+  font-size: .78rem !important;
+  font-weight: 750 !important;
+  letter-spacing: .045em !important;
+  text-transform: uppercase;
+  text-decoration: none !important;
+  transition:
+    transform .24s ease,
+    box-shadow .24s ease,
+    border-color .24s ease,
+    background .24s ease !important;
+}
+
+#atendimento .atendimento-formats__btn::before {
+  content: "";
+  position: absolute;
+  inset: 1px;
+  border-radius: inherit;
+  background:
+    linear-gradient(180deg, rgba(255,255,255,.28), transparent 45%),
+    radial-gradient(circle at 15% 0%, rgba(255,255,255,.32), transparent 30%);
+  opacity: .76;
+  z-index: -1;
+  pointer-events: none;
+}
+
+#atendimento .atendimento-formats__btn::after {
+  content: "→";
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 26px;
+  height: 26px;
+  margin-left: 12px;
+  border-radius: 999px;
+  background: rgba(255,255,255,.18);
+  border: 1px solid rgba(255,255,255,.20);
+  color: #fff;
+  font-size: 15px;
+  line-height: 1;
+  transform: translateX(0);
+  transition: transform .24s ease, background .24s ease;
+}
+
+#atendimento .atendimento-formats__btn:hover {
+  transform: translateY(-2px) !important;
+  border-color: rgba(151,109,41,.48) !important;
+  background:
+    linear-gradient(135deg, #e0c06c 0%, #cda550 44%, #ad8030 100%) !important;
+  box-shadow:
+    0 24px 52px rgba(184,139,53,.28),
+    0 10px 24px rgba(33,18,31,.13),
+    inset 0 1px 0 rgba(255,255,255,.34) !important;
+}
+
+#atendimento .atendimento-formats__btn:hover::after {
+  transform: translateX(3px);
+  background: rgba(255,255,255,.24);
+}
+
+#atendimento .atendimento-formats__btn:active {
+  transform: translateY(0) scale(.99) !important;
+}
+
+@media (max-width: 700px) {
+  #atendimento .atendimento-formats__btn {
+    width: 100%;
+    min-height: 52px !important;
+    padding-inline: 18px !important;
+    justify-content: center;
+  }
+
+  #atendimento .atendimento-formats__btn::after {
+    width: 24px;
+    height: 24px;
+    margin-left: 10px;
+  }
+}

@@ -1,0 +1,886 @@
+/* =========================================
+   COMPACT.CSS — Override para LP mais enxuta
+   Carregado DEPOIS de todos os outros CSS
+   ========================================= */
+
+/* ─── Seções com menos padding vertical ─── */
+.section {
+  padding: 44px 0;
+}
+
+.hero {
+  padding: 56px 0;
+}
+
+@media (max-width: 820px) {
+  .section {
+    padding: 36px 0;
+  }
+  .hero {
+    padding: 36px 0 40px;
+  }
+}
+
+@media (max-width: 600px) {
+  .section {
+    padding: 28px 0;
+  }
+  .hero {
+    padding: 24px 0 32px;
+  }
+}
+
+/* ─── Hero: título mais compacto ─── */
+.hero h1 {
+  font-size: clamp(1.5rem, 3.2vw, 2.2rem);
+  line-height: 1.25;
+  margin-bottom: 8px;
+}
+
+.hero .subtitle {
+  font-size: clamp(.9rem, 1.4vw, 1.05rem);
+  margin-bottom: 10px;
+}
+
+.hero-form h3 {
+  font-size: 1rem;
+  margin-bottom: 14px;
+}
+
+.hero-form.card {
+  padding: 20px;
+}
+
+/* ─── Section heads mais compactos ─── */
+.section-head {
+  margin-bottom: 18px;
+}
+
+.section h2 {
+  font-size: clamp(1.15rem, 2vw, 1.55rem);
+  line-height: 1.3;
+}
+
+.pain-title {
+  font-size: clamp(1.15rem, 2vw, 1.55rem);
+  line-height: 1.35;
+  max-width: 700px;
+}
+
+/* ─── Lead text menor ─── */
+.lead {
+  font-size: .9rem;
+  line-height: 1.6;
+}
+
+/* ─── Identificação: seção mais enxuta ─── */
+#identificacao .demand-list {
+  margin-top: 14px;
+  gap: 8px;
+}
+
+/* ─── Steps/Cards mais compactos ─── */
+.card.step {
+  padding: 18px;
+}
+
+.card.step h3 {
+  font-size: .95rem;
+  margin-bottom: 8px;
+}
+
+.card.step p {
+  font-size: .85rem;
+  line-height: 1.55;
+  margin-bottom: 0;
+}
+
+.step-n {
+  font-size: .8rem;
+}
+
+.step-points {
+  margin-top: 10px;
+  gap: 7px;
+}
+
+.step-points li {
+  font-size: .88rem;
+}
+
+.step-points li + li {
+  padding-top: 7px;
+}
+
+/* ─── Split section: mais compacta ─── */
+.split-section {
+  gap: 0 36px;
+}
+
+.split-col {
+  padding: 8px 0;
+}
+
+.split-title {
+  font-size: clamp(1rem, 1.6vw, 1.25rem);
+  margin-bottom: 14px;
+}
+
+.demand-list {
+  gap: 8px;
+  margin-top: 14px;
+}
+
+.demand-list li {
+  font-size: .85rem;
+  line-height: 1.45;
+}
+
+.benefit-cards {
+  margin-top: 14px;
+  gap: 8px;
+}
+
+.benefit-cards li {
+  padding: 10px 14px;
+  font-size: .85rem;
+}
+
+.benefit-icon {
+  width: 28px;
+  height: 28px;
+  font-size: .68rem;
+}
+
+.benefit-tag {
+  margin-bottom: 10px;
+  font-size: .68rem;
+}
+
+/* ─── Diferenciais + Para quem: grid 2 colunas (não 3) ─── */
+.da-grid--compact {
+  grid-template-columns: 1fr 1fr !important;
+}
+
+.da-header {
+  margin-bottom: 28px;
+}
+
+.da-title {
+  font-size: clamp(1.15rem, 2vw, 1.5rem);
+}
+
+.da-card {
+  padding: 22px 20px;
+}
+
+.da-card__label {
+  font-size: .68rem;
+  margin-bottom: 10px;
+}
+
+.da-card__intro {
+  font-size: .85rem;
+  margin-bottom: 14px;
+}
+
+.da-diff-list {
+  gap: 9px;
+}
+
+.da-diff-list li {
+  font-size: .85rem;
+}
+
+.da-audience-list {
+  gap: 7px;
+  margin-bottom: 18px;
+}
+
+.da-audience-list li {
+  font-size: .83rem;
+}
+
+@media (max-width: 700px) {
+  .da-grid--compact {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+/* ─── Authority: mais compacta ─── */
+.authority-stats {
+  gap: 24px;
+  margin-bottom: 20px;
+}
+
+.stat-num {
+  font-size: 2rem;
+}
+
+.stat-suffix {
+  font-size: 1.2rem;
+}
+
+.authority-grid h2 {
+  font-size: clamp(1.1rem, 1.8vw, 1.4rem);
+}
+
+.authority-grid p {
+  font-size: .9rem;
+  line-height: 1.65;
+}
+
+/* ─── Testimonials: cards mais compactos ─── */
+.testimonial-card {
+  padding: 22px 20px;
+  gap: 12px;
+}
+
+.testimonial-quote {
+  font-size: 2.8rem;
+  line-height: .7;
+}
+
+.testimonial-text {
+  font-size: .88rem;
+  line-height: 1.6;
+}
+
+.testimonial-author {
+  padding-top: 12px;
+}
+
+/* ─── FAQ: mais compacto ─── */
+.faq-list {
+  gap: 10px;
+  margin-top: 18px;
+}
+
+.faq-item {
+  padding: 16px 18px;
+}
+
+.faq-item h3 {
+  font-size: .92rem;
+  margin-bottom: 6px;
+}
+
+.faq-item p {
+  font-size: .85rem;
+  line-height: 1.55;
+}
+
+/* ─── CTA Final: mais compacto ─── */
+.cta-final {
+  height: auto !important;
+  min-height: 0 !important;
+}
+
+.cta-final h2 {
+  font-size: clamp(1.15rem, 2.2vw, 1.6rem) !important;
+  line-height: 1.3;
+}
+
+.cta-final p {
+  font-size: .9rem;
+  max-width: 60ch;
+}
+
+/* ─── Footer: tighter ─── */
+.site-footer {
+  padding-top: 48px;
+}
+
+.footer-top {
+  padding-bottom: 40px;
+  gap: 36px;
+}
+
+/* ─── CTA center: menos margin ─── */
+.center {
+  margin-top: 14px;
+}
+
+/* ─── Botões: touch-friendly mas sem excesso ─── */
+.btn-primary {
+  font-size: .78rem;
+}
+
+/* ─── Mobile: refinamentos extras ─── */
+@media (max-width: 820px) {
+
+  .hero h1 {
+    font-size: clamp(1.3rem, 5.5vw, 1.65rem);
+  }
+
+  .hero .subtitle {
+    font-size: .9rem;
+  }
+
+  .microbullets--icons {
+    gap: 8px 14px;
+    margin: 10px 0 14px;
+  }
+
+  .microbullets--icons .mbi {
+    font-size: .85rem;
+  }
+
+  .card.step {
+    padding: 16px;
+  }
+
+  .split-section {
+    gap: 28px;
+  }
+
+  .da-card {
+    padding: 18px 16px;
+  }
+
+  .authority-grid {
+    gap: 0 !important;
+  }
+
+  .testimonial-card {
+    padding: 18px 16px;
+  }
+
+  .cta-final .cta-box h2 {
+    font-size: clamp(1.15rem, 5vw, 1.45rem) !important;
+  }
+
+  .cta-final p {
+    margin-bottom: 20px !important;
+  }
+}
+
+@media (max-width: 600px) {
+  .hero-form.card {
+    padding: 16px;
+  }
+
+  .hero-form h3 {
+    font-size: .92rem;
+    margin-bottom: 12px;
+  }
+
+  .pain-title {
+    font-size: clamp(1.05rem, 4.5vw, 1.3rem);
+  }
+
+  .faq-item {
+    padding: 14px 16px;
+  }
+}
+
+/* =========================================================
+   V23 — padrão único de tipografia das sections baseado no hero
+   ========================================================= */
+.section:not(.hero) h2{
+  font-family: inherit;
+  font-size: clamp(1.5rem, 3.2vw, 2.2rem);
+  line-height: 1.25;
+  letter-spacing: 0;
+  font-weight: 700;
+}
+
+.section:not(.hero) h3{
+  font-family: inherit;
+  font-size: clamp(1rem, 1.45vw, 1.18rem);
+  line-height: 1.3;
+  letter-spacing: 0;
+  font-weight: 700;
+}
+
+.section:not(.hero) p,
+.section:not(.hero) .lead{
+  font-family: inherit;
+  font-size: clamp(.9rem, 1.4vw, 1.05rem);
+  line-height: 1.6;
+  font-weight: 400;
+}
+
+
+/* =========================================================
+   V28 — Identificação abaixo do hero igual ao Figma
+   Ajusta largura, alinhamento e respiro sem mexer nas outras animações.
+   ========================================================= */
+#identificacao.section.alt-soft{
+  padding: 52px 0 46px;
+  background:
+    radial-gradient(720px 260px at 11% 15%, rgba(199,163,91,.10), transparent 62%),
+    radial-gradient(760px 300px at 88% 70%, rgba(91,44,85,.08), transparent 66%),
+    #fbf9f8;
+  border-top: 1px solid rgba(199,163,91,.18);
+  border-bottom: 1px solid rgba(199,163,91,.14);
+}
+
+#identificacao > .container{
+  width: min(100%, 1260px);
+  max-width: 1260px;
+  padding-inline: clamp(32px, 5vw, 72px);
+  margin-inline: auto;
+}
+
+#identificacao .section-head{
+  display: block;
+  max-width: 900px;
+  margin: 0 0 28px;
+}
+
+#identificacao .pain-title{
+  max-width: 900px;
+  margin: 0;
+  padding-left: 18px;
+  font-size: clamp(1.85rem, 2.35vw, 2.75rem);
+  line-height: 1.14;
+  font-weight: 650 !important;
+  letter-spacing: -0.028em !important;
+  color: var(--text);
+  text-wrap: balance;
+}
+
+#identificacao .pain-title::before{
+  top: .12em;
+  height: 1.35em;
+  width: 4px;
+  border-radius: 999px;
+  background: var(--brand-2);
+}
+
+#identificacao .lead{
+  display: block;
+  max-width: 900px !important;
+  margin: 0 0 24px !important;
+  font-size: clamp(.98rem, 1.06vw, 1.12rem);
+  line-height: 1.65;
+  color: rgba(25,25,30,.68);
+}
+
+#identificacao .demand-list{
+  max-width: 1040px;
+  margin: 0 0 30px !important;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  column-gap: clamp(56px, 9vw, 130px);
+  row-gap: 12px;
+}
+
+#identificacao .demand-list li{
+  position: relative;
+  padding-left: 20px;
+  font-size: clamp(.92rem, .96vw, 1rem);
+  line-height: 1.5;
+  color: rgba(31,31,37,.64);
+}
+
+#identificacao .demand-list li::before{
+  content: "";
+  position: absolute;
+  left: 0;
+  top: .7em;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: rgba(91,44,85,.46);
+}
+
+#identificacao .center{
+  justify-content: center;
+  max-width: 1040px;
+  margin-top: 26px;
+}
+
+#identificacao .btn.btn-primary{
+  min-width: min(100%, 360px);
+  min-height: 54px;
+  border-radius: 999px;
+  padding: 0 34px;
+  box-shadow: 0 16px 34px rgba(199,163,91,.24);
+}
+
+@media (max-width: 900px){
+  #identificacao.section.alt-soft{
+    padding: 44px 0 42px;
+  }
+
+  #identificacao > .container{
+    padding-inline: 24px;
+  }
+
+  #identificacao .pain-title{
+    max-width: 720px;
+    font-size: clamp(1.55rem, 5.4vw, 2.25rem);
+  }
+
+  #identificacao .lead{
+    max-width: 720px !important;
+  }
+
+  #identificacao .demand-list{
+    grid-template-columns: 1fr;
+    gap: 10px;
+    max-width: 720px;
+  }
+
+  #identificacao .center{
+    justify-content: flex-start;
+  }
+}
+
+@media (max-width: 560px){
+  #identificacao.section.alt-soft{
+    padding: 38px 0 38px;
+  }
+
+  #identificacao .pain-title{
+    padding-left: 14px;
+    line-height: 1.18;
+  }
+
+  #identificacao .lead{
+    font-size: .95rem;
+    line-height: 1.6;
+  }
+
+  #identificacao .btn.btn-primary{
+    width: 100%;
+    min-width: 0;
+  }
+}
+
+
+/* =========================================================
+   V29 — HERO alinhado ao Figma
+   Ajusta somente o bloco hero: largura do texto, respiro,
+   form e proporção geral, sem mexer em animações/JS.
+   ========================================================= */
+.hero#topo{
+  padding: 46px 0 48px !important;
+  min-height: 330px;
+  display: flex;
+  align-items: center;
+  background-position: center center;
+}
+
+.hero#topo > .container.hero-grid{
+  width: 100%;
+  max-width: 1210px;
+  padding-inline: clamp(24px, 3.8vw, 44px);
+  display: grid;
+  grid-template-columns: minmax(0, 1.06fr) minmax(360px, 430px);
+  gap: clamp(46px, 7vw, 96px);
+  align-items: center;
+}
+
+.hero#topo .hero-copy{
+  max-width: 650px;
+}
+
+.hero#topo h1{
+  max-width: 650px;
+  font-size: clamp(2.05rem, 3.05vw, 2.9rem) !important;
+  line-height: 1.16 !important;
+  font-weight: 650 !important;
+  letter-spacing: -0.026em !important;
+  margin: 0 0 12px !important;
+  text-wrap: balance;
+}
+
+.hero#topo .subtitle{
+  max-width: 580px;
+  font-size: clamp(1rem, 1.14vw, 1.1rem) !important;
+  line-height: 1.55 !important;
+  margin: 0 0 12px !important;
+  opacity: .94;
+}
+
+.hero#topo .typing-wrap{
+  display: inline;
+}
+
+.hero#topo .microbullets{
+  max-width: 585px;
+  margin: 12px 0 0 !important;
+  gap: 8px 0;
+}
+
+.hero#topo .microbullets--icons .mbi{
+  font-size: clamp(.9rem, 1.02vw, .98rem);
+  line-height: 1.35;
+  font-weight: 600;
+}
+
+.hero#topo .microbullets--icons .mbi svg{
+  width: 16px;
+  height: 16px;
+  margin-right: 9px;
+}
+
+.hero#topo .hero-form.card{
+  width: 100%;
+  max-width: 430px;
+  justify-self: end;
+  padding: 24px 28px 26px !important;
+  border-radius: 16px;
+  box-shadow:
+    0 18px 42px rgba(23, 18, 28, .18),
+    0 2px 10px rgba(0, 0, 0, .05);
+}
+
+.hero#topo .hero-form h3{
+  font-size: 1rem !important;
+  line-height: 1.25;
+  font-weight: 650 !important;
+  margin-bottom: 14px !important;
+  color: var(--brand-1);
+}
+
+.hero#topo .form{
+  gap: 14px;
+}
+
+.hero#topo .form label span{
+  font-size: .98rem;
+  margin-bottom: 7px;
+}
+
+.hero#topo .form input{
+  min-height: 50px;
+  padding: 13px 16px;
+  border-radius: 12px;
+}
+
+.hero#topo .hero-form .btn{
+  margin-top: 4px;
+  min-height: 52px;
+  width: 100%;
+  border-radius: 999px;
+  letter-spacing: .05em;
+}
+
+@media (min-width: 1440px){
+  .hero#topo > .container.hero-grid{
+    max-width: 1240px;
+  }
+}
+
+@media (max-width: 980px){
+  .hero#topo{
+    padding: 42px 0 44px !important;
+  }
+
+  .hero#topo > .container.hero-grid{
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+
+  .hero#topo .hero-copy,
+  .hero#topo h1,
+  .hero#topo .subtitle,
+  .hero#topo .microbullets{
+    max-width: 720px;
+  }
+
+  .hero#topo .hero-form.card{
+    justify-self: start;
+    max-width: 520px;
+  }
+}
+
+@media (max-width: 620px){
+  .hero#topo{
+    padding: 32px 0 36px !important;
+    min-height: auto;
+  }
+
+  .hero#topo > .container.hero-grid{
+    padding-inline: 22px;
+  }
+
+  .hero#topo h1{
+    font-size: clamp(1.75rem, 8vw, 2.25rem) !important;
+    line-height: 1.14 !important;
+  }
+
+  .hero#topo .hero-form.card{
+    padding: 20px !important;
+  }
+}
+
+
+/* =========================================================
+   V30 — HERO: largura do título igual ao Figma
+   Ajuste fino somente no bloco de texto do hero.
+   ========================================================= */
+.hero#topo > .container.hero-grid{
+  max-width: 1220px;
+  grid-template-columns: minmax(0, 1.18fr) minmax(360px, 430px);
+  gap: clamp(44px, 5.5vw, 82px);
+}
+
+.hero#topo .hero-copy{
+  max-width: 760px;
+}
+
+.hero#topo h1{
+  max-width: 760px !important;
+  font-size: clamp(2.05rem, 2.72vw, 2.75rem) !important;
+  line-height: 1.14 !important;
+  letter-spacing: -0.028em !important;
+  text-wrap: balance;
+}
+
+.hero#topo .subtitle,
+.hero#topo .microbullets{
+  max-width: 650px !important;
+}
+
+@media (min-width: 1280px){
+  .hero#topo h1{
+    width: 760px;
+  }
+}
+
+@media (max-width: 980px){
+  .hero#topo h1{
+    width: auto;
+    max-width: 720px !important;
+  }
+}
+
+@media (max-width: 620px){
+  .hero#topo h1{
+    max-width: 100% !important;
+    font-size: clamp(1.75rem, 8vw, 2.25rem) !important;
+  }
+}
+
+/* =========================================================
+   V47 — FIX MOBILE HERO INDEX
+   Corrige o hero quebrado no celular após remover o pin mobile
+   da section atendimento. Não afeta desktop nem atendimento-pin.
+   ========================================================= */
+@media (max-width: 700px){
+  body:not(.page-service) #topo.hero{
+    min-height: auto !important;
+    height: auto !important;
+    padding: 34px 0 28px !important;
+    overflow: hidden !important;
+    background-position: center center !important;
+  }
+
+  body:not(.page-service) #topo.hero > .container.hero-grid{
+    width: 100% !important;
+    max-width: none !important;
+    padding-inline: 20px !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: stretch !important;
+    justify-content: flex-start !important;
+    gap: 22px !important;
+    grid-template-columns: none !important;
+  }
+
+  body:not(.page-service) #topo.hero .hero-copy{
+    order: 1 !important;
+    position: relative !important;
+    z-index: 2 !important;
+    width: 100% !important;
+    max-width: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    transform: none !important;
+  }
+
+  body:not(.page-service) #topo.hero h1{
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 0 12px !important;
+    font-size: clamp(2rem, 9.2vw, 2.55rem) !important;
+    line-height: 1.08 !important;
+    letter-spacing: -0.03em !important;
+    font-weight: 650 !important;
+    text-wrap: balance;
+    overflow-wrap: normal !important;
+    word-break: normal !important;
+  }
+
+  body:not(.page-service) #topo.hero .subtitle{
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 0 14px !important;
+    font-size: .98rem !important;
+    line-height: 1.45 !important;
+  }
+
+  body:not(.page-service) #topo.hero .microbullets{
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 12px 0 0 !important;
+    display: grid !important;
+    gap: 8px !important;
+  }
+
+  body:not(.page-service) #topo.hero .microbullets--icons .mbi{
+    display: grid !important;
+    grid-template-columns: 18px 1fr !important;
+    align-items: start !important;
+    gap: 8px !important;
+    font-size: .94rem !important;
+    line-height: 1.3 !important;
+  }
+
+  body:not(.page-service) #topo.hero .microbullets--icons .mbi svg{
+    width: 16px !important;
+    height: 16px !important;
+    margin: 2px 0 0 !important;
+  }
+
+  body:not(.page-service) #topo.hero .hero-form.card{
+    order: 2 !important;
+    position: relative !important;
+    inset: auto !important;
+    z-index: 3 !important;
+    width: 100% !important;
+    max-width: none !important;
+    margin: 0 !important;
+    padding: 20px !important;
+    justify-self: auto !important;
+    align-self: stretch !important;
+    transform: none !important;
+    border-radius: 16px !important;
+  }
+
+  body:not(.page-service) #topo.hero .hero-form h3{
+    font-size: 1rem !important;
+    margin: 0 0 14px !important;
+  }
+
+  body:not(.page-service) #topo.hero .form{
+    gap: 12px !important;
+  }
+
+  body:not(.page-service) #topo.hero .form input{
+    min-height: 48px !important;
+    font-size: .95rem !important;
+  }
+
+  body:not(.page-service) #topo.hero .hero-form .btn{
+    min-height: 50px !important;
+    margin-top: 2px !important;
+  }
+}
+
+@media (max-width: 420px){
+  body:not(.page-service) #topo.hero > .container.hero-grid{
+    padding-inline: 18px !important;
+  }
+
+  body:not(.page-service) #topo.hero h1{
+    font-size: clamp(1.85rem, 8.6vw, 2.25rem) !important;
+  }
+}

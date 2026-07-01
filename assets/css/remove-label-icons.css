@@ -1,0 +1,39 @@
+/* =====================================================
+   V60 — remove ícones/pontos decorativos dos labels
+   Pedido do cliente: retirar os ícones das chamadas pequenas
+   em todas as páginas, sem alterar listas, botões ou animações.
+===================================================== */
+
+.service-eyebrow::before,
+.service-section-label::before,
+.atendimento-pin__kicker::before,
+.atendimento-panel__eyebrow::before,
+.demandas-slider__eyebrow::before,
+.demandas-slider__right-kicker::before,
+.identificacao-kicker::before,
+.how-service__eyebrow::before,
+.section-kicker::before,
+.eyebrow::before,
+.kicker::before,
+.badge::before,
+.tag::before {
+  content: none !important;
+  display: none !important;
+}
+
+/* Evita sobra visual onde o ponto era usado como primeiro item flex */
+.service-eyebrow,
+.service-section-label,
+.atendimento-pin__kicker,
+.atendimento-panel__eyebrow,
+.demandas-slider__eyebrow,
+.demandas-slider__right-kicker,
+.identificacao-kicker,
+.how-service__eyebrow,
+.section-kicker,
+.eyebrow,
+.kicker,
+.badge,
+.tag {
+  gap: 0 !important;
+}
