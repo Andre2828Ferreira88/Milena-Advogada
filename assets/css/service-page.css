@@ -1485,3 +1485,187 @@ body.page-service--trabalhista .service-case-card {
     padding-right: 24px !important;
   }
 }
+
+/* =========================================================
+   V77 — Ajustes conforme PDF do cliente (somente Trabalhista)
+   1) Mais leitura no hero
+   2) Texto explicativo do hero convertido em bullets
+   3) Situações aparentes em grade, sem precisar arrastar
+   4) Formatos de atendimento mais direto, apenas com os cards
+   ========================================================= */
+
+body.page-service--trabalhista .service-hero .hero-copy h1,
+body.page-service--trabalhista .service-hero .hero-copy .subtitle,
+body.page-service--trabalhista .service-hero .microbullets .mbi {
+  text-shadow:
+    0 2px 12px rgba(0, 0, 0, 0.42),
+    0 12px 42px rgba(30, 12, 28, 0.34) !important;
+}
+
+body.page-service--trabalhista .service-hero .hero-copy .subtitle {
+  font-weight: 540 !important;
+  color: rgba(255,255,255,0.96) !important;
+}
+
+body.page-service--trabalhista .service-hero .service-hero__bullet-list {
+  display: grid !important;
+  grid-template-columns: repeat(2, minmax(240px, 1fr)) !important;
+  column-gap: 22px !important;
+  row-gap: 7px !important;
+  max-width: 780px !important;
+  margin-top: 14px !important;
+}
+
+body.page-service--trabalhista .service-hero .service-hero__bullet-list .mbi {
+  max-width: none !important;
+  width: 100% !important;
+  font-weight: 650 !important;
+}
+
+body.page-service--trabalhista #identificacao.service-intro--carousel .service-cases {
+  width: min(100% - clamp(40px, 7vw, 140px), 1480px) !important;
+  max-width: 1480px !important;
+  margin: 0 auto !important;
+  padding: 0 !important;
+}
+
+body.page-service--trabalhista #identificacao.service-intro--carousel .service-cases::before,
+body.page-service--trabalhista #identificacao.service-intro--carousel .service-cases::after {
+  content: none !important;
+  display: none !important;
+}
+
+body.page-service--trabalhista #identificacao.service-intro--carousel .service-cases__controls {
+  display: none !important;
+}
+
+body.page-service--trabalhista #identificacao.service-intro--carousel .service-cases__top {
+  width: 100% !important;
+  max-width: none !important;
+  padding-inline: 0 !important;
+  margin: 0 0 18px !important;
+}
+
+body.page-service--trabalhista #identificacao.service-intro--carousel .service-cases__viewport {
+  display: grid !important;
+  grid-template-columns: repeat(5, minmax(0, 1fr)) !important;
+  grid-auto-flow: row !important;
+  grid-auto-columns: unset !important;
+  gap: 16px !important;
+  width: 100% !important;
+  max-width: none !important;
+  overflow: visible !important;
+  padding: 0 !important;
+  scroll-snap-type: none !important;
+  cursor: default !important;
+  user-select: auto !important;
+}
+
+body.page-service--trabalhista #identificacao.service-intro--carousel .service-case-card {
+  min-height: 206px !important;
+  width: auto !important;
+  scroll-snap-align: none !important;
+}
+
+body.page-service--trabalhista #identificacao.service-intro--carousel .service-case-card p {
+  max-width: none !important;
+}
+
+body.page-service--trabalhista #atendimento.atendimento-formats--compact-only {
+  padding-block: clamp(58px, 7vw, 92px) !important;
+}
+
+body.page-service--trabalhista #atendimento.atendimento-formats--compact-only .atendimento-formats__wrap {
+  display: block !important;
+  width: min(100% - clamp(40px, 7vw, 140px), 1180px) !important;
+  max-width: 1180px !important;
+  margin-inline: auto !important;
+}
+
+body.page-service--trabalhista #atendimento.atendimento-formats--compact-only .atendimento-formats__cards {
+  display: grid !important;
+  grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  gap: clamp(20px, 3vw, 34px) !important;
+  max-width: 980px !important;
+  margin-inline: auto !important;
+}
+
+body.page-service--trabalhista #atendimento.atendimento-formats--compact-only .atendimento-format-card {
+  min-height: auto !important;
+  padding: clamp(28px, 3vw, 40px) !important;
+}
+
+@media (max-width: 1180px) {
+  body.page-service--trabalhista #identificacao.service-intro--carousel .service-cases__viewport {
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+  }
+}
+
+@media (max-width: 760px) {
+  body.page-service--trabalhista .service-hero .service-hero__bullet-list {
+    grid-template-columns: 1fr !important;
+  }
+
+  body.page-service--trabalhista #identificacao.service-intro--carousel .service-cases {
+    width: min(100% - 40px, 680px) !important;
+  }
+
+  body.page-service--trabalhista #identificacao.service-intro--carousel .service-cases__viewport {
+    grid-template-columns: 1fr !important;
+  }
+
+  body.page-service--trabalhista #atendimento.atendimento-formats--compact-only .atendimento-formats__wrap {
+    width: min(100% - 40px, 680px) !important;
+  }
+
+  body.page-service--trabalhista #atendimento.atendimento-formats--compact-only .atendimento-formats__cards {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+/* =========================================================
+   V78 — Reveal dos cards de formatos de atendimento
+   Apenas a section compacta da página trabalhista.
+   ========================================================= */
+body.page-service--trabalhista #atendimento.atendimento-formats--compact-only .atendimento-format-card {
+  will-change: transform, opacity;
+  backface-visibility: hidden;
+}
+
+body.page-service--trabalhista #atendimento.atendimento-formats--compact-only.is-reveal-ready .atendimento-format-card {
+  opacity: 0;
+  transition:
+    opacity .82s cubic-bezier(.22, 1, .36, 1),
+    transform .82s cubic-bezier(.22, 1, .36, 1),
+    box-shadow .28s ease,
+    border-color .28s ease;
+}
+
+body.page-service--trabalhista #atendimento.atendimento-formats--compact-only.is-reveal-ready .atendimento-format-card:nth-child(1) {
+  transform: translate3d(-74px, 18px, 0);
+}
+
+body.page-service--trabalhista #atendimento.atendimento-formats--compact-only.is-reveal-ready .atendimento-format-card:nth-child(2) {
+  transform: translate3d(74px, 18px, 0);
+  transition-delay: .08s;
+}
+
+body.page-service--trabalhista #atendimento.atendimento-formats--compact-only.is-revealed .atendimento-format-card {
+  opacity: 1;
+  transform: translate3d(0, 0, 0) !important;
+}
+
+@media (max-width: 760px) {
+  body.page-service--trabalhista #atendimento.atendimento-formats--compact-only.is-reveal-ready .atendimento-format-card:nth-child(1),
+  body.page-service--trabalhista #atendimento.atendimento-formats--compact-only.is-reveal-ready .atendimento-format-card:nth-child(2) {
+    transform: translate3d(0, 34px, 0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  body.page-service--trabalhista #atendimento.atendimento-formats--compact-only .atendimento-format-card {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+}
