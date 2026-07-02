@@ -1074,3 +1074,126 @@
     margin-top: 24px;
   }
 }
+
+
+/* =========================================================
+   V85 — Demandas: mini cards sempre lado a lado no desktop
+   Mantém texto e estrutura; ajusta apenas os 3 pills.
+   ========================================================= */
+#demandas .demandas-slider__mini-list{
+  display: grid !important;
+  grid-template-columns: repeat(3, max-content) !important;
+  justify-content: start !important;
+  align-items: center !important;
+  gap: 10px !important;
+  width: 100% !important;
+  max-width: none !important;
+  overflow: visible !important;
+}
+
+#demandas .demandas-slider__mini-list li{
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  white-space: nowrap !important;
+  width: auto !important;
+  min-width: 0 !important;
+  max-width: none !important;
+}
+
+@media (max-width: 760px){
+  #demandas .demandas-slider__mini-list{
+    grid-template-columns: 1fr !important;
+    gap: 8px !important;
+  }
+
+  #demandas .demandas-slider__mini-list li{
+    justify-content: flex-start !important;
+    white-space: normal !important;
+  }
+}
+
+/* =========================================================
+   V86 — Demandas: pills dentro do card + slide sem cortar número
+   Ajusta apenas a section demandas-slider.
+   ========================================================= */
+#demandas .demandas-slider__right-inner{
+  overflow: hidden !important;
+}
+
+#demandas .demandas-slider__mini-list{
+  display: grid !important;
+  grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+  width: 100% !important;
+  max-width: 100% !important;
+  min-width: 0 !important;
+  gap: 8px !important;
+  align-items: stretch !important;
+  justify-content: stretch !important;
+  overflow: hidden !important;
+}
+
+#demandas .demandas-slider__mini-list li{
+  width: 100% !important;
+  min-width: 0 !important;
+  max-width: 100% !important;
+  padding: 8px 10px !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  text-align: center !important;
+  white-space: normal !important;
+  line-height: 1.15 !important;
+  font-size: clamp(.62rem, .68vw, .72rem) !important;
+  overflow-wrap: normal !important;
+}
+
+#demandas .demandas-slider__viewport{
+  min-height: clamp(335px, 36vh, 430px) !important;
+  overflow: visible !important;
+}
+
+#demandas .demandas-slide{
+  padding-top: 18px !important;
+  padding-bottom: 18px !important;
+  justify-content: center !important;
+}
+
+#demandas .demandas-slide__number{
+  flex: 0 0 auto !important;
+  margin-top: 0 !important;
+  margin-bottom: 12px !important;
+}
+
+#demandas .demandas-slide h2{
+  flex: 0 0 auto !important;
+}
+
+@media (max-width: 1180px){
+  #demandas .demandas-slider__mini-list{
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+  }
+
+  #demandas .demandas-slider__mini-list li{
+    font-size: .66rem !important;
+    padding: 8px 9px !important;
+  }
+}
+
+@media (max-width: 760px){
+  #demandas .demandas-slider__mini-list{
+    grid-template-columns: 1fr !important;
+    overflow: visible !important;
+  }
+
+  #demandas .demandas-slider__mini-list li{
+    justify-content: flex-start !important;
+    text-align: left !important;
+    white-space: normal !important;
+    font-size: .72rem !important;
+  }
+
+  #demandas .demandas-slider__viewport{
+    min-height: 330px !important;
+  }
+}

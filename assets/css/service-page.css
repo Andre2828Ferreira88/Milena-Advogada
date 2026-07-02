@@ -160,6 +160,7 @@ body.page-service .service-case p {
   }
 }
 
+
 @media (max-width: 720px) {
   body.page-service .service-hero {
     min-height: auto;
@@ -1668,4 +1669,497 @@ body.page-service--trabalhista #atendimento.atendimento-formats--compact-only.is
     transform: none !important;
     transition: none !important;
   }
+}
+
+/* =========================================================
+   V81 — Atendimento formats: título central + CTA abaixo dos cards
+   Apenas página Trabalhista, sem alterar textos/estrutura externa.
+   ========================================================= */
+body.page-service--trabalhista #atendimento.atendimento-formats--compact-only .atendimento-formats__wrap{
+  display: grid !important;
+  grid-template-columns: 1fr !important;
+  justify-items: center !important;
+  gap: clamp(24px, 3.2vw, 42px) !important;
+}
+
+body.page-service--trabalhista #atendimento.atendimento-formats--compact-only .atendimento-formats__headline{
+  width: min(100%, 920px);
+  margin-inline: auto;
+  text-align: center;
+}
+
+body.page-service--trabalhista #atendimento.atendimento-formats--compact-only .atendimento-formats__headline h2{
+  margin: 0;
+  color: #10131a;
+  font-size: clamp(2rem, 3vw, 3.4rem);
+  line-height: 1.08;
+  font-weight: 650;
+  letter-spacing: -0.04em;
+  text-wrap: balance;
+}
+
+body.page-service--trabalhista #atendimento.atendimento-formats--compact-only .atendimento-formats__cards{
+  width: min(100%, 980px) !important;
+  margin-inline: auto !important;
+}
+
+body.page-service--trabalhista #atendimento.atendimento-formats--compact-only .atendimento-formats__cta{
+  width: min(100%, 720px);
+  margin: 2px auto 0;
+  display: flex;
+  justify-content: center;
+}
+
+body.page-service--trabalhista #atendimento.atendimento-formats--compact-only .atendimento-formats__primary{
+  position: relative;
+  isolation: isolate;
+  width: min(100%, 680px);
+  min-height: 64px;
+  padding: 18px 72px 18px 34px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  border-radius: 16px;
+  border: 1px solid rgba(157, 113, 38, .38);
+  background:
+    linear-gradient(135deg, #e3bd63 0%, #c99d3f 48%, #b98425 100%);
+  color: #fff;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: clamp(.78rem, .88vw, .94rem);
+  font-weight: 800;
+  letter-spacing: .045em;
+  line-height: 1.2;
+  box-shadow:
+    0 22px 52px rgba(150, 105, 31, .22),
+    inset 0 1px 0 rgba(255,255,255,.35);
+  overflow: hidden;
+  transition: transform .28s ease, box-shadow .28s ease, filter .28s ease;
+}
+
+body.page-service--trabalhista #atendimento.atendimento-formats--compact-only .atendimento-formats__primary::before{
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,.22), transparent);
+  transform: translateX(-120%);
+  transition: transform .65s ease;
+}
+
+body.page-service--trabalhista #atendimento.atendimento-formats--compact-only .atendimento-formats__primary i{
+  position: absolute;
+  right: 18px;
+  top: 50%;
+  width: 38px;
+  height: 38px;
+  transform: translateY(-50%);
+  display: grid;
+  place-items: center;
+  border-radius: 999px;
+  border: 1px solid rgba(255,255,255,.35);
+  background: rgba(255,255,255,.14);
+  font-style: normal;
+  font-size: 1.12rem;
+  line-height: 1;
+}
+
+body.page-service--trabalhista #atendimento.atendimento-formats--compact-only .atendimento-formats__primary:hover{
+  transform: translateY(-3px);
+  filter: saturate(1.04);
+  box-shadow:
+    0 28px 68px rgba(150, 105, 31, .28),
+    inset 0 1px 0 rgba(255,255,255,.42);
+}
+
+body.page-service--trabalhista #atendimento.atendimento-formats--compact-only .atendimento-formats__primary:hover::before{
+  transform: translateX(120%);
+}
+
+@media (max-width: 760px){
+  body.page-service--trabalhista #atendimento.atendimento-formats--compact-only .atendimento-formats__headline h2{
+    font-size: clamp(1.9rem, 8.5vw, 2.7rem);
+  }
+
+  body.page-service--trabalhista #atendimento.atendimento-formats--compact-only .atendimento-formats__primary{
+    min-height: 58px;
+    padding: 16px 62px 16px 22px;
+    border-radius: 14px;
+    font-size: .76rem;
+  }
+
+  body.page-service--trabalhista #atendimento.atendimento-formats--compact-only .atendimento-formats__primary i{
+    right: 14px;
+    width: 34px;
+    height: 34px;
+  }
+}
+
+
+/* =========================================================
+   V82 — Atendimento formats: título com peso/tamanho padrão
+   Mantém a section igual, ajustando apenas o título central.
+   ========================================================= */
+body.page-service--trabalhista #atendimento.atendimento-formats--compact-only .atendimento-formats__headline h2{
+  max-width: 980px !important;
+  font-size: clamp(2.15rem, 3.45vw, 4.35rem) !important;
+  line-height: 1.08 !important;
+  font-weight: 600 !important;
+  letter-spacing: -0.04em !important;
+  color: #10131a !important;
+}
+
+@media (max-width: 760px){
+  body.page-service--trabalhista #atendimento.atendimento-formats--compact-only .atendimento-formats__headline h2{
+    font-size: clamp(2.05rem, 8.2vw, 3rem) !important;
+    line-height: 1.08 !important;
+  }
+}
+/* =====================================================
+   AJUSTE FINO — TÍTULO DA SECTION ATENDIMENTO FORMATS
+   Reduz só o título "Sua empresa pode contar..."
+===================================================== */
+
+section.atendimento-formats.atendimento-formats--compact-only .atendimento-formats__title,
+section.atendimento-formats.atendimento-formats--compact-only h2 {
+  max-width: 580px !important;
+  font-size: clamp(2.1rem, 2.85vw, 3.55rem) !important;
+  line-height: 1.06 !important;
+  font-weight: 620 !important;
+  letter-spacing: -0.045em !important;
+  margin: 0 auto clamp(46px, 5vw, 72px) !important;
+}
+
+/* Mantém a barra dourada acompanhando o título */
+section.atendimento-formats.atendimento-formats--compact-only .atendimento-formats__title::before,
+section.atendimento-formats.atendimento-formats--compact-only h2::before {
+  height: calc(100% - 0.08em) !important;
+  top: 0.04em !important;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  section.atendimento-formats.atendimento-formats--compact-only .atendimento-formats__title,
+  section.atendimento-formats.atendimento-formats--compact-only h2 {
+    font-size: clamp(2rem, 8.8vw, 3rem) !important;
+    line-height: 1.08 !important;
+    max-width: 100% !important;
+    margin-bottom: 34px !important;
+  }
+}
+/* =====================================================
+   FIX FINAL — diminuir título do atendimento formats
+   Colocar no FINAL do service-page.css
+===================================================== */
+
+body.page-service--trabalhista section#atendimento.atendimento-formats.atendimento-formats--compact-only .atendimento-formats__headline {
+  width: min(100%, 760px) !important;
+  max-width: 760px !important;
+  margin: 0 auto clamp(26px, 3vw, 40px) !important;
+  text-align: center !important;
+}
+
+body.page-service--trabalhista section#atendimento.atendimento-formats.atendimento-formats--compact-only .atendimento-formats__headline h2 {
+  max-width: 760px !important;
+  margin: 0 auto !important;
+
+  font-size: clamp(1.9rem, 2.45vw, 2.85rem) !important;
+  line-height: 1.08 !important;
+  font-weight: 620 !important;
+  letter-spacing: -0.035em !important;
+
+  color: #10131a !important;
+  text-align: center !important;
+  text-wrap: balance !important;
+}
+
+/* remove a barra gigante desse título específico */
+body.page-service--trabalhista section#atendimento.atendimento-formats.atendimento-formats--compact-only .atendimento-formats__headline h2::before {
+  display: none !important;
+  content: none !important;
+}
+
+@media (max-width: 760px) {
+  body.page-service--trabalhista section#atendimento.atendimento-formats.atendimento-formats--compact-only .atendimento-formats__headline h2 {
+    font-size: clamp(1.75rem, 7.4vw, 2.45rem) !important;
+    line-height: 1.1 !important;
+  }
+}
+
+/* =====================================================
+   V83 — Subtítulo abaixo do título de formatos de atendimento
+   Escopo: somente Trabalhista.html / section atendimento-formats
+===================================================== */
+
+body.page-service--trabalhista section#atendimento.atendimento-formats.atendimento-formats--compact-only .atendimento-formats__subtitle {
+  max-width: 620px !important;
+  margin: 14px auto 0 !important;
+  color: rgba(17, 20, 28, 0.54) !important;
+  font-size: clamp(0.9rem, 0.95vw, 1rem) !important;
+  line-height: 1.55 !important;
+  font-weight: 400 !important;
+  letter-spacing: -0.01em !important;
+  text-align: center !important;
+}
+
+body.page-service--trabalhista section#atendimento.atendimento-formats.atendimento-formats--compact-only .atendimento-formats__headline {
+  margin-bottom: clamp(30px, 3.4vw, 46px) !important;
+}
+
+@media (max-width: 760px) {
+  body.page-service--trabalhista section#atendimento.atendimento-formats.atendimento-formats--compact-only .atendimento-formats__subtitle {
+    max-width: 34ch !important;
+    margin-top: 12px !important;
+    font-size: 0.9rem !important;
+    line-height: 1.5 !important;
+  }
+}
+
+
+/* =====================================================
+   V84 — Atendimento formats mais compacto
+   Reduz aproximadamente 20% da altura visual da section,
+   sem alterar textos, estrutura ou layout.
+===================================================== */
+
+body.page-service--trabalhista section#atendimento.atendimento-formats.atendimento-formats--compact-only {
+  padding-block: clamp(42px, 5.4vw, 72px) !important;
+}
+
+body.page-service--trabalhista section#atendimento.atendimento-formats.atendimento-formats--compact-only .atendimento-formats__wrap {
+  gap: clamp(18px, 2.4vw, 30px) !important;
+}
+
+body.page-service--trabalhista section#atendimento.atendimento-formats.atendimento-formats--compact-only .atendimento-formats__headline {
+  margin-bottom: clamp(20px, 2.4vw, 32px) !important;
+}
+
+body.page-service--trabalhista section#atendimento.atendimento-formats.atendimento-formats--compact-only .atendimento-formats__headline h2 {
+  line-height: 1.04 !important;
+}
+
+body.page-service--trabalhista section#atendimento.atendimento-formats.atendimento-formats--compact-only .atendimento-formats__subtitle {
+  margin-top: 10px !important;
+  line-height: 1.42 !important;
+}
+
+body.page-service--trabalhista section#atendimento.atendimento-formats.atendimento-formats--compact-only .atendimento-format-card {
+  padding: clamp(22px, 2.25vw, 32px) !important;
+}
+
+body.page-service--trabalhista section#atendimento.atendimento-formats.atendimento-formats--compact-only .atendimento-format-card p {
+  line-height: 1.48 !important;
+}
+
+body.page-service--trabalhista section#atendimento.atendimento-formats.atendimento-formats--compact-only .atendimento-formats__primary {
+  min-height: 56px !important;
+  padding-top: 15px !important;
+  padding-bottom: 15px !important;
+}
+
+@media (max-width: 760px) {
+  body.page-service--trabalhista section#atendimento.atendimento-formats.atendimento-formats--compact-only {
+    padding-block: 36px !important;
+  }
+
+  body.page-service--trabalhista section#atendimento.atendimento-formats.atendimento-formats--compact-only .atendimento-formats__wrap {
+    gap: 18px !important;
+  }
+
+  body.page-service--trabalhista section#atendimento.atendimento-formats.atendimento-formats--compact-only .atendimento-format-card {
+    padding: 22px 20px !important;
+  }
+}
+/* =====================================================
+   FIX — demandas-slider não cortar slides grandes
+   Corrige títulos longos e numeração cortada
+===================================================== */
+
+body.page-service--trabalhista #demandas.demandas-slider,
+body.page-service--trabalhista #demandas.demandas-slider .demandas-slider__inner,
+body.page-service--trabalhista #demandas.demandas-slider .demandas-slider__slides,
+body.page-service--trabalhista #demandas.demandas-slider .demandas-slide,
+body.page-service--trabalhista #demandas.demandas-slider .demandas-slide__content {
+  height: auto !important;
+  min-height: 0 !important;
+  max-height: none !important;
+  overflow: visible !important;
+}
+
+/* Dá mais respiro vertical para slides com título grande */
+body.page-service--trabalhista #demandas.demandas-slider .demandas-slide {
+  padding-top: clamp(42px, 5vw, 78px) !important;
+  padding-bottom: clamp(42px, 5vw, 78px) !important;
+}
+
+/* Garante espaço suficiente para título + texto + contador */
+body.page-service--trabalhista #demandas.demandas-slider .demandas-slide__content,
+body.page-service--trabalhista #demandas.demandas-slider .demandas-slide__body {
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: center !important;
+  min-height: clamp(520px, 52vw, 680px) !important;
+}
+
+/* Títulos longos não cortam mais */
+body.page-service--trabalhista #demandas.demandas-slider .demandas-slide__title,
+body.page-service--trabalhista #demandas.demandas-slider .demandas-slide h3 {
+  max-width: 760px !important;
+  overflow: visible !important;
+  text-wrap: balance !important;
+}
+
+/* Contador sempre fica visível */
+body.page-service--trabalhista #demandas.demandas-slider .demandas-slide__count,
+body.page-service--trabalhista #demandas.demandas-slider .demandas-slider__count,
+body.page-service--trabalhista #demandas.demandas-slider .demandas-progress {
+  position: relative !important;
+  z-index: 5 !important;
+  margin-top: clamp(20px, 2vw, 30px) !important;
+  overflow: visible !important;
+}
+
+/* Se algum wrapper estiver prendendo a altura, libera também */
+body.page-service--trabalhista #demandas.demandas-slider [class*="slide"],
+body.page-service--trabalhista #demandas.demandas-slider [class*="track"],
+body.page-service--trabalhista #demandas.demandas-slider [class*="viewport"] {
+  max-height: none !important;
+  overflow: visible !important;
+}
+
+/* Mobile */
+@media (max-width: 760px) {
+  body.page-service--trabalhista #demandas.demandas-slider .demandas-slide__content,
+  body.page-service--trabalhista #demandas.demandas-slider .demandas-slide__body {
+    min-height: auto !important;
+  }
+
+  body.page-service--trabalhista #demandas.demandas-slider .demandas-slide {
+    padding-top: 38px !important;
+    padding-bottom: 42px !important;
+  }
+}
+/* =====================================================
+   FIX REAL — afinar os 3 cardzinhos da section demandas
+   Força todos os links/spans/badges do resumo esquerdo
+===================================================== */
+
+body.page-service--trabalhista section#demandas.demandas-slider .demandas-summary a,
+body.page-service--trabalhista section#demandas.demandas-slider .demandas-summary span,
+body.page-service--trabalhista section#demandas.demandas-slider .demandas-summary li,
+body.page-service--trabalhista section#demandas.demandas-slider .demandas-info a,
+body.page-service--trabalhista section#demandas.demandas-slider .demandas-info span,
+body.page-service--trabalhista section#demandas.demandas-slider .demandas-info li,
+body.page-service--trabalhista section#demandas.demandas-slider [class*="tag"],
+body.page-service--trabalhista section#demandas.demandas-slider [class*="pill"],
+body.page-service--trabalhista section#demandas.demandas-slider [class*="badge"] {
+  min-height: 0 !important;
+  height: auto !important;
+  padding-top: 5px !important;
+  padding-bottom: 5px !important;
+  padding-left: 18px !important;
+  padding-right: 18px !important;
+
+  line-height: 1.05 !important;
+  font-size: 0.78rem !important;
+  font-weight: 650 !important;
+}
+
+/* Caso os 3 itens estejam dentro de uma lista/flex/grid */
+body.page-service--trabalhista section#demandas.demandas-slider .demandas-summary ul,
+body.page-service--trabalhista section#demandas.demandas-slider .demandas-summary__tags,
+body.page-service--trabalhista section#demandas.demandas-slider .demandas-tags,
+body.page-service--trabalhista section#demandas.demandas-slider .demandas-pills,
+body.page-service--trabalhista section#demandas.demandas-slider [class*="tags"],
+body.page-service--trabalhista section#demandas.demandas-slider [class*="pills"] {
+  display: flex !important;
+  align-items: center !important;
+  gap: 9px !important;
+  flex-wrap: nowrap !important;
+}
+
+/* Se o texto interno estiver forçando altura */
+body.page-service--trabalhista section#demandas.demandas-slider [class*="tag"] *,
+body.page-service--trabalhista section#demandas.demandas-slider [class*="pill"] *,
+body.page-service--trabalhista section#demandas.demandas-slider [class*="badge"] * {
+  line-height: 1.05 !important;
+  margin: 0 !important;
+}
+body.page-service--trabalhista section#demandas.demandas-slider [class*="tag"],
+body.page-service--trabalhista section#demandas.demandas-slider [class*="pill"],
+body.page-service--trabalhista section#demandas.demandas-slider [class*="badge"] {
+  padding: 4px 16px !important;
+  font-size: 0.74rem !important;
+  line-height: 1 !important;
+}
+/* =====================================================
+   FIX FINAL — Authority stats / Brasil com 3 linhas
+   Deixa BRASIL alinhado e compacto como os outros números
+===================================================== */
+
+.section.authority.alt-soft .authority-stats,
+.section.authority.alt-soft .authority-metrics,
+.section.authority.alt-soft .authority-numbers,
+.section.authority.alt-soft [class*="stat"],
+.section.authority.alt-soft [class*="metric"] {
+  align-items: flex-start !important;
+}
+
+/* força todos os blocos de número a terem o mesmo comportamento */
+.section.authority.alt-soft .authority-stats > *,
+.section.authority.alt-soft .authority-metrics > *,
+.section.authority.alt-soft .authority-numbers > * {
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: flex-start !important;
+  gap: 0 !important;
+}
+
+/* número principal: 10+, 5+, BRASIL */
+.section.authority.alt-soft .authority-stats > * > strong,
+.section.authority.alt-soft .authority-metrics > * > strong,
+.section.authority.alt-soft .authority-numbers > * > strong,
+.section.authority.alt-soft .authority-stats > * > b,
+.section.authority.alt-soft .authority-metrics > * > b,
+.section.authority.alt-soft .authority-numbers > * > b {
+  display: block !important;
+  margin: 0 0 14px !important;
+  line-height: 0.9 !important;
+}
+
+/* texto de baixo */
+.section.authority.alt-soft .authority-stats > * > span,
+.section.authority.alt-soft .authority-metrics > * > span,
+.section.authority.alt-soft .authority-numbers > * > span {
+  display: block !important;
+  margin: 0 !important;
+  line-height: 1.05 !important;
+  letter-spacing: 0.09em !important;
+}
+
+/* ajuste específico do terceiro bloco */
+.section.authority.alt-soft .authority-stats > *:nth-child(3) > strong,
+.section.authority.alt-soft .authority-metrics > *:nth-child(3) > strong,
+.section.authority.alt-soft .authority-numbers > *:nth-child(3) > strong,
+.section.authority.alt-soft .authority-stats > *:nth-child(3) > b,
+.section.authority.alt-soft .authority-metrics > *:nth-child(3) > b,
+.section.authority.alt-soft .authority-numbers > *:nth-child(3) > b {
+  margin-bottom: 10px !important;
+  line-height: 0.86 !important;
+}
+
+.section.authority.alt-soft .authority-stats > *:nth-child(3) > span,
+.section.authority.alt-soft .authority-metrics > *:nth-child(3) > span,
+.section.authority.alt-soft .authority-numbers > *:nth-child(3) > span {
+  max-width: 150px !important;
+  line-height: 1.02 !important;
+  margin-top: 0 !important;
+}
+
+/* linha dourada de baixo mais próxima */
+.section.authority.alt-soft .authority-stats > *::after,
+.section.authority.alt-soft .authority-metrics > *::after,
+.section.authority.alt-soft .authority-numbers > *::after {
+  margin-top: 14px !important;
 }
