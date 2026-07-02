@@ -2163,3 +2163,78 @@ body.page-service--trabalhista section#demandas.demandas-slider [class*="badge"]
 .section.authority.alt-soft .authority-numbers > *::after {
   margin-top: 14px !important;
 }
+.how-service__benefits {
+  border: none !important;
+  box-shadow: none !important;
+  background: rgba(255, 255, 255, 0.22) !important;
+  backdrop-filter: blur(4px);
+}
+
+.how-service__benefits::before,
+.how-service__benefits::after {
+  display: none !important;
+  content: none !important;
+}
+/* =====================================================
+   V95 — Hero Trabalhista: checkins iguais à referência
+   Mantém apenas os 3 itens em coluna, cada um em uma linha.
+===================================================== */
+body.page-service--trabalhista .service-hero .service-hero__bullet-list,
+body.page-service--trabalhista .service-hero .microbullets.service-hero__bullet-list,
+body.page-service--trabalhista .service-hero .microbullets--icons.service-hero__bullet-list {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: flex-start !important;
+  justify-content: flex-start !important;
+  flex-wrap: nowrap !important;
+  grid-template-columns: none !important;
+  gap: 7px !important;
+  max-width: 720px !important;
+  width: fit-content !important;
+  margin-top: 14px !important;
+}
+
+body.page-service--trabalhista .service-hero .service-hero__bullet-list .mbi,
+body.page-service--trabalhista .service-hero .microbullets.service-hero__bullet-list .mbi,
+body.page-service--trabalhista .service-hero .microbullets--icons.service-hero__bullet-list .mbi {
+  display: inline-grid !important;
+  grid-template-columns: 16px max-content !important;
+  align-items: center !important;
+  gap: 10px !important;
+  width: auto !important;
+  max-width: none !important;
+  white-space: nowrap !important;
+  font-size: clamp(0.88rem, 0.98vw, 1rem) !important;
+  line-height: 1.15 !important;
+  font-weight: 700 !important;
+  color: #fff !important;
+  text-shadow: 0 1px 14px rgba(0, 0, 0, 0.34) !important;
+}
+
+body.page-service--trabalhista .service-hero .service-hero__bullet-list .mbi svg,
+body.page-service--trabalhista .service-hero .microbullets.service-hero__bullet-list .mbi svg,
+body.page-service--trabalhista .service-hero .microbullets--icons.service-hero__bullet-list .mbi svg {
+  width: 13px !important;
+  height: 13px !important;
+  margin: 0 !important;
+  opacity: 0.96 !important;
+}
+
+@media (max-width: 760px) {
+  body.page-service--trabalhista .service-hero .service-hero__bullet-list,
+  body.page-service--trabalhista .service-hero .microbullets.service-hero__bullet-list,
+  body.page-service--trabalhista .service-hero .microbullets--icons.service-hero__bullet-list {
+    width: 100% !important;
+    max-width: 100% !important;
+    gap: 8px !important;
+  }
+
+  body.page-service--trabalhista .service-hero .service-hero__bullet-list .mbi,
+  body.page-service--trabalhista .service-hero .microbullets.service-hero__bullet-list .mbi,
+  body.page-service--trabalhista .service-hero .microbullets--icons.service-hero__bullet-list .mbi {
+    grid-template-columns: 15px minmax(0, 1fr) !important;
+    white-space: normal !important;
+    font-size: 0.88rem !important;
+    line-height: 1.22 !important;
+  }
+}
