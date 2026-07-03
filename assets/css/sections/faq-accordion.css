@@ -127,9 +127,11 @@
 }
 
 #faq .faq-answer {
+  display: block !important;
   overflow: hidden !important;
   max-height: 0 !important;
   opacity: 0 !important;
+  visibility: hidden !important;
   transform: translateY(-6px) !important;
   transition:
     max-height .34s ease,
@@ -138,12 +140,15 @@
 }
 
 #faq .faq-item.is-open .faq-answer {
+  max-height: var(--faq-answer-height, 620px) !important;
   opacity: 1 !important;
+  visibility: visible !important;
   transform: translateY(0) !important;
 }
 
 #faq .faq-answer p,
 #faq .faq-item > p {
+  display: block !important;
   margin: 0 !important;
   padding: 0 24px 24px !important;
   color: rgba(31, 28, 33, 0.72) !important;
@@ -189,4 +194,27 @@
     font-size: .9rem !important;
     line-height: 1.62 !important;
   }
+}
+
+
+/* =========================================================
+   FAQ V100 — resposta visível ao abrir
+   Corrige conflito de max-height com !important.
+   ========================================================= */
+#faq.faq-ready .faq-item.is-open .faq-answer {
+  max-height: var(--faq-answer-height, 640px) !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+  transform: translateY(0) !important;
+}
+
+#faq.faq-ready .faq-item:not(.is-open) .faq-answer {
+  max-height: 0 !important;
+  opacity: 0 !important;
+  visibility: hidden !important;
+}
+
+#faq.faq-ready .faq-answer p {
+  display: block !important;
+  visibility: visible !important;
 }

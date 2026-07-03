@@ -19,7 +19,8 @@
         if (item.dataset.faqReady === 'true') {
           const answerReady = item.querySelector('.faq-answer');
           if (answerReady && !item.classList.contains('is-open')) {
-            answerReady.style.maxHeight = '0px';
+            answerReady.style.setProperty('max-height', '0px', 'important');
+            answerReady.style.setProperty('--faq-answer-height', '0px');
           }
           return;
         }
@@ -64,7 +65,8 @@
         title.textContent = '';
         title.appendChild(button);
 
-        answerWrap.style.maxHeight = '0px';
+        answerWrap.style.setProperty('max-height', '0px', 'important');
+        answerWrap.style.setProperty('--faq-answer-height', '0px');
 
         button.addEventListener('click', () => {
           const isOpen = item.classList.contains('is-open');
@@ -77,19 +79,25 @@
 
             other.classList.remove('is-open');
 
-            if (otherAnswer) otherAnswer.style.maxHeight = '0px';
+            if (otherAnswer) {
+              otherAnswer.style.setProperty('max-height', '0px', 'important');
+              otherAnswer.style.setProperty('--faq-answer-height', '0px');
+            }
             if (otherButton) otherButton.setAttribute('aria-expanded', 'false');
           });
 
           if (isOpen) {
             item.classList.remove('is-open');
-            answerWrap.style.maxHeight = '0px';
+            answerWrap.style.setProperty('max-height', '0px', 'important');
+        answerWrap.style.setProperty('--faq-answer-height', '0px');
             button.setAttribute('aria-expanded', 'false');
             return;
           }
 
           item.classList.add('is-open');
-          answerWrap.style.maxHeight = `${answerWrap.scrollHeight}px`;
+          const answerHeight = `${answerWrap.scrollHeight}px`;
+          answerWrap.style.setProperty('--faq-answer-height', answerHeight);
+          answerWrap.style.setProperty('max-height', answerHeight, 'important');
           button.setAttribute('aria-expanded', 'true');
         });
       });
@@ -98,7 +106,9 @@
 
   function refreshOpenAnswers() {
     document.querySelectorAll('#faq .faq-item.is-open .faq-answer').forEach((answer) => {
-      answer.style.maxHeight = `${answer.scrollHeight}px`;
+      const answerHeight = `${answer.scrollHeight}px`;
+      answer.style.setProperty('--faq-answer-height', answerHeight);
+      answer.style.setProperty('max-height', answerHeight, 'important');
     });
   }
 
