@@ -542,3 +542,51 @@ body.page-service--trabalhista #atendimento.atendimento-formats.atendimento-form
   display: none !important;
   content: none !important;
 }
+
+/* =====================================================
+   V99 — Authority mobile: BRASIL maior e centralizado
+   Escopo: somente indicadores da section da advogada no mobile
+===================================================== */
+@media (max-width: 700px){
+  #sobre.section.authority .authority-stats--premium .stat-item.stat-item--brasil{
+    align-items: center !important;
+    justify-content: flex-start !important;
+    text-align: center !important;
+    padding-left: 8px !important;
+    padding-right: 0 !important;
+  }
+
+  #sobre.section.authority .authority-stats--premium .stat-item.stat-item--brasil .stat-value{
+    width: 100% !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: flex-start !important;
+    margin: 0 0 5px !important;
+    line-height: .9 !important;
+  }
+
+  #sobre.section.authority .authority-stats--premium .stat-item.stat-item--brasil .stat-num--text{
+    display: block !important;
+    font-size: clamp(1.52rem, 6.2vw, 1.95rem) !important;
+    line-height: .9 !important;
+    font-weight: 700 !important;
+    letter-spacing: -0.055em !important;
+    color: #caa24d !important;
+    text-align: center !important;
+    transform: translateX(-1px) scaleX(.96) !important;
+    transform-origin: center !important;
+  }
+
+  #sobre.section.authority .authority-stats--premium .stat-item.stat-item--brasil .stat-label{
+    width: 100% !important;
+    max-width: 104px !important;
+    margin: 0 auto !important;
+    text-align: center !important;
+    line-height: 1.02 !important;
+    letter-spacing: .064em !important;
+  }
+
+  #sobre.section.authority .authority-stats--premium .stat-item.stat-item--brasil .stat-line{
+    margin: 5px auto 0 !important;
+  }
+}
