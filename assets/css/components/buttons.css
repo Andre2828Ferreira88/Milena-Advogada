@@ -298,3 +298,80 @@
       inset 0 1px 0 rgba(255,255,255,.30) !important;
   }
 }
+
+/* =========================================================
+   V105 — Header CTA institucional em roxo
+   Ajuste para deixar o botão evidente sem aparência artificial.
+   ========================================================= */
+.site-header .nav-cta,
+header.site-header .nav-cta {
+  position: relative !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  min-height: 46px !important;
+  padding: 12px 24px !important;
+  border-radius: 999px !important;
+  border: 1px solid rgba(91, 44, 85, .82) !important;
+  background:
+    linear-gradient(135deg, #5b2c55 0%, #6a3564 52%, #4b2146 100%) !important;
+  color: #fff !important;
+  font-weight: 650 !important;
+  letter-spacing: -0.01em !important;
+  box-shadow:
+    0 12px 26px rgba(91, 44, 85, .16),
+    0 2px 8px rgba(33, 18, 31, .08),
+    inset 0 1px 0 rgba(255, 255, 255, .12) !important;
+  overflow: hidden !important;
+  transform: translateZ(0);
+  transition:
+    transform .22s ease,
+    box-shadow .22s ease,
+    border-color .22s ease,
+    background .22s ease !important;
+}
+
+.site-header .nav-cta::before,
+header.site-header .nav-cta::before {
+  content: "";
+  position: absolute;
+  inset: 1px;
+  border-radius: inherit;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, .12), transparent 48%),
+    radial-gradient(circle at 18% 0%, rgba(255, 255, 255, .16), transparent 30%);
+  opacity: .68;
+  pointer-events: none;
+}
+
+.site-header .nav-cta::after,
+header.site-header .nav-cta::after {
+  content: "";
+  position: absolute;
+  left: 22px;
+  right: 22px;
+  bottom: 8px;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(205, 169, 85, .84), transparent);
+  opacity: .64;
+  pointer-events: none;
+}
+
+.site-header .nav-cta:hover,
+header.site-header .nav-cta:hover {
+  color: #fff !important;
+  border-color: rgba(205, 169, 85, .62) !important;
+  background:
+    linear-gradient(135deg, #62305c 0%, #743a6d 50%, #51234b 100%) !important;
+  box-shadow:
+    0 16px 34px rgba(91, 44, 85, .22),
+    0 4px 14px rgba(33, 18, 31, .10),
+    inset 0 1px 0 rgba(255, 255, 255, .14) !important;
+  transform: translateY(-1px) !important;
+}
+
+.site-header .nav-cta:focus-visible,
+header.site-header .nav-cta:focus-visible {
+  outline: 3px solid rgba(91, 44, 85, .22) !important;
+  outline-offset: 4px !important;
+}

@@ -590,3 +590,62 @@ body.page-service--trabalhista #atendimento.atendimento-formats.atendimento-form
     margin: 5px auto 0 !important;
   }
 }
+
+/* =====================================================
+   V106 — Demandas mobile: setas centralizadas abaixo do slide
+   Escopo: somente posição dos controles no mobile
+===================================================== */
+@media (max-width: 760px){
+  #demandas.demandas-slider .demandas-slider__left{
+    display: block !important;
+  }
+
+  #demandas.demandas-slider .demandas-slider__content{
+    width: min(100%, 390px) !important;
+    max-width: 390px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+
+  #demandas.demandas-slider .demandas-slider__controls{
+    position: relative !important;
+    inset: auto !important;
+    left: auto !important;
+    right: auto !important;
+    top: auto !important;
+    bottom: auto !important;
+    transform: none !important;
+
+    width: fit-content !important;
+    min-width: 0 !important;
+    height: auto !important;
+    margin: 20px auto 0 !important;
+    padding: 7px !important;
+
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 8px !important;
+
+    border-radius: 999px !important;
+    background: rgba(255,255,255,.90) !important;
+    border: 1px solid rgba(91,44,85,.10) !important;
+    box-shadow: 0 16px 36px rgba(34,18,31,.12) !important;
+    backdrop-filter: blur(10px) !important;
+  }
+
+  #demandas.demandas-slider .demandas-slider__arrow{
+    width: 38px !important;
+    height: 38px !important;
+    min-width: 38px !important;
+    min-height: 38px !important;
+    max-width: 38px !important;
+    max-height: 38px !important;
+    flex: 0 0 38px !important;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+}
