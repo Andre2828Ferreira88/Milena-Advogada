@@ -16,6 +16,14 @@
       faq.classList.add('faq-ready');
 
       items.forEach((item, index) => {
+        if (index > 3) {
+          item.classList.add('faq-item--extra');
+          item.setAttribute('aria-hidden', 'true');
+        } else {
+          item.classList.remove('faq-item--extra');
+          item.removeAttribute('aria-hidden');
+        }
+
         if (item.dataset.faqReady === 'true') {
           const answerReady = item.querySelector('.faq-answer');
           if (answerReady && !item.classList.contains('is-open')) {
@@ -101,6 +109,47 @@
           button.setAttribute('aria-expanded', 'true');
         });
       });
+
+      if (items.length > 4 && !faq.querySelector('.faq-more')) {
+        const list = faq.querySelector('.faq-list');
+        const moreWrap = document.createElement('div');
+        const moreButton = document.createElement('button');
+        const moreIcon = document.createElement('span');
+
+        moreWrap.className = 'faq-more reveal';
+        moreButton.type = 'button';
+        moreButton.className = 'faq-more__button';
+        moreButton.setAttribute('aria-expanded', 'false');
+        moreButton.textContent = 'Veja mais';
+        moreIcon.className = 'faq-more__icon';
+        moreIcon.setAttribute('aria-hidden', 'true');
+        moreButton.appendChild(moreIcon);
+        moreWrap.appendChild(moreButton);
+
+        if (list) list.insertAdjacentElement('afterend', moreWrap);
+
+        moreButton.addEventListener('click', () => {
+          const isExpanded = faq.classList.toggle('faq-show-all');
+          moreButton.setAttribute('aria-expanded', String(isExpanded));
+          moreButton.firstChild.nodeValue = isExpanded ? 'Ver menos' : 'Veja mais';
+
+          items.slice(4).forEach((extraItem) => {
+            if (isExpanded) {
+              extraItem.removeAttribute('aria-hidden');
+            } else {
+              extraItem.setAttribute('aria-hidden', 'true');
+              extraItem.classList.remove('is-open');
+              const answer = extraItem.querySelector('.faq-answer');
+              const trigger = extraItem.querySelector('.faq-trigger');
+              if (answer) {
+                answer.style.setProperty('max-height', '0px', 'important');
+                answer.style.setProperty('--faq-answer-height', '0px');
+              }
+              if (trigger) trigger.setAttribute('aria-expanded', 'false');
+            }
+          });
+        });
+      }
     });
   }
 

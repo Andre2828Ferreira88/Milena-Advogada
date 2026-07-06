@@ -2238,3 +2238,173 @@ body.page-service--trabalhista .service-hero .microbullets--icons.service-hero__
     line-height: 1.22 !important;
   }
 }
+/* =====================================================
+   V101 — ícones personalizados dos cards trabalhistas
+   Escopo: somente service-intro--carousel / situações atendidas
+===================================================== */
+body.page-service--trabalhista #identificacao.service-intro--carousel .service-case-card__icon--custom {
+  width: 52px !important;
+  height: 52px !important;
+  margin-bottom: 18px !important;
+  padding: 8px !important;
+  display: grid !important;
+  place-items: center !important;
+  border: 1px solid rgba(94, 43, 90, 0.14) !important;
+  background: rgba(255, 255, 255, 0.86) !important;
+  box-shadow: 0 12px 28px rgba(94, 43, 90, 0.055) !important;
+}
+
+body.page-service--trabalhista #identificacao.service-intro--carousel .service-case-card__icon--custom img {
+  display: block !important;
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: contain !important;
+}
+
+body.page-service--trabalhista #identificacao.service-intro--carousel .service-case-card__icon--custom svg {
+  display: none !important;
+}
+
+@media (max-width: 760px) {
+  body.page-service--trabalhista #identificacao.service-intro--carousel .service-case-card__icon--custom {
+    width: 48px !important;
+    height: 48px !important;
+    padding: 7px !important;
+  }
+}
+
+/* =====================================================
+   V102 — Mobile sliders para cards das sections
+   Escopo: somente Trabalhista / mobile
+   Sections:
+   1) service-intro--carousel
+   2) atendimento-formats--compact-only
+   Mantém textos, cards e desktop sem alteração.
+===================================================== */
+
+@media (max-width: 760px) {
+  /* Service intro: transforma a grade de cards em slider horizontal */
+  body.page-service--trabalhista #identificacao.service-intro--carousel .service-cases {
+    width: 100% !important;
+    max-width: none !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    padding-inline: 0 !important;
+    overflow: visible !important;
+  }
+
+  body.page-service--trabalhista #identificacao.service-intro--carousel .service-cases__top {
+    width: 100% !important;
+    padding-inline: 0 !important;
+    margin-bottom: 14px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    gap: 14px !important;
+  }
+
+  body.page-service--trabalhista #identificacao.service-intro--carousel .service-cases__controls {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: flex-end !important;
+    gap: 8px !important;
+    flex: 0 0 auto !important;
+  }
+
+  body.page-service--trabalhista #identificacao.service-intro--carousel .service-cases__btn {
+    width: 38px !important;
+    height: 38px !important;
+    min-width: 38px !important;
+  }
+
+  body.page-service--trabalhista #identificacao.service-intro--carousel .service-cases__viewport {
+    display: grid !important;
+    grid-auto-flow: column !important;
+    grid-template-columns: none !important;
+    grid-auto-columns: minmax(260px, 86vw) !important;
+    gap: 14px !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    overflow-x: auto !important;
+    overflow-y: hidden !important;
+    padding: 2px 0 16px !important;
+    scroll-snap-type: x mandatory !important;
+    scroll-padding-left: 0 !important;
+    overscroll-behavior-x: contain !important;
+    -webkit-overflow-scrolling: touch !important;
+    scrollbar-width: none !important;
+    cursor: grab !important;
+    user-select: none !important;
+    touch-action: pan-x pan-y !important;
+  }
+
+  body.page-service--trabalhista #identificacao.service-intro--carousel .service-cases__viewport::-webkit-scrollbar {
+    display: none !important;
+  }
+
+  body.page-service--trabalhista #identificacao.service-intro--carousel .service-case-card {
+    width: 100% !important;
+    min-height: 236px !important;
+    scroll-snap-align: start !important;
+    scroll-snap-stop: always !important;
+  }
+
+  body.page-service--trabalhista #identificacao.service-intro--carousel .service-case-card:last-child {
+    scroll-snap-align: start !important;
+  }
+
+  /* Atendimento formats: os dois cards viram slides no mobile */
+  body.page-service--trabalhista #atendimento.atendimento-formats.atendimento-formats--compact-only .atendimento-formats__wrap {
+    width: min(100% - 40px, 680px) !important;
+    max-width: 680px !important;
+    overflow: visible !important;
+  }
+
+  body.page-service--trabalhista #atendimento.atendimento-formats.atendimento-formats--compact-only .atendimento-formats__cards {
+    display: grid !important;
+    grid-auto-flow: column !important;
+    grid-template-columns: none !important;
+    grid-auto-columns: minmax(280px, 86vw) !important;
+    gap: 14px !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    overflow-x: auto !important;
+    overflow-y: hidden !important;
+    padding: 2px 0 16px !important;
+    margin-inline: auto !important;
+    scroll-snap-type: x mandatory !important;
+    overscroll-behavior-x: contain !important;
+    -webkit-overflow-scrolling: touch !important;
+    scrollbar-width: none !important;
+    cursor: grab !important;
+    user-select: none !important;
+    touch-action: pan-x pan-y !important;
+  }
+
+  body.page-service--trabalhista #atendimento.atendimento-formats.atendimento-formats--compact-only .atendimento-formats__cards::-webkit-scrollbar {
+    display: none !important;
+  }
+
+  body.page-service--trabalhista #atendimento.atendimento-formats.atendimento-formats--compact-only .atendimento-format-card {
+    width: 100% !important;
+    min-height: 332px !important;
+    scroll-snap-align: start !important;
+    scroll-snap-stop: always !important;
+  }
+
+  body.page-service--trabalhista #atendimento.atendimento-formats.atendimento-formats--compact-only .atendimento-format-card:nth-child(1),
+  body.page-service--trabalhista #atendimento.atendimento-formats.atendimento-formats--compact-only .atendimento-format-card:nth-child(2) {
+    transform: none !important;
+  }
+}
+
+@media (max-width: 390px) {
+  body.page-service--trabalhista #identificacao.service-intro--carousel .service-cases__viewport,
+  body.page-service--trabalhista #atendimento.atendimento-formats.atendimento-formats--compact-only .atendimento-formats__cards {
+    grid-auto-columns: minmax(252px, 84vw) !important;
+  }
+
+  body.page-service--trabalhista #atendimento.atendimento-formats.atendimento-formats--compact-only .atendimento-format-card {
+    min-height: 348px !important;
+  }
+}

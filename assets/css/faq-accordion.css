@@ -218,3 +218,117 @@
   display: block !important;
   visibility: visible !important;
 }
+
+/* =========================================================
+   FAQ V103 — mostra 4 perguntas + botão Veja mais
+   Mantém accordion e deixa restante oculto até o clique.
+   ========================================================= */
+#faq.faq-ready:not(.faq-show-all) .faq-item--extra {
+  display: none !important;
+}
+
+#faq.faq-ready.faq-show-all .faq-item--extra {
+  display: block !important;
+  animation: faqExtraIn .42s cubic-bezier(.22, 1, .36, 1) both;
+}
+
+#faq .faq-more {
+  display: flex !important;
+  justify-content: center !important;
+  margin: clamp(18px, 2.4vw, 28px) auto 0 !important;
+}
+
+#faq .faq-more__button {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  min-height: 46px;
+  padding: 13px 24px 13px 28px;
+  border: 1px solid rgba(94, 43, 90, .16);
+  border-radius: 999px;
+  background:
+    linear-gradient(180deg, rgba(255,255,255,.92), rgba(255,255,255,.72));
+  color: #5e2b5a;
+  font-family: inherit;
+  font-size: .78rem;
+  font-weight: 780;
+  letter-spacing: .075em;
+  line-height: 1;
+  text-transform: uppercase;
+  cursor: pointer;
+  box-shadow:
+    0 14px 38px rgba(33, 18, 31, .07),
+    inset 0 1px 0 rgba(255,255,255,.9);
+  transition: transform .24s ease, border-color .24s ease, box-shadow .24s ease, background .24s ease;
+}
+
+#faq .faq-more__button:hover {
+  transform: translateY(-2px);
+  border-color: rgba(201, 162, 79, .58);
+  background: #fff;
+  box-shadow:
+    0 20px 46px rgba(33, 18, 31, .10),
+    inset 0 1px 0 rgba(255,255,255,.95);
+}
+
+#faq .faq-more__button:focus-visible {
+  outline: 3px solid rgba(201, 162, 79, .25);
+  outline-offset: 4px;
+}
+
+#faq .faq-more__icon {
+  width: 26px;
+  height: 26px;
+  border-radius: 999px;
+  border: 1px solid rgba(201, 162, 79, .34);
+  background: rgba(201, 162, 79, .10);
+  display: grid;
+  place-items: center;
+  flex: 0 0 auto;
+}
+
+#faq .faq-more__icon::before,
+#faq .faq-more__icon::after {
+  content: "";
+  position: absolute;
+  width: 9px;
+  height: 2px;
+  border-radius: 999px;
+  background: currentColor;
+  transition: transform .24s ease, opacity .24s ease;
+}
+
+#faq .faq-more__icon::after {
+  transform: rotate(90deg);
+}
+
+#faq.faq-show-all .faq-more__icon::after {
+  transform: rotate(90deg) scaleX(0);
+  opacity: 0;
+}
+
+@keyframes faqExtraIn {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 760px) {
+  #faq .faq-more {
+    margin-top: 16px !important;
+  }
+
+  #faq .faq-more__button {
+    width: min(100%, 240px);
+    min-height: 44px;
+    padding: 12px 18px 12px 22px;
+    font-size: .74rem;
+  }
+}
