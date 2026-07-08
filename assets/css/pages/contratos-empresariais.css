@@ -35,3 +35,31 @@ body.page-service--contratos #identificacao.service-intro--carousel .service-cas
     padding: 9px !important;
   }
 }
+/* =========================================================
+   V112 — Contratos Empresariais: ícones enviados pelo cliente
+   Aplica somente aos cards da seção service-intro desta página.
+   ========================================================= */
+
+body.page-service--contratos #identificacao.service-intro--carousel .service-case-card__icon.service-case-card__icon--cliente {
+  width: 54px !important;
+  height: 54px !important;
+  padding: 9px !important;
+  border: 1px solid rgba(94, 43, 90, 0.14) !important;
+  background: rgba(255, 255, 255, 0.9) !important;
+  box-shadow: 0 14px 30px rgba(94, 43, 90, 0.07) !important;
+}
+
+body.page-service--contratos #identificacao.service-intro--carousel .service-case-card__icon.service-case-card__icon--cliente img {
+  display: block !important;
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: contain !important;
+}
+
+@media (max-width: 760px) {
+  body.page-service--contratos #identificacao.service-intro--carousel .service-case-card__icon.service-case-card__icon--cliente {
+    width: 52px !important;
+    height: 52px !important;
+    padding: 8px !important;
+  }
+}

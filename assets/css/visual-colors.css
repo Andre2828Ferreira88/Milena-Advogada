@@ -649,3 +649,253 @@ body.page-service--trabalhista #atendimento.atendimento-formats.atendimento-form
     margin: 0 !important;
   }
 }
+
+/* =====================================================
+   V110 — Mobile: textos justificados nas sections
+   Mantém títulos, botões e navegação intactos.
+===================================================== */
+@media (max-width: 760px){
+  .section p,
+  .section li,
+  .section .lead,
+  .section .subtitle,
+  .section .text,
+  .section .copy,
+  .section .service-card p,
+  .section .service-case-card p,
+  .section .demandas-slide__text,
+  .section .demandas-slide p,
+  .section .how-service__lead,
+  .section .how-service__benefits li,
+  .section .authority-copy p,
+  .section .faq-answer,
+  .section .faq-answer p,
+  .service-hero p,
+  .service-hero .service-hero__lead,
+  .service-hero .service-hero__text,
+  .service-hero .hero-service__text,
+  .service-hero .hero-service__lead,
+  .service-hero .service-hero__copy p,
+  .page-service .service-intro p,
+  .page-service .service-intro li,
+  .page-service .atendimento-formats p,
+  .page-service .atendimento-formats li,
+  .page-service .demandas-slider p,
+  .page-service .demandas-slider li,
+  .page-service .how-service p,
+  .page-service .how-service li,
+  .page-service .authority p,
+  .page-service .authority li,
+  .page-service .alt-warm p,
+  .page-service .alt-warm li,
+  .page-service .cta-final p{
+    text-align: justify !important;
+    text-align-last: left !important;
+    -webkit-hyphens: auto !important;
+    hyphens: auto !important;
+    overflow-wrap: break-word !important;
+  }
+
+  .section h1,
+  .section h2,
+  .section h3,
+  .section .section-title,
+  .section .kicker,
+  .section .eyebrow,
+  .section .pill,
+  .section .tag,
+  .section .btn,
+  .section button,
+  .section a[class*="btn"],
+  .section a[class*="cta"],
+  .service-hero h1,
+  .service-hero h2,
+  .service-hero h3,
+  .service-hero .service-hero__checks,
+  .service-hero .service-hero__checks li,
+  .service-hero .hero-service__checks,
+  .service-hero .hero-service__checks li,
+  .page-service .service-card h3,
+  .page-service .service-case-card h3,
+  .page-service .demandas-slide__title,
+  .page-service .authority-stat,
+  .page-service .authority-stat *,
+  .page-service .faq-question,
+  .page-service .faq-toggle,
+  .page-service .faq-more-btn{
+    text-align: inherit;
+    text-align-last: auto !important;
+  }
+}
+
+
+/* =====================================================
+   V111 — service-intro carousel com fundo premium
+   Apenas acabamento visual: fundo, linhas sutis e cards.
+===================================================== */
+
+body.page-service--trabalhista #identificacao.service-intro--carousel {
+  isolation: isolate;
+  background:
+    linear-gradient(115deg, rgba(255,255,255,0.92) 0%, rgba(251,247,241,0.86) 48%, rgba(255,255,255,0.96) 100%),
+    radial-gradient(760px 360px at 8% 12%, rgba(201, 162, 79, 0.16), transparent 62%),
+    radial-gradient(680px 360px at 92% 18%, rgba(94, 43, 90, 0.105), transparent 64%),
+    radial-gradient(520px 280px at 76% 92%, rgba(201, 162, 79, 0.09), transparent 70%),
+    #fbfaf8 !important;
+}
+
+body.page-service--trabalhista #identificacao.service-intro--carousel::before {
+  height: 100% !important;
+  background:
+    linear-gradient(90deg, rgba(201, 162, 79, 0.14) 1px, transparent 1px),
+    linear-gradient(180deg, rgba(94, 43, 90, 0.055) 1px, transparent 1px) !important;
+  background-size: 96px 96px, 96px 96px !important;
+  mask-image: radial-gradient(circle at 50% 40%, rgba(0,0,0,0.56), transparent 72%) !important;
+  opacity: 0.38 !important;
+  pointer-events: none !important;
+  z-index: 0 !important;
+}
+
+body.page-service--trabalhista #identificacao.service-intro--carousel::after {
+  content: "";
+  position: absolute;
+  right: clamp(-180px, -8vw, -80px);
+  top: clamp(42px, 8vw, 120px);
+  width: clamp(300px, 32vw, 540px);
+  height: clamp(300px, 32vw, 540px);
+  border: 1px solid rgba(201, 162, 79, 0.20);
+  border-radius: 999px;
+  background:
+    radial-gradient(circle at 38% 38%, rgba(94, 43, 90, 0.045), transparent 42%),
+    radial-gradient(circle at 62% 62%, rgba(201, 162, 79, 0.055), transparent 50%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+body.page-service--trabalhista #identificacao.service-intro--carousel .service-intro__inner,
+body.page-service--trabalhista #identificacao.service-intro--carousel .container {
+  position: relative;
+  z-index: 2;
+}
+
+body.page-service--trabalhista #identificacao.service-intro--carousel .service-intro__head {
+  position: relative;
+}
+
+body.page-service--trabalhista #identificacao.service-intro--carousel .service-intro__head::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -18px;
+  width: min(420px, 58vw);
+  height: 1px;
+  background: linear-gradient(90deg, rgba(201, 162, 79, 0.58), rgba(94, 43, 90, 0.12), transparent);
+  pointer-events: none;
+}
+
+body.page-service--trabalhista #identificacao.service-intro--carousel .service-cases {
+  position: relative;
+  z-index: 2;
+}
+
+body.page-service--trabalhista #identificacao.service-intro--carousel .service-cases__top {
+  position: relative;
+}
+
+body.page-service--trabalhista #identificacao.service-intro--carousel .service-cases__eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+}
+
+body.page-service--trabalhista #identificacao.service-intro--carousel .service-cases__eyebrow::after {
+  content: "";
+  display: block;
+  width: clamp(42px, 6vw, 82px);
+  height: 1px;
+  background: linear-gradient(90deg, rgba(201, 162, 79, 0.7), transparent);
+}
+
+body.page-service--trabalhista #identificacao.service-intro--carousel .service-case-card {
+  overflow: hidden;
+  border-color: rgba(94, 43, 90, 0.16) !important;
+  background:
+    linear-gradient(180deg, rgba(255,255,255,0.96), rgba(255,255,255,0.82)),
+    radial-gradient(180px 120px at 92% 4%, rgba(201, 162, 79, 0.12), transparent 72%) !important;
+  box-shadow:
+    0 22px 58px rgba(33, 18, 31, 0.055),
+    inset 0 1px 0 rgba(255,255,255,0.72) !important;
+}
+
+body.page-service--trabalhista #identificacao.service-intro--carousel .service-case-card::before {
+  top: 0 !important;
+  bottom: auto !important;
+  left: 0 !important;
+  width: 3px !important;
+  height: 100% !important;
+  opacity: 0.72 !important;
+  background: linear-gradient(180deg, #c9a24f 0%, rgba(94, 43, 90, 0.35) 100%) !important;
+}
+
+body.page-service--trabalhista #identificacao.service-intro--carousel .service-case-card::after {
+  content: "";
+  position: absolute;
+  right: -44px;
+  bottom: -52px;
+  width: 138px;
+  height: 138px;
+  border-radius: 999px;
+  background: radial-gradient(circle, rgba(94, 43, 90, 0.055), transparent 64%);
+  pointer-events: none;
+}
+
+body.page-service--trabalhista #identificacao.service-intro--carousel .service-case-card:hover,
+body.page-service--trabalhista #identificacao.service-intro--carousel .service-case-card:focus-within {
+  border-color: rgba(201, 162, 79, 0.48) !important;
+  box-shadow:
+    0 28px 74px rgba(33, 18, 31, 0.10),
+    inset 0 1px 0 rgba(255,255,255,0.82) !important;
+}
+
+body.page-service--trabalhista #identificacao.service-intro--carousel .service-case-card__number {
+  color: rgba(201, 162, 79, 0.98) !important;
+}
+
+body.page-service--trabalhista #identificacao.service-intro--carousel .service-case-card__icon {
+  border-color: rgba(94, 43, 90, 0.16) !important;
+  background:
+    linear-gradient(180deg, rgba(255,255,255,0.96), rgba(251,247,241,0.72)) !important;
+  box-shadow: 0 12px 28px rgba(33, 18, 31, 0.045) !important;
+}
+
+@media (max-width: 760px) {
+  body.page-service--trabalhista #identificacao.service-intro--carousel {
+    background:
+      linear-gradient(180deg, rgba(255,255,255,0.96), rgba(251,247,241,0.92)),
+      radial-gradient(420px 240px at 12% 5%, rgba(201, 162, 79, 0.13), transparent 68%),
+      radial-gradient(360px 220px at 96% 42%, rgba(94, 43, 90, 0.09), transparent 70%),
+      #fbfaf8 !important;
+  }
+
+  body.page-service--trabalhista #identificacao.service-intro--carousel::before {
+    background-size: 72px 72px, 72px 72px !important;
+    opacity: 0.26 !important;
+  }
+
+  body.page-service--trabalhista #identificacao.service-intro--carousel::after {
+    right: -220px;
+    top: 120px;
+    opacity: 0.72;
+  }
+
+  body.page-service--trabalhista #identificacao.service-intro--carousel .service-intro__head::after {
+    width: 68%;
+    bottom: -14px;
+  }
+
+  body.page-service--trabalhista #identificacao.service-intro--carousel .service-case-card {
+    box-shadow:
+      0 18px 46px rgba(33, 18, 31, 0.06),
+      inset 0 1px 0 rgba(255,255,255,0.8) !important;
+  }
+}
