@@ -1,0 +1,37 @@
+/* =========================================================
+   Página específica — Contratos Empresariais
+   Mantém o padrão da página de serviço e isola ajustes futuros
+   somente deste novo HTML.
+   ========================================================= */
+
+body.page-service--contratos .service-hero .hero-copy h1 {
+  max-width: 850px !important;
+}
+
+body.page-service--contratos #identificacao.service-intro--carousel .service-case-card__icon {
+  width: 48px !important;
+  height: 48px !important;
+  padding: 10px !important;
+  border: 1px solid rgba(94, 43, 90, 0.14) !important;
+  background: rgba(255, 255, 255, 0.86) !important;
+  box-shadow: 0 12px 28px rgba(94, 43, 90, 0.055) !important;
+}
+
+body.page-service--contratos #identificacao.service-intro--carousel .service-case-card__icon svg {
+  display: block !important;
+  width: 100% !important;
+  height: 100% !important;
+  fill: none !important;
+  stroke: #5e2b5a !important;
+  stroke-width: 1.65 !important;
+  stroke-linecap: round !important;
+  stroke-linejoin: round !important;
+}
+
+@media (max-width: 760px) {
+  body.page-service--contratos #identificacao.service-intro--carousel .service-case-card__icon {
+    width: 46px !important;
+    height: 46px !important;
+    padding: 9px !important;
+  }
+}

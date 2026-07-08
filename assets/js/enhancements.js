@@ -164,52 +164,12 @@
 
 
   /* ─────────────────────────────────────────────
-     6. CURSOR PERSONALIZADO (desktop)
+     6. CURSOR PADRÃO
+     Cursor personalizado removido a pedido do cliente.
      ───────────────────────────────────────────── */
-  if (window.matchMedia('(hover: hover) and (pointer: fine)').matches) {
-    const dot  = document.createElement('div');
-    const ring = document.createElement('div');
-    dot.className  = 'cursor-dot';
-    ring.className = 'cursor-ring';
-    document.body.appendChild(dot);
-    document.body.appendChild(ring);
-
-    let mx = -100, my = -100;
-    let rx = -100, ry = -100;
-
-    window.addEventListener('mousemove', function (e) {
-      mx = e.clientX;
-      my = e.clientY;
-      dot.style.left = mx + 'px';
-      dot.style.top  = my + 'px';
-    }, { passive: true });
-
-    // ring follows with smooth lag
-    function animateRing() {
-      rx += (mx - rx) * 0.14;
-      ry += (my - ry) * 0.14;
-      ring.style.left = rx + 'px';
-      ring.style.top  = ry + 'px';
-      requestAnimationFrame(animateRing);
-    }
-    animateRing();
-
-    // scale ring on interactive elements
-    document.querySelectorAll('a, button, .da-cta, .bot-opt').forEach(function (el) {
-      el.addEventListener('mouseenter', function () {
-        ring.style.width  = '44px';
-        ring.style.height = '44px';
-        ring.style.borderColor = 'var(--brand-2)';
-        dot.style.opacity = '0.5';
-      });
-      el.addEventListener('mouseleave', function () {
-        ring.style.width  = '32px';
-        ring.style.height = '32px';
-        ring.style.borderColor = 'rgba(91,44,85,.45)';
-        dot.style.opacity = '1';
-      });
-    });
-  }
+  document.querySelectorAll('.cursor-dot, .cursor-ring').forEach(function (el) {
+    el.remove();
+  });
 
 
   /* ─────────────────────────────────────────────

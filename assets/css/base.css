@@ -1708,41 +1708,35 @@ body.is-loading{
 
 
 /* ═══════════════════════════════════════
-   8. CURSOR PERSONALIZADO (desktop only)
+   8. CURSOR PADRÃO DO NAVEGADOR
    ═══════════════════════════════════════ */
-@media (hover: hover) and (pointer: fine) {
-  html { cursor: none; }
-  .cursor-dot {
-    position: fixed;
-    top: 0; left: 0;
-    width: 8px; height: 8px;
-    border-radius: 999px;
-    background: var(--brand-2);
-    pointer-events: none;
-    z-index: 999999;
-    transform: translate(-50%, -50%);
-    transition: transform .08s ease, opacity .2s;
-    will-change: transform;
-  }
-  .cursor-ring {
-    position: fixed;
-    top: 0; left: 0;
-    width: 32px; height: 32px;
-    border-radius: 999px;
-    border: 1.5px solid rgba(91,44,85,.45);
-    pointer-events: none;
-    z-index: 999998;
-    transform: translate(-50%, -50%);
-    transition: width .2s ease, height .2s ease, border-color .2s, transform .12s ease;
-    will-change: transform;
-  }
-  a:hover ~ .cursor-ring,
-  button:hover ~ .cursor-ring {
-    width: 44px; height: 44px;
-    border-color: var(--brand-2);
-  }
+html,
+body,
+a,
+button,
+input,
+textarea,
+select,
+[role="button"] {
+  cursor: auto;
 }
 
+a,
+button,
+[role="button"],
+.nav-cta,
+.btn,
+.whatsapp-float {
+  cursor: pointer;
+}
+
+.cursor-dot,
+.cursor-ring {
+  display: none !important;
+  opacity: 0 !important;
+  visibility: hidden !important;
+  pointer-events: none !important;
+}
 
 /* ═══════════════════════════════════════
    9. REVEAL COM DIREÇÃO
