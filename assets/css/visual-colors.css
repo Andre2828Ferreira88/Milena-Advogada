@@ -1541,3 +1541,17 @@ body.page-service--trabalhista #atendimento.atendimento-formats.atendimento-form
       radial-gradient(circle at 82% 30%, rgba(205,167,88,.085), transparent 24%) !important;
   }
 }
+
+
+/* =====================================================
+   V122 — Demandas: centraliza os 3 balões/pills no card
+   Pedido: não alterar tamanho, apenas alinhar o grupo no centro.
+===================================================== */
+@media (min-width: 761px){
+  #demandas.demandas-slider .demandas-slider__mini-list{
+    justify-content: center !important;
+    justify-items: center !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+}
