@@ -543,6 +543,137 @@ body.page-service--trabalhista #atendimento.atendimento-formats.atendimento-form
   content: none !important;
 }
 
+
+/* =====================================================
+   V116 — How Service: fundo com detalhes jurídicos minimalistas
+   Pedido: adicionar mais riqueza visual apenas no fundo da section,
+   sem mexer na estrutura interna.
+===================================================== */
+#como-funciona.how-service::before{
+  background:
+    linear-gradient(90deg, transparent 0%, rgba(205,167,88,.18) 50%, transparent 100%) top center / min(720px, 62vw) 1px no-repeat,
+    linear-gradient(90deg, transparent 0%, rgba(95,43,88,.10) 50%, transparent 100%) bottom center / min(760px, 66vw) 1px no-repeat,
+    linear-gradient(180deg, rgba(205,167,88,.14) 0 1px, transparent 1px 100%) 8% 0 / 1px 150px no-repeat,
+    linear-gradient(180deg, rgba(95,43,88,.10) 0 1px, transparent 1px 100%) 92% 100% / 1px 164px no-repeat !important;
+}
+
+#como-funciona.how-service::after{
+  opacity: .80 !important;
+  background:
+    url("data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20viewBox%3D%270%200%20200%20200%27%20fill%3D%27none%27%3E%0A%20%20%3Cg%20stroke%3D%27%235f2b58%27%20stroke-width%3D%273%27%20stroke-linecap%3D%27round%27%20stroke-linejoin%3D%27round%27%20opacity%3D%27.22%27%3E%0A%20%20%20%20%3Cpath%20d%3D%27M100%2034v104%27%2F%3E%0A%20%20%20%20%3Cpath%20d%3D%27M74%2052h52%27%2F%3E%0A%20%20%20%20%3Cpath%20d%3D%27M58%2062h84%27%2F%3E%0A%20%20%20%20%3Cpath%20d%3D%27M66%2062l-18%2034h36L66%2062Z%27%2F%3E%0A%20%20%20%20%3Cpath%20d%3D%27M134%2062l-18%2034h36L134%2062Z%27%2F%3E%0A%20%20%20%20%3Cpath%20d%3D%27M48%2096c4%2011%2015%2018%2028%2018s24-7%2028-18%27%2F%3E%0A%20%20%20%20%3Cpath%20d%3D%27M96%2096c4%2011%2015%2018%2028%2018s24-7%2028-18%27%2F%3E%0A%20%20%20%20%3Cpath%20d%3D%27M90%20138h20%27%2F%3E%0A%20%20%20%20%3Cpath%20d%3D%27M78%20152c9%208%2035%208%2044%200%27%2F%3E%0A%20%20%3C%2Fg%3E%0A%3C%2Fsvg%3E") 88% 18% / 168px 168px no-repeat,
+    url("data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20viewBox%3D%270%200%20200%20200%27%20fill%3D%27none%27%3E%0A%20%20%3Cg%20stroke%3D%27%23cda758%27%20stroke-width%3D%273%27%20stroke-linecap%3D%27round%27%20stroke-linejoin%3D%27round%27%20opacity%3D%27.24%27%3E%0A%20%20%20%20%3Cpath%20d%3D%27M52%2046h96%27%2F%3E%0A%20%20%20%20%3Cpath%20d%3D%27M44%2060h112%27%2F%3E%0A%20%20%20%20%3Cpath%20d%3D%27M60%2060v68%27%2F%3E%0A%20%20%20%20%3Cpath%20d%3D%27M84%2060v68%27%2F%3E%0A%20%20%20%20%3Cpath%20d%3D%27M108%2060v68%27%2F%3E%0A%20%20%20%20%3Cpath%20d%3D%27M132%2060v68%27%2F%3E%0A%20%20%20%20%3Cpath%20d%3D%27M42%20128h116%27%2F%3E%0A%20%20%20%20%3Cpath%20d%3D%27M36%20142h128%27%2F%3E%0A%20%20%20%20%3Cpath%20d%3D%27M70%2034h60%27%2F%3E%0A%20%20%3C%2Fg%3E%0A%3C%2Fsvg%3E") 10% 78% / 156px 156px no-repeat,
+    linear-gradient(115deg, rgba(205,167,88,.09) 0 1px, transparent 1px 100%) 6% 22% / 180px 180px no-repeat,
+    linear-gradient(25deg, rgba(95,43,88,.075) 0 1px, transparent 1px 100%) 92% 76% / 210px 210px no-repeat,
+    linear-gradient(90deg, transparent 0%, rgba(205,167,88,.10) 50%, transparent 100%) 14% 86% / 148px 1px no-repeat,
+    linear-gradient(90deg, transparent 0%, rgba(95,43,88,.08) 50%, transparent 100%) 84% 12% / 164px 1px no-repeat,
+    radial-gradient(circle at 16% 72%, rgba(95,43,88,.052), transparent 24%),
+    radial-gradient(circle at 84% 22%, rgba(205,167,88,.075), transparent 23%) !important;
+}
+
+#como-funciona .how-service__container::after{
+  content: "" !important;
+  position: absolute !important;
+  inset: 18px 0 !important;
+  pointer-events: none !important;
+  z-index: -1 !important;
+  opacity: .78 !important;
+  background:
+    linear-gradient(90deg, transparent 0%, rgba(205,167,88,.10) 50%, transparent 100%) 50% 28px / min(180px, 18vw) 1px no-repeat,
+    linear-gradient(90deg, transparent 0%, rgba(95,43,88,.08) 50%, transparent 100%) 50% calc(100% - 28px) / min(210px, 20vw) 1px no-repeat,
+    radial-gradient(circle, rgba(205,167,88,.16) 0 1px, transparent 2px) 50% 50% / 16px 16px no-repeat !important;
+}
+
+@media (max-width: 760px){
+  #como-funciona.how-service::before{
+    background:
+      linear-gradient(90deg, transparent 0%, rgba(205,167,88,.18) 50%, transparent 100%) top center / 72vw 1px no-repeat,
+      linear-gradient(90deg, transparent 0%, rgba(95,43,88,.10) 50%, transparent 100%) bottom center / 74vw 1px no-repeat !important;
+  }
+
+  #como-funciona.how-service::after{
+    opacity: .56 !important;
+    background:
+      url("data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20viewBox%3D%270%200%20200%20200%27%20fill%3D%27none%27%3E%0A%20%20%3Cg%20stroke%3D%27%235f2b58%27%20stroke-width%3D%273%27%20stroke-linecap%3D%27round%27%20stroke-linejoin%3D%27round%27%20opacity%3D%27.22%27%3E%0A%20%20%20%20%3Cpath%20d%3D%27M100%2034v104%27%2F%3E%0A%20%20%20%20%3Cpath%20d%3D%27M74%2052h52%27%2F%3E%0A%20%20%20%20%3Cpath%20d%3D%27M58%2062h84%27%2F%3E%0A%20%20%20%20%3Cpath%20d%3D%27M66%2062l-18%2034h36L66%2062Z%27%2F%3E%0A%20%20%20%20%3Cpath%20d%3D%27M134%2062l-18%2034h36L134%2062Z%27%2F%3E%0A%20%20%20%20%3Cpath%20d%3D%27M48%2096c4%2011%2015%2018%2028%2018s24-7%2028-18%27%2F%3E%0A%20%20%20%20%3Cpath%20d%3D%27M96%2096c4%2011%2015%2018%2028%2018s24-7%2028-18%27%2F%3E%0A%20%20%20%20%3Cpath%20d%3D%27M90%20138h20%27%2F%3E%0A%20%20%20%20%3Cpath%20d%3D%27M78%20152c9%208%2035%208%2044%200%27%2F%3E%0A%20%20%3C%2Fg%3E%0A%3C%2Fsvg%3E") 92% 12% / 108px 108px no-repeat,
+      linear-gradient(115deg, rgba(205,167,88,.08) 0 1px, transparent 1px 100%) 8% 24% / 126px 126px no-repeat,
+      radial-gradient(circle at 18% 76%, rgba(95,43,88,.05), transparent 24%),
+      radial-gradient(circle at 84% 16%, rgba(205,167,88,.06), transparent 22%) !important;
+  }
+
+  #como-funciona .how-service__container::after{
+    display: none !important;
+  }
+}
+
+
+
+/* =====================================================
+   V117 — How Service: fundo mais perceptível e ainda minimalista
+   Escopo: somente background da section como-funciona.
+===================================================== */
+#como-funciona.how-service{
+  background:
+    radial-gradient(680px 360px at 8% 72%, rgba(205,167,88,.16), transparent 68%),
+    radial-gradient(720px 390px at 91% 18%, rgba(95,43,88,.13), transparent 70%),
+    linear-gradient(180deg, #fffdf8 0%, #fbf7ef 50%, #fffdf8 100%) !important;
+}
+
+#como-funciona.how-service::before{
+  opacity: .92 !important;
+  background:
+    linear-gradient(90deg, transparent 0%, rgba(205,167,88,.28) 50%, transparent 100%) top center / min(920px, 78vw) 1px no-repeat,
+    linear-gradient(90deg, transparent 0%, rgba(95,43,88,.16) 50%, transparent 100%) bottom center / min(920px, 78vw) 1px no-repeat,
+    linear-gradient(90deg, rgba(205,167,88,.18), transparent 28%) 9% 67% / 190px 1px no-repeat,
+    linear-gradient(90deg, rgba(205,167,88,.18), transparent 28%) 9% calc(67% + 22px) / 150px 1px no-repeat,
+    linear-gradient(90deg, rgba(95,43,88,.14), transparent 30%) 89% 22% / 170px 1px no-repeat,
+    repeating-linear-gradient(135deg, rgba(95,43,88,.032) 0 1px, transparent 1px 92px) !important;
+}
+
+#como-funciona.how-service::after{
+  opacity: .95 !important;
+  background:
+    url("data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20viewBox%3D%270%200%20240%20240%27%20fill%3D%27none%27%3E%0A%3Cg%20stroke%3D%27%235f2b58%27%20stroke-width%3D%273.2%27%20stroke-linecap%3D%27round%27%20stroke-linejoin%3D%27round%27%20opacity%3D%27.34%27%3E%0A%3Cpath%20d%3D%27M120%2038v140%27%2F%3E%3Cpath%20d%3D%27M86%2062h68%27%2F%3E%3Cpath%20d%3D%27M66%2076h108%27%2F%3E%3Cpath%20d%3D%27M78%2076%2052%20126h52L78%2076Z%27%2F%3E%3Cpath%20d%3D%27M162%2076l-26%2050h52L162%2076Z%27%2F%3E%3Cpath%20d%3D%27M52%20126c6%2015%2021%2024%2042%2024s36-9%2042-24%27%2F%3E%3Cpath%20d%3D%27M104%20126c6%2015%2021%2024%2042%2024s36-9%2042-24%27%2F%3E%3Cpath%20d%3D%27M108%20178h24%27%2F%3E%3Cpath%20d%3D%27M92%20196c16%2010%2040%2010%2056%200%27%2F%3E%0A%3C%2Fg%3E%3C%2Fsvg%3E") 87% 13% / 226px 226px no-repeat,
+    url("data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20viewBox%3D%270%200%20240%20240%27%20fill%3D%27none%27%3E%0A%3Cg%20stroke%3D%27%23cda758%27%20stroke-width%3D%273.2%27%20stroke-linecap%3D%27round%27%20stroke-linejoin%3D%27round%27%20opacity%3D%27.38%27%3E%0A%3Cpath%20d%3D%27M62%2058h116%27%2F%3E%3Cpath%20d%3D%27M50%2076h140%27%2F%3E%3Cpath%20d%3D%27M74%2076v82%27%2F%3E%3Cpath%20d%3D%27M102%2076v82%27%2F%3E%3Cpath%20d%3D%27M138%2076v82%27%2F%3E%3Cpath%20d%3D%27M166%2076v82%27%2F%3E%3Cpath%20d%3D%27M54%20158h132%27%2F%3E%3Cpath%20d%3D%27M44%20176h152%27%2F%3E%3Cpath%20d%3D%27M86%2044h68%27%2F%3E%0A%3C%2Fg%3E%3C%2Fsvg%3E") 8% 78% / 220px 220px no-repeat,
+    url("data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20viewBox%3D%270%200%20420%20220%27%20fill%3D%27none%27%3E%0A%3Cg%20stroke%3D%27%235f2b58%27%20stroke-linecap%3D%27round%27%20opacity%3D%27.20%27%3E%0A%3Cpath%20d%3D%27M42%2044h190%27%2F%3E%3Cpath%20d%3D%27M42%2072h292%27%2F%3E%3Cpath%20d%3D%27M42%20100h238%27%2F%3E%3Cpath%20d%3D%27M42%20128h320%27%2F%3E%3Cpath%20d%3D%27M42%20156h210%27%2F%3E%3Cpath%20d%3D%27M42%20184h280%27%2F%3E%0A%3C%2Fg%3E%3Cpath%20d%3D%27M300%2040c34%2022%2056%2054%2068%2096%27%20stroke%3D%27%23cda758%27%20stroke-width%3D%272%27%20opacity%3D%27.22%27%2F%3E%3C%2Fsvg%3E") 51% 48% / 430px 226px no-repeat,
+    radial-gradient(circle at 50% 50%, transparent 0 210px, rgba(205,167,88,.16) 211px 212px, transparent 213px) 50% 50% / 520px 520px no-repeat,
+    radial-gradient(circle at 13% 72%, rgba(205,167,88,.24) 0 2px, transparent 3px),
+    radial-gradient(circle at 84% 26%, rgba(95,43,88,.14) 0 2px, transparent 3px),
+    radial-gradient(circle at 30% 38%, rgba(205,167,88,.14), transparent 18%),
+    radial-gradient(circle at 78% 84%, rgba(95,43,88,.10), transparent 22%) !important;
+}
+
+#como-funciona .how-service__container::after{
+  content: "" !important;
+  position: absolute !important;
+  inset: -26px -38px !important;
+  z-index: -1 !important;
+  pointer-events: none !important;
+  opacity: .82 !important;
+  background:
+    linear-gradient(90deg, rgba(205,167,88,.24), transparent 34%) 0 8% / 118px 1px no-repeat,
+    linear-gradient(180deg, rgba(205,167,88,.24), transparent 34%) 0 8% / 1px 118px no-repeat,
+    linear-gradient(270deg, rgba(95,43,88,.18), transparent 34%) 100% 92% / 128px 1px no-repeat,
+    linear-gradient(0deg, rgba(95,43,88,.18), transparent 34%) 100% 92% / 1px 128px no-repeat !important;
+}
+
+@media (max-width: 760px){
+  #como-funciona.how-service{
+    background:
+      radial-gradient(420px 250px at 0% 72%, rgba(205,167,88,.14), transparent 72%),
+      radial-gradient(420px 250px at 100% 8%, rgba(95,43,88,.10), transparent 72%),
+      linear-gradient(180deg, #fffdf8 0%, #fbf7ef 54%, #fffdf8 100%) !important;
+  }
+
+  #como-funciona.how-service::after{
+    opacity: .78 !important;
+    background:
+      url("data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20viewBox%3D%270%200%20240%20240%27%20fill%3D%27none%27%3E%0A%3Cg%20stroke%3D%27%235f2b58%27%20stroke-width%3D%273.2%27%20stroke-linecap%3D%27round%27%20stroke-linejoin%3D%27round%27%20opacity%3D%27.34%27%3E%0A%3Cpath%20d%3D%27M120%2038v140%27%2F%3E%3Cpath%20d%3D%27M86%2062h68%27%2F%3E%3Cpath%20d%3D%27M66%2076h108%27%2F%3E%3Cpath%20d%3D%27M78%2076%2052%20126h52L78%2076Z%27%2F%3E%3Cpath%20d%3D%27M162%2076l-26%2050h52L162%2076Z%27%2F%3E%3Cpath%20d%3D%27M52%20126c6%2015%2021%2024%2042%2024s36-9%2042-24%27%2F%3E%3Cpath%20d%3D%27M104%20126c6%2015%2021%2024%2042%2024s36-9%2042-24%27%2F%3E%3Cpath%20d%3D%27M108%20178h24%27%2F%3E%3Cpath%20d%3D%27M92%20196c16%2010%2040%2010%2056%200%27%2F%3E%0A%3C%2Fg%3E%3C%2Fsvg%3E") 100% 7% / 148px 148px no-repeat,
+      url("data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20viewBox%3D%270%200%20240%20240%27%20fill%3D%27none%27%3E%0A%3Cg%20stroke%3D%27%23cda758%27%20stroke-width%3D%273.2%27%20stroke-linecap%3D%27round%27%20stroke-linejoin%3D%27round%27%20opacity%3D%27.38%27%3E%0A%3Cpath%20d%3D%27M62%2058h116%27%2F%3E%3Cpath%20d%3D%27M50%2076h140%27%2F%3E%3Cpath%20d%3D%27M74%2076v82%27%2F%3E%3Cpath%20d%3D%27M102%2076v82%27%2F%3E%3Cpath%20d%3D%27M138%2076v82%27%2F%3E%3Cpath%20d%3D%27M166%2076v82%27%2F%3E%3Cpath%20d%3D%27M54%20158h132%27%2F%3E%3Cpath%20d%3D%27M44%20176h152%27%2F%3E%3Cpath%20d%3D%27M86%2044h68%27%2F%3E%0A%3C%2Fg%3E%3C%2Fsvg%3E") -24px 92% / 150px 150px no-repeat,
+      repeating-linear-gradient(135deg, rgba(95,43,88,.026) 0 1px, transparent 1px 80px),
+      radial-gradient(circle at 18% 76%, rgba(205,167,88,.12), transparent 25%),
+      radial-gradient(circle at 88% 16%, rgba(95,43,88,.09), transparent 22%) !important;
+  }
+}
+
 /* =====================================================
    V99 — Authority mobile: BRASIL maior e centralizado
    Escopo: somente indicadores da section da advogada no mobile
@@ -897,5 +1028,516 @@ body.page-service--trabalhista #identificacao.service-intro--carousel .service-c
     box-shadow:
       0 18px 46px rgba(33, 18, 31, 0.06),
       inset 0 1px 0 rgba(255,255,255,0.8) !important;
+  }
+}
+
+/* =====================================================
+   V115 — demandas-slider: somente fundo da section
+   Sem mexer nas colunas, cards, textos, slides ou estrutura.
+===================================================== */
+
+#demandas.demandas-slider{
+  position: relative !important;
+  isolation: isolate !important;
+  overflow: hidden !important;
+  background:
+    radial-gradient(760px 380px at 7% 10%, rgba(205, 167, 88, .16), transparent 64%),
+    radial-gradient(820px 420px at 98% 18%, rgba(94, 43, 90, .105), transparent 68%),
+    radial-gradient(640px 300px at 50% 100%, rgba(205, 167, 88, .075), transparent 70%),
+    linear-gradient(180deg, #fffaf2 0%, #ffffff 46%, #fbf6f0 100%) !important;
+  border-top: 1px solid rgba(205, 167, 88, .20) !important;
+  border-bottom: 1px solid rgba(205, 167, 88, .16) !important;
+}
+
+/* textura/linhas minimalistas apenas no fundo da section */
+#demandas.demandas-slider::before{
+  content: "" !important;
+  position: absolute !important;
+  inset: 0 !important;
+  z-index: 0 !important;
+  pointer-events: none !important;
+  opacity: .48 !important;
+  background:
+    repeating-linear-gradient(135deg, rgba(94, 43, 90, .035) 0 1px, transparent 1px 92px),
+    radial-gradient(circle at 11% 22%, rgba(205, 167, 88, .55) 0 4px, transparent 5px),
+    radial-gradient(circle at 88% 78%, rgba(94, 43, 90, .11) 0 13px, transparent 14px),
+    linear-gradient(90deg, rgba(205,167,88,.07), transparent 28%, transparent 72%, rgba(94,43,90,.06)) !important;
+}
+
+/* detalhes grandes e discretos no fundo, sem criar caixa nos cards */
+#demandas.demandas-slider::after{
+  content: "" !important;
+  position: absolute !important;
+  inset: auto auto clamp(-180px, -11vw, -110px) clamp(-120px, -7vw, -70px) !important;
+  width: clamp(260px, 28vw, 470px) !important;
+  height: clamp(260px, 28vw, 470px) !important;
+  border-radius: 999px !important;
+  border: 1px solid rgba(205, 167, 88, .15) !important;
+  background: radial-gradient(circle, rgba(205, 167, 88, .065), transparent 66%) !important;
+  pointer-events: none !important;
+  z-index: 0 !important;
+}
+
+#demandas.demandas-slider .demandas-slider__wrap,
+#demandas.demandas-slider .demandas-slider__left,
+#demandas.demandas-slider .demandas-slider__right,
+#demandas.demandas-slider .demandas-slider__right-inner{
+  position: relative !important;
+  z-index: 2 !important;
+}
+
+/* Neutraliza somente a personalização visual anterior nas colunas.
+   O visual original dos cards/colunas continua vindo dos CSS próprios. */
+#demandas.demandas-slider .demandas-slider__left,
+#demandas.demandas-slider .demandas-slider__right,
+#demandas.demandas-slider .demandas-slider__right-inner{
+  background-image: none !important;
+}
+
+#demandas.demandas-slider .demandas-slider__left .demandas-slider__content::after{
+  display: none !important;
+  content: none !important;
+}
+
+@media (max-width: 760px){
+  #demandas.demandas-slider{
+    background:
+      radial-gradient(420px 230px at 0% 0%, rgba(205,167,88,.15), transparent 70%),
+      radial-gradient(420px 250px at 100% 90%, rgba(94,43,90,.09), transparent 72%),
+      linear-gradient(180deg, #fffaf2 0%, #ffffff 54%, #fbf7f1 100%) !important;
+  }
+
+  #demandas.demandas-slider::before{
+    opacity: .34 !important;
+    background:
+      repeating-linear-gradient(135deg, rgba(94, 43, 90, .03) 0 1px, transparent 1px 76px),
+      radial-gradient(circle at 12% 18%, rgba(205,167,88,.48) 0 3px, transparent 4px) !important;
+  }
+
+  #demandas.demandas-slider::after{
+    width: 260px !important;
+    height: 260px !important;
+    left: -128px !important;
+    bottom: -128px !important;
+    opacity: .72 !important;
+  }
+}
+
+
+/* =====================================================
+   V118 — How Service: fundo refinado com menos linhas + Lady Justice
+   Pedido: deixar os detalhes mais coerentes e adicionar a imagem
+   no lado esquerdo, bem transparente, sem apagar os textos.
+===================================================== */
+#como-funciona.how-service{
+  background:
+    radial-gradient(640px 320px at 14% 72%, rgba(205,167,88,.13), transparent 68%),
+  radial-gradient(720px 360px at 92% 18%, rgba(95,43,88,.10), transparent 72%),  
+    linear-gradient(180deg, #fffdf9 0%, #fbf8f2 52%, #fffdf9 100%) !important;
+}
+
+#como-funciona.how-service::before{
+  opacity: 1 !important;
+  background:
+    linear-gradient(90deg, transparent 0%, rgba(205,167,88,.20) 50%, transparent 100%) top center / min(720px, 62vw) 1px no-repeat,
+    linear-gradient(90deg, transparent 0%, rgba(95,43,88,.10) 50%, transparent 100%) bottom center / min(760px, 66vw) 1px no-repeat,
+    linear-gradient(180deg, rgba(205,167,88,.16), transparent 80%) 9.5% 73% / 1px 132px no-repeat,
+    linear-gradient(90deg, rgba(205,167,88,.16), transparent 92%) 9.5% calc(73% + 132px) / 112px 1px no-repeat,
+    linear-gradient(90deg, rgba(95,43,88,.08), transparent 96%) 43% 33% / 164px 1px no-repeat,
+    linear-gradient(90deg, rgba(95,43,88,.07), transparent 96%) 43% 67% / 132px 1px no-repeat !important;
+}
+
+#como-funciona.how-service::after{
+  opacity: .78 !important;
+  background:
+    url("data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20viewBox%3D%270%200%20240%20240%27%20fill%3D%27none%27%3E%0A%3Cg%20stroke%3D%27%235f2b58%27%20stroke-width%3D%273.2%27%20stroke-linecap%3D%27round%27%20stroke-linejoin%3D%27round%27%20opacity%3D%27.24%27%3E%0A%3Cpath%20d%3D%27M120%2038v140%27%2F%3E%3Cpath%20d%3D%27M86%2062h68%27%2F%3E%3Cpath%20d%3D%27M66%2076h108%27%2F%3E%3Cpath%20d%3D%27M78%2076%2052%20126h52L78%2076Z%27%2F%3E%3Cpath%20d%3D%27M162%2076l-26%2050h52L162%2076Z%27%2F%3E%3Cpath%20d%3D%27M52%20126c6%2015%2021%2024%2042%2024s36-9%2042-24%27%2F%3E%3Cpath%20d%3D%27M104%20126c6%2015%2021%2024%2042%2024s36-9%2042-24%27%2F%3E%3Cpath%20d%3D%27M108%20178h24%27%2F%3E%3Cpath%20d%3D%27M92%20196c16%2010%2040%2010%2056%200%27%2F%3E%0A%3C%2Fg%3E%3C%2Fsvg%3E") 87% 13% / 138px 138px no-repeat,
+    radial-gradient(circle at 50% 50%, transparent 0 190px, rgba(205,167,88,.12) 191px 192px, transparent 193px) 50% 50% / 500px 500px no-repeat,
+    radial-gradient(circle at 18% 76%, rgba(205,167,88,.10), transparent 18%),
+    radial-gradient(circle at 84% 20%, rgba(95,43,88,.07), transparent 20%) !important;
+}
+
+#como-funciona .how-service__container::after{
+  display: none !important;
+  content: none !important;
+}
+
+#como-funciona .how-service__left{
+  isolation: isolate !important;
+}
+
+#como-funciona .how-service__left::before{
+  content: "" !important;
+  position: absolute !important;
+  inset: -28px -10px -28px -56px !important;
+  z-index: -2 !important;
+  pointer-events: none !important;}
+
+#como-funciona .how-service__left::after{
+  content: "" !important;
+  position: absolute !important;
+  left: clamp(-308px, -76.8vw, -18px) !important;
+  bottom: -296px !important;
+  width: clamp(308px, 32vw, 518px) !important;
+  height: clamp(300px, 61vw, 940px) !important;
+  z-index: -1 !important;
+  pointer-events: none !important;
+  background: url("../img/how-service-lady-justice.png") center / contain no-repeat !important;
+  opacity: .1 !important;
+  filter: saturate(.82) brightness(1.02) contrast(1.02) !important;
+}
+
+@media (max-width: 760px){
+  #como-funciona.how-service::before{
+    background:
+      linear-gradient(90deg, transparent 0%, rgba(205,167,88,.18) 50%, transparent 100%) top center / 72vw 1px no-repeat,
+      linear-gradient(90deg, transparent 0%, rgba(95,43,88,.10) 50%, transparent 100%) bottom center / 74vw 1px no-repeat !important;
+  }
+
+  #como-funciona.how-service::after{
+    opacity: .48 !important;
+    background:
+      url("data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20viewBox%3D%270%200%20240%20240%27%20fill%3D%27none%27%3E%0A%3Cg%20stroke%3D%27%235f2b58%27%20stroke-width%3D%273.2%27%20stroke-linecap%3D%27round%27%20stroke-linejoin%3D%27round%27%20opacity%3D%27.24%27%3E%0A%3Cpath%20d%3D%27M120%2038v140%27%2F%3E%3Cpath%20d%3D%27M86%2062h68%27%2F%3E%3Cpath%20d%3D%27M66%2076h108%27%2F%3E%3Cpath%20d%3D%27M78%2076%2052%20126h52L78%2076Z%27%2F%3E%3Cpath%20d%3D%27M162%2076l-26%2050h52L162%2076Z%27%2F%3E%3Cpath%20d%3D%27M52%20126c6%2015%2021%2024%2042%2024s36-9%2042-24%27%2F%3E%3Cpath%20d%3D%27M104%20126c6%2015%2021%2024%2042%2024s36-9%2042-24%27%2F%3E%3Cpath%20d%3D%27M108%20178h24%27%2F%3E%3Cpath%20d%3D%27M92%20196c16%2010%2040%2010%2056%200%27%2F%3E%0A%3C%2Fg%3E%3C%2Fsvg%3E") 92% 10% / 96px 96px no-repeat,
+      radial-gradient(circle at 84% 16%, rgba(205,167,88,.06), transparent 18%) !important;
+  }
+
+  #como-funciona .how-service__left::before{
+    inset: -14px -6px -16px -18px !important;
+    background: linear-gradient(180deg, rgba(255,253,248,.94), rgba(255,253,248,.88)) !important;
+  }
+
+  #como-funciona .how-service__left::after{
+    left: auto !important;
+    right: 2px !important;
+    bottom: auto !important;
+    top: 8px !important;
+    width: 128px !important;
+    height: 188px !important;
+    opacity: .09 !important;
+  }
+}
+
+
+/* =====================================================
+   V119 — Textos justificados no desktop e mobile
+   Escopo: conteúdo textual das páginas, do começo ao fim.
+   Mantém títulos, botões, menus, formulários e números sem justificar.
+===================================================== */
+body :where(
+  p,
+  li,
+  .lead,
+  .subtitle,
+  .text,
+  .copy,
+  .section-lead,
+  .section-subtitle,
+  .hero-lead,
+  .hero-copy,
+  .service-hero__lead,
+  .service-hero__text,
+  .hero-service__lead,
+  .hero-service__text,
+  .service-card p,
+  .service-card li,
+  .service-case-card p,
+  .service-case-card li,
+  .atendimento-card p,
+  .format-card p,
+  .demandas-slide__text,
+  .demandas-slide p,
+  .how-service__lead,
+  .how-service__benefits li,
+  .how-service__step p,
+  .authority-copy p,
+  .included-card p,
+  .cta-final p,
+  .faq-answer,
+  .faq-answer p,
+  .footer p,
+  .footer li
+){
+  text-align: justify !important;
+  text-align-last: left !important;
+  -webkit-hyphens: auto !important;
+  hyphens: auto !important;
+  overflow-wrap: break-word !important;
+}
+
+body :where(
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  .section-title,
+  .section-heading,
+  .kicker,
+  .eyebrow,
+  .pill,
+  .tag,
+  .badge,
+  .btn,
+  button,
+  label,
+  input,
+  textarea,
+  select,
+  nav,
+  nav *,
+  .site-header,
+  .site-header *,
+  .topbar,
+  .topbar *,
+  .preloader,
+  .preloader *,
+  .service-hero__checks,
+  .service-hero__checks *,
+  .hero-service__checks,
+  .hero-service__checks *,
+  .hero-checks,
+  .hero-checks *,
+  .check-list,
+  .check-list *,
+  .faq-question,
+  .faq-toggle,
+  .faq-more-btn,
+  .authority-stat,
+  .authority-stat *,
+  .stat-item,
+  .stat-item *,
+  .how-service__number,
+  .demandas-slider__controls,
+  .demandas-slider__controls *,
+  .social-links,
+  .social-links *
+){
+  text-align-last: auto !important;
+  hyphens: manual !important;
+}
+
+
+/* =====================================================
+   V120 — Justificação refinada: sem buracos em textos estreitos
+   Mantém textos longos justificados, mas impede espaçamento exagerado
+   em títulos, cards, listas e blocos compactos.
+===================================================== */
+body :where(
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  .hero-copy,
+  .service-hero .hero-copy,
+  .service-hero h1,
+  .service-hero h2,
+  .service-hero h3,
+  .section-title,
+  .section-heading,
+  .pain-title,
+  .how-service__title,
+  .how-service__steps-title,
+  .service-card h3,
+  .service-case-card h3,
+  .atendimento-card h3,
+  .format-card h3,
+  .demandas-slide__title,
+  .included-card h3,
+  .faq-question,
+  .faq-toggle,
+  .btn,
+  button,
+  nav,
+  nav *
+){
+  text-align: left !important;
+  text-align-last: auto !important;
+  word-spacing: normal !important;
+  letter-spacing: inherit;
+  -webkit-hyphens: manual !important;
+  hyphens: manual !important;
+}
+
+body :where(
+  .service-card p,
+  .service-card li,
+  .service-case-card p,
+  .service-case-card li,
+  .atendimento-card p,
+  .format-card p,
+  .how-service__benefits li,
+  .how-service__step p,
+  .included-card p,
+  .microbullets,
+  .microbullets *,
+  .service-hero__bullet-list,
+  .service-hero__bullet-list *,
+  .hero-checks,
+  .hero-checks *,
+  .check-list,
+  .check-list *
+){
+  text-align: left !important;
+  text-align-last: auto !important;
+  word-spacing: normal !important;
+  -webkit-hyphens: manual !important;
+  hyphens: manual !important;
+  overflow-wrap: normal !important;
+  text-wrap: pretty !important;
+}
+
+body :where(
+  .subtitle,
+  .lead,
+  .section-lead,
+  .section-subtitle,
+  .hero-lead,
+  .service-hero__lead,
+  .service-hero__text,
+  .hero-service__lead,
+  .hero-service__text,
+  .hero-copy > p,
+  .service-intro__head > p,
+  .atendimento-formats__head > p,
+  .demandas-slider__left > p,
+  .demandas-slide__text,
+  .demandas-slide p,
+  .how-service__lead,
+  .authority-copy p,
+  .cta-final p,
+  .faq-answer p
+){
+  text-align: justify !important;
+  text-align-last: left !important;
+  word-spacing: normal !important;
+  -webkit-hyphens: auto !important;
+  hyphens: auto !important;
+  overflow-wrap: break-word !important;
+  text-wrap: pretty !important;
+}
+
+@media (min-width: 761px){
+  body :where(
+    .service-card p,
+    .service-case-card p,
+    .atendimento-card p,
+    .format-card p,
+    .how-service__step p,
+    .included-card p
+  ){
+    text-align: left !important;
+    text-align-last: auto !important;
+  }
+}
+
+@media (max-width: 760px){
+  body :where(
+    .service-card p,
+    .service-case-card p,
+    .atendimento-card p,
+    .format-card p,
+    .how-service__step p,
+    .included-card p
+  ){
+    text-align: left !important;
+    text-align-last: auto !important;
+    text-wrap: pretty !important;
+  }
+}
+
+/* =====================================================
+   V121 — Justificação refinada: evita buracos em slides e pills
+   Escopo: corrige textos estreitos da demandas-slider e mantém
+   os 3 balões/pills em uma linha no desktop.
+===================================================== */
+#demandas.demandas-slider :where(
+  .demandas-slide__text,
+  .demandas-slide p,
+  .demandas-slider__right p,
+  .demandas-slider__right-line p
+){
+  text-align: left !important;
+  text-align-last: auto !important;
+  word-spacing: normal !important;
+  letter-spacing: inherit !important;
+  -webkit-hyphens: manual !important;
+  hyphens: manual !important;
+  overflow-wrap: normal !important;
+  text-wrap: pretty !important;
+}
+
+@media (min-width: 761px){
+  #demandas.demandas-slider .demandas-slider__mini-list{
+    display: grid !important;
+    grid-template-columns: repeat(3, max-content) !important;
+    justify-content: start !important;
+    align-items: center !important;
+    gap: 10px !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    overflow: visible !important;
+  }
+
+  #demandas.demandas-slider .demandas-slider__mini-list li{
+    width: auto !important;
+    min-width: max-content !important;
+    max-width: none !important;
+    padding: 10px 18px !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    white-space: nowrap !important;
+    text-align: center !important;
+    text-align-last: auto !important;
+    word-spacing: normal !important;
+    -webkit-hyphens: manual !important;
+    hyphens: manual !important;
+    line-height: 1 !important;
+    font-size: clamp(.70rem, .72vw, .78rem) !important;
+  }
+}
+
+@media (max-width: 760px){
+  #demandas.demandas-slider .demandas-slider__mini-list li{
+    text-align: left !important;
+    text-align-last: auto !important;
+    word-spacing: normal !important;
+    -webkit-hyphens: manual !important;
+    hyphens: manual !important;
+  }
+}
+
+
+/* =========================================================
+   V119 — Atendimento formats: imagem de balança no fundo
+   Escopo: somente section atendimento-formats--compact-only
+   Objetivo: adicionar a balança no canto direito, apagada e ao fundo,
+   sem alterar estrutura, cards ou copy.
+   ========================================================= */
+body.page-service--trabalhista #atendimento.atendimento-formats.atendimento-formats--compact-only::after{
+  opacity: .1 !important;
+  background:
+    url("../img/atendimento-scales-bg.png") right clamp(-528px, -25vw, -90px) center / clamp(640px, 58vw, 790px) auto no-repeat,
+    linear-gradient(90deg, transparent 0%, rgba(205,167,88,.20) 50%, transparent 100%) top center / min(760px, 68vw) 1px no-repeat,
+    linear-gradient(90deg, transparent 0%, rgba(95,43,88,.16) 50%, transparent 100%) bottom center / min(820px, 72vw) 1px no-repeat,
+    radial-gradient(circle at 18% 64%, rgba(95,43,88,.055), transparent 24%),
+    radial-gradient(circle at 82% 30%, rgba(205,167,88,.085), transparent 24%) !important;
+}
+
+body.page-service--trabalhista #atendimento.atendimento-formats.atendimento-formats--compact-only .atendimento-formats__wrap{
+  position: relative !important;
+  z-index: 1 !important;
+}
+
+@media (max-width: 760px){
+  body.page-service--trabalhista #atendimento.atendimento-formats.atendimento-formats--compact-only::after{
+    opacity: .50 !important;
+    background:
+      linear-gradient(90deg, transparent 0%, rgba(205,167,88,.20) 50%, transparent 100%) top center / min(760px, 68vw) 1px no-repeat,
+      linear-gradient(90deg, transparent 0%, rgba(95,43,88,.16) 50%, transparent 100%) bottom center / min(820px, 72vw) 1px no-repeat,
+      radial-gradient(circle at 18% 64%, rgba(95,43,88,.055), transparent 24%),
+      radial-gradient(circle at 82% 30%, rgba(205,167,88,.085), transparent 24%) !important;
   }
 }
