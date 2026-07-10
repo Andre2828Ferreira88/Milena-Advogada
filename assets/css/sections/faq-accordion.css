@@ -332,3 +332,59 @@
     font-size: .74rem;
   }
 }
+
+
+/* =========================================================
+   FAQ V104 — imagem de direito no fundo da section
+   Escopo: somente section alt-warm / faq
+   ========================================================= */
+#faq.alt-warm {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+}
+
+#faq.alt-warm::before {
+  content: "";
+  position: absolute;
+  left: clamp(-70px, -4vw, -28px);
+  top: 50%;
+  transform: translateY(-50%);
+  width: clamp(920px, 94vw, 940px);
+  height: clamp(920px, 94vw, 940px);
+  background: url("../../img/faq-gavel-bg.png") center / contain no-repeat;
+  opacity: .13;
+  pointer-events: none;
+  z-index: 0;
+  filter: saturate(.86) contrast(1.02);
+}
+
+#faq .faq-list,
+#faq .faq-more,
+#faq > .container,
+#faq > .section-inner {
+  position: relative;
+  z-index: 1;
+}
+
+
+
+/* =========================================================
+   FAQ V105 — duplicação do martelo no canto direito espelhado
+   Escopo: somente section alt-warm / faq
+   ========================================================= */
+#faq.alt-warm::after {
+  content: "";
+  position: absolute;
+  left: 42%;
+  top: 50%;
+  transform: translateY(-50%) scaleX(-1);
+  width: clamp(920px, 94vw, 940px);
+  height: clamp(920px, 94vw, 940px);
+  background: url("../../img/faq-gavel-bg.png") center / contain no-repeat;
+  opacity: .13;
+  pointer-events: none;
+  z-index: 0;
+  filter: saturate(.86) contrast(1.02);
+}
+
