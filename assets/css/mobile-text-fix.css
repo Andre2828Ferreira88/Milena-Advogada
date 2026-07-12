@@ -1,0 +1,89 @@
+/* =========================================================
+   MOBILE TEXT FIX — remove justificação no mobile
+   Objetivo: eliminar espaços gigantes entre palavras em blocos estreitos,
+   principalmente cards, etapas, sliders e listas.
+   Carregar este arquivo por último nos HTMLs.
+   ========================================================= */
+
+@media (max-width: 760px){
+  body :is(
+    .section p,
+    .section li,
+    .section strong,
+    .section small,
+    .section span,
+    .service-hero p,
+    .service-hero li,
+    .service-intro p,
+    .service-intro li,
+    .service-case-card p,
+    .service-case-card li,
+    .atendimento-formats p,
+    .atendimento-formats li,
+    .atendimento-format-card p,
+    .atendimento-format-card strong,
+    .demandas-slider p,
+    .demandas-slider li,
+    .demandas-slide__text,
+    .how-service p,
+    .how-service li,
+    .how-service__lead,
+    .how-service__benefits li,
+    .how-service__step,
+    .how-service__step *,
+    .authority p,
+    .authority li,
+    .alt-warm p,
+    .alt-warm li,
+    .faq-answer,
+    .faq-answer p,
+    .cta-final p,
+    footer p,
+    footer li
+  ){
+    text-align: left !important;
+    text-align-last: auto !important;
+    word-spacing: normal !important;
+    letter-spacing: normal !important;
+    word-break: normal !important;
+    overflow-wrap: break-word !important;
+    hyphens: manual !important;
+    -webkit-hyphens: manual !important;
+    text-wrap: pretty !important;
+  }
+
+  body :is(
+    .section h1,
+    .section h2,
+    .section h3,
+    .section h4,
+    .section h5,
+    .section h6,
+    .section .section-title,
+    .section .section-heading,
+    .section .kicker,
+    .section .eyebrow,
+    .section .pill,
+    .section .tag,
+    .section .badge,
+    .section .btn,
+    .section button,
+    .section a[class*="btn"],
+    .section a[class*="cta"],
+    .faq-trigger,
+    .faq-trigger *,
+    .faq-more,
+    .faq-more *,
+    .site-header,
+    .site-header *,
+    .topbar,
+    .topbar *,
+    nav,
+    nav *
+  ){
+    text-align-last: auto !important;
+    word-spacing: normal !important;
+    hyphens: manual !important;
+    -webkit-hyphens: manual !important;
+  }
+}

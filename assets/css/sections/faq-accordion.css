@@ -388,3 +388,56 @@
   filter: saturate(.86) contrast(1.02);
 }
 
+
+
+/* =========================================================
+   FAQ V106 — martelos do fundo estáveis em qualquer proporção/zoom
+   Escopo: somente section alt-warm / faq
+   Observação: usa o centro da section como referência para os dois lados,
+   evitando desalinhamento quando o viewport muda para 90%, 80% etc.
+   ========================================================= */
+#faq.alt-warm{
+  --faq-gavel-size: clamp(560px, 50vw, 940px);
+  --faq-gavel-offset: clamp(340px, 42vw, 680px);
+}
+
+#faq.alt-warm::before,
+#faq.alt-warm::after{
+  top: 50% !important;
+  left: 50% !important;
+  right: auto !important;
+  width: var(--faq-gavel-size) !important;
+  height: var(--faq-gavel-size) !important;
+  background: url("../../img/faq-gavel-bg.png") center / contain no-repeat !important;
+  opacity: .13 !important;
+  pointer-events: none !important;
+  z-index: 0 !important;
+  filter: saturate(.86) contrast(1.02) !important;
+}
+
+#faq.alt-warm::before{
+  transform: translate(calc(-50% - var(--faq-gavel-offset)), -50%) !important;
+}
+
+#faq.alt-warm::after{
+  transform: translate(calc(-50% + var(--faq-gavel-offset)), -50%) scaleX(-1) !important;
+}
+
+@media (max-width: 760px){
+  #faq.alt-warm{
+    --faq-gavel-size: 170px;
+    --faq-gavel-offset: calc(50vw - 44px);
+  }
+
+  #faq.alt-warm::before{
+    top: 18px !important;
+    transform: translate(calc(-50% - var(--faq-gavel-offset)), 0) !important;
+    opacity: .075 !important;
+  }
+
+  #faq.alt-warm::after{
+    top: 18px !important;
+    transform: translate(calc(-50% + var(--faq-gavel-offset)), 0) scaleX(-1) !important;
+    opacity: .075 !important;
+  }
+}

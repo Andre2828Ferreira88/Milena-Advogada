@@ -1555,3 +1555,161 @@ body.page-service--trabalhista #atendimento.atendimento-formats.atendimento-form
     margin-right: auto !important;
   }
 }
+
+
+/* =====================================================
+   V122 — Mobile: remove justificação que cria espaços enormes
+   Escopo: somente textos em telas pequenas.
+   Mantém leitura natural e evita buracos entre palavras em cards,
+   listas, etapas, benefícios, slides e descrições.
+===================================================== */
+@media (max-width: 760px){
+  body :where(
+    .section p,
+    .section li,
+    .section span:not(.faq-icon):not(.faq-more__icon),
+    .section .lead,
+    .section .subtitle,
+    .section .text,
+    .section .copy,
+    .service-hero p,
+    .service-hero li,
+    .service-hero .service-hero__lead,
+    .service-hero .service-hero__text,
+    .service-hero .hero-service__lead,
+    .service-hero .hero-service__text,
+    .service-card p,
+    .service-card li,
+    .service-case-card p,
+    .service-case-card li,
+    .atendimento-card p,
+    .format-card p,
+    .atendimento-format-card p,
+    .service-intro p,
+    .service-intro li,
+    .atendimento-formats p,
+    .atendimento-formats li,
+    .demandas-slider p,
+    .demandas-slider li,
+    .demandas-slide__text,
+    .demandas-slide p,
+    .how-service p,
+    .how-service li,
+    .how-service__lead,
+    .how-service__benefits li,
+    .how-service__step p,
+    .authority p,
+    .authority li,
+    .alt-warm p,
+    .alt-warm li,
+    .cta-final p,
+    .faq-answer,
+    .faq-answer p
+  ){
+    text-align: left !important;
+    text-align-last: auto !important;
+    word-spacing: normal !important;
+    letter-spacing: inherit;
+    word-break: normal !important;
+    overflow-wrap: break-word !important;
+    -webkit-hyphens: manual !important;
+    hyphens: manual !important;
+    text-wrap: pretty !important;
+  }
+
+  body :where(
+    .section h1,
+    .section h2,
+    .section h3,
+    .section h4,
+    .section h5,
+    .section h6,
+    .section .section-title,
+    .section .section-heading,
+    .section .kicker,
+    .section .eyebrow,
+    .section .pill,
+    .section .tag,
+    .section .badge,
+    .section .btn,
+    .section button,
+    .section a[class*="btn"],
+    .section a[class*="cta"],
+    .service-hero h1,
+    .service-hero h2,
+    .service-hero h3,
+    .faq-trigger,
+    .faq-trigger *,
+    .faq-more,
+    .faq-more *,
+    .site-header,
+    .site-header *,
+    .topbar,
+    .topbar *
+  ){
+    text-align-last: auto !important;
+    word-spacing: normal !important;
+    -webkit-hyphens: manual !important;
+    hyphens: manual !important;
+  }
+}
+
+
+/* =====================================================
+   V123 — Como funciona mobile: remove espaços da justificação
+   Escopo: somente cards da section how-service no mobile.
+===================================================== */
+@media (max-width: 760px){
+  #como-funciona.how-service .how-service__step,
+  #como-funciona.how-service .how-service__step *,
+  #como-funciona.how-service .how-service__lead,
+  #como-funciona.how-service .how-service__benefits li{
+    text-align: left !important;
+    text-align-last: auto !important;
+    word-spacing: normal !important;
+    letter-spacing: normal !important;
+    word-break: normal !important;
+    overflow-wrap: normal !important;
+    -webkit-hyphens: manual !important;
+    hyphens: manual !important;
+    text-wrap: pretty !important;
+  }
+
+  #como-funciona.how-service .how-service__step p{
+    display: block !important;
+    max-width: none !important;
+    width: auto !important;
+  }
+}
+
+/* =====================================================
+   V124 — Mobile: corrige espaços nos cards de atendimento
+   Escopo: todos os HTMLs que usam atendimento-formats--compact-only.
+   Motivo: regras globais de justificação tinham maior especificidade
+   e ainda afetavam os textos pequenos dentro dos cards.
+===================================================== */
+@media (max-width: 760px){
+  body.page-service #atendimento.atendimento-formats.atendimento-formats--compact-only .atendimento-format-card,
+  body.page-service #atendimento.atendimento-formats.atendimento-formats--compact-only .atendimento-format-card *,
+  body.page-service--trabalhista #atendimento.atendimento-formats.atendimento-formats--compact-only .atendimento-format-card,
+  body.page-service--trabalhista #atendimento.atendimento-formats.atendimento-formats--compact-only .atendimento-format-card *{
+    text-align: left !important;
+    text-align-last: auto !important;
+    word-spacing: normal !important;
+    letter-spacing: normal !important;
+    word-break: normal !important;
+    overflow-wrap: normal !important;
+    -webkit-hyphens: manual !important;
+    hyphens: manual !important;
+    text-wrap: pretty !important;
+  }
+
+  body.page-service #atendimento.atendimento-formats.atendimento-formats--compact-only .atendimento-format-card p,
+  body.page-service #atendimento.atendimento-formats.atendimento-formats--compact-only .atendimento-format-card strong,
+  body.page-service--trabalhista #atendimento.atendimento-formats.atendimento-formats--compact-only .atendimento-format-card p,
+  body.page-service--trabalhista #atendimento.atendimento-formats.atendimento-formats--compact-only .atendimento-format-card strong{
+    max-width: none !important;
+    white-space: normal !important;
+    line-break: auto !important;
+  }
+}

@@ -1,0 +1,26 @@
+/* =========================================================
+   Landing pages — ícones da section service-intro +20%
+   Escopo: somente Notificação Extrajudicial e Citação/Intimação
+   ========================================================= */
+body.page-service--notificacao-extrajudicial #identificacao.service-intro--carousel .service-case-card__icon.service-case-card__icon--custom,
+body.page-service--citacao-intimacao #identificacao.service-intro--carousel .service-case-card__icon.service-case-card__icon--custom {
+  width: 58px !important;
+  height: 58px !important;
+  padding: 8px !important;
+}
+
+body.page-service--notificacao-extrajudicial #identificacao.service-intro--carousel .service-case-card__icon.service-case-card__icon--custom img,
+body.page-service--citacao-intimacao #identificacao.service-intro--carousel .service-case-card__icon.service-case-card__icon--custom img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: contain !important;
+}
+
+@media (max-width: 760px) {
+  body.page-service--notificacao-extrajudicial #identificacao.service-intro--carousel .service-case-card__icon.service-case-card__icon--custom,
+  body.page-service--citacao-intimacao #identificacao.service-intro--carousel .service-case-card__icon.service-case-card__icon--custom {
+    width: 55px !important;
+    height: 55px !important;
+    padding: 7px !important;
+  }
+}
