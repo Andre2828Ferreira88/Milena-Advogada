@@ -1,89 +1,94 @@
 /* =========================================================
-   MOBILE TEXT FIX — remove justificação no mobile
-   Objetivo: eliminar espaços gigantes entre palavras em blocos estreitos,
-   principalmente cards, etapas, sliders e listas.
-   Carregar este arquivo por último nos HTMLs.
+   MOBILE TEXT FIX DEFINITIVO — remove justificação no mobile
+   Objetivo: eliminar espaços gigantes entre palavras em textos
+   estreitos no mobile. Este arquivo deve ser carregado por último.
    ========================================================= */
 
 @media (max-width: 760px){
-  body :is(
-    .section p,
-    .section li,
-    .section strong,
-    .section small,
-    .section span,
-    .service-hero p,
-    .service-hero li,
-    .service-intro p,
-    .service-intro li,
-    .service-case-card p,
-    .service-case-card li,
-    .atendimento-formats p,
-    .atendimento-formats li,
-    .atendimento-format-card p,
-    .atendimento-format-card strong,
-    .demandas-slider p,
-    .demandas-slider li,
-    .demandas-slide__text,
-    .how-service p,
-    .how-service li,
-    .how-service__lead,
-    .how-service__benefits li,
-    .how-service__step,
-    .how-service__step *,
-    .authority p,
-    .authority li,
-    .alt-warm p,
-    .alt-warm li,
-    .faq-answer,
-    .faq-answer p,
-    .cta-final p,
-    footer p,
-    footer li
-  ){
+  html body.page-service .section,
+  html body.page-service .section *,
+  html body:not(.page-service) .section,
+  html body:not(.page-service) .section *{
+    text-align-last: auto !important;
+    word-spacing: normal !important;
+    word-break: normal !important;
+    overflow-wrap: break-word !important;
+    -webkit-hyphens: manual !important;
+    hyphens: manual !important;
+  }
+
+  html body.page-service .section :is(p, li, span, strong, small, em, div),
+  html body:not(.page-service) .section :is(p, li, span, strong, small, em, div){
     text-align: left !important;
     text-align-last: auto !important;
     word-spacing: normal !important;
-    letter-spacing: normal !important;
+    letter-spacing: inherit !important;
     word-break: normal !important;
     overflow-wrap: break-word !important;
-    hyphens: manual !important;
     -webkit-hyphens: manual !important;
+    hyphens: manual !important;
     text-wrap: pretty !important;
   }
 
-  body :is(
-    .section h1,
-    .section h2,
-    .section h3,
-    .section h4,
-    .section h5,
-    .section h6,
-    .section .section-title,
-    .section .section-heading,
-    .section .kicker,
-    .section .eyebrow,
-    .section .pill,
-    .section .tag,
-    .section .badge,
-    .section .btn,
-    .section button,
-    .section a[class*="btn"],
-    .section a[class*="cta"],
-    .faq-trigger,
-    .faq-trigger *,
-    .faq-more,
-    .faq-more *,
-    .site-header,
-    .site-header *,
-    .topbar,
-    .topbar *,
-    nav,
-    nav *
-  ){
+  html body.page-service .section :is(h1, h2, h3, h4, h5, h6, button, a, label, input, textarea, select),
+  html body:not(.page-service) .section :is(h1, h2, h3, h4, h5, h6, button, a, label, input, textarea, select){
     text-align-last: auto !important;
     word-spacing: normal !important;
-    hyphens: manual !important;
     -webkit-hyphens: manual !important;
+    hyphens: manual !important;
+  }
+
+  html body.page-service #identificacao.service-intro.service-intro--carousel :is(.service-intro__head, .service-intro__head *, .service-case-card, .service-case-card *),
+  html body.page-service #atendimento.atendimento-formats.atendimento-formats--compact-only :is(.atendimento-formats__headline, .atendimento-formats__headline *, .atendimento-format-card, .atendimento-format-card *),
+  html body.page-service #demandas.demandas-slider :is(.demandas-slide, .demandas-slide *, .demandas-slider__right, .demandas-slider__right *, .demandas-slider__mini-list, .demandas-slider__mini-list *),
+  html body.page-service #como-funciona.how-service :is(.how-service__left, .how-service__left *, .how-service__right, .how-service__right *, .how-service__step, .how-service__step *),
+  html body.page-service #sobre.authority :is(.authority-copy, .authority-copy *, .authority-grid, .authority-grid p),
+  html body.page-service #faq.alt-warm :is(.faq-item, .faq-item *, .faq-answer, .faq-answer *){
+    text-align: left !important;
+    text-align-last: auto !important;
+    word-spacing: normal !important;
+    letter-spacing: inherit !important;
+    word-break: normal !important;
+    overflow-wrap: break-word !important;
+    -webkit-hyphens: manual !important;
+    hyphens: manual !important;
+    text-wrap: pretty !important;
+  }
+
+  html body.page-service #identificacao.service-intro.service-intro--carousel .service-case-card p,
+  html body.page-service #atendimento.atendimento-formats.atendimento-formats--compact-only .atendimento-format-card p,
+  html body.page-service #atendimento.atendimento-formats.atendimento-formats--compact-only .atendimento-format-card strong,
+  html body.page-service #demandas.demandas-slider .demandas-slide p,
+  html body.page-service #demandas.demandas-slider .demandas-slider__right-line p,
+  html body.page-service #como-funciona.how-service .how-service__step p,
+  html body.page-service #como-funciona.how-service .how-service__lead,
+  html body.page-service #como-funciona.how-service .how-service__benefits li,
+  html body.page-service #sobre.authority p,
+  html body.page-service #faq.alt-warm .faq-answer p{
+    display: block !important;
+    max-width: none !important;
+    width: auto !important;
+    min-width: 0 !important;
+    white-space: normal !important;
+    text-align: left !important;
+    text-align-last: auto !important;
+    word-spacing: normal !important;
+    letter-spacing: inherit !important;
+    overflow-wrap: break-word !important;
+    -webkit-hyphens: manual !important;
+    hyphens: manual !important;
+  }
+
+  html body.page-service .site-header *,
+  html body.page-service .topbar *,
+  html body.page-service .nav *,
+  html body.page-service .btn,
+  html body.page-service .btn *,
+  html body.page-service [class*="cta"],
+  html body.page-service [class*="cta"] *{
+    text-align-last: auto !important;
+    word-spacing: normal !important;
+    -webkit-hyphens: manual !important;
+    hyphens: manual !important;
   }
 }
