@@ -6,6 +6,14 @@
   'use strict';
 
   const WA_NUM = '5511933082223';
+  const DEFAULT_BASE_MESSAGE = 'Olá! Vim pelo anúncio de Direito Trabalhista Empresarial e gostaria de orientação para uma demanda da minha empresa.';
+
+  function getBaseMessage() {
+    return (document.body && document.body.dataset && document.body.dataset.whatsappMessage)
+      ? document.body.dataset.whatsappMessage.trim()
+      : DEFAULT_BASE_MESSAGE;
+  }
+
   function waLink(msg) {
     return 'https://wa.me/' + WA_NUM + '?text=' + encodeURIComponent(msg);
   }
@@ -117,15 +125,16 @@
 
     heroForm.addEventListener('submit', function (e) {
       e.preventDefault();
+      e.stopImmediatePropagation();
+
       const nomeInput = document.getElementById('fieldNome');
       const waInput   = document.getElementById('fieldWa');
       const v1 = validateField(nomeInput);
       const v2 = validateField(waInput);
       if (!v1 || !v2) return;
 
-      const msg = 'Olá! Me chamo ' + nomeInput.value.trim() +
-                  ' (' + waInput.value.trim() + ') e gostaria de informações sobre o atendimento jurídico.';
-      window.open(waLink(msg), '_blank');
+      // Mensagem fixa por página. Não envia nome, telefone, segmento ou qualquer dado do formulário.
+      window.open(waLink(getBaseMessage()), '_blank', 'noopener,noreferrer');
     });
   }
 

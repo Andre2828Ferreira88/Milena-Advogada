@@ -233,10 +233,7 @@ function initWhatsApp(){
         return;
       }
 
-      const text =
-        `${getBaseMessage()}\n\n` +
-        `Nome: ${nome}\n` +
-        `Telefone: ${telefone}`;
+      const text = getBaseMessage();
 
       modal._waClose && modal._waClose();
       window.open(waLink(text), '_blank', 'noopener,noreferrer');
@@ -288,33 +285,7 @@ function initWhatsApp(){
 
     if (!validateForm(form)) return;
 
-    const fd = new FormData(form);
-    const nome = (fd.get("nome") || "").toString().trim();
-    const whatsapp = (fd.get("whatsapp") || "").toString().trim();
-    const empresa = (fd.get("empresa") || "").toString().trim();
-    const area = (fd.get("area") || "").toString().trim();
-    const demanda = (fd.get("demanda") || "").toString().trim();
-    const segmento = (fd.get("segmento") || "").toString().trim();
-
-    const isServiceForm = form.hasAttribute('data-service-form');
-
-    let text;
-
-    if (isServiceForm) {
-      text =
-        `${getBaseMessage()}\n\n` +
-        `Nome: ${nome}\n` +
-        `WhatsApp: ${whatsapp}\n` +
-        (empresa ? `Empresa: ${empresa}\n` : '') +
-        (area ? `Área de interesse: ${area}\n` : '') +
-        (demanda ? `Demanda: ${demanda}\n` : '');
-    } else {
-      text =
-        `${getBaseMessage()}\n\n` +
-        `Nome: ${nome}\n` +
-        `WhatsApp: ${whatsapp}\n` +
-        `Segmento: ${segmento}`;
-    }
+    const text = getBaseMessage();
 
     window.open(waLink(text), "_blank", "noopener,noreferrer");
   });
