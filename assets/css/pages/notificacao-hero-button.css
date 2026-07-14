@@ -1,0 +1,29 @@
+/* =========================================================
+   Notificação Extrajudicial — ajuste do botão do Hero
+   Escopo: somente Notificacao-Extrajudicial.html
+   ========================================================= */
+body.page-service--notificacao-extrajudicial #topo.service-hero .hero-form #heroSubmit{
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  text-align: center !important;
+  width: 100% !important;
+  min-height: 62px !important;
+  padding: 16px 26px !important;
+  font-size: clamp(.86rem, .92vw, .98rem) !important;
+  line-height: 1.18 !important;
+  font-weight: 800 !important;
+  letter-spacing: .065em !important;
+  white-space: normal !important;
+  text-wrap: balance !important;
+}
+
+@media (max-width: 760px){
+  body.page-service--notificacao-extrajudicial #topo.service-hero .hero-form #heroSubmit{
+    min-height: 56px !important;
+    padding: 15px 22px !important;
+    font-size: .84rem !important;
+    line-height: 1.16 !important;
+    letter-spacing: .055em !important;
+  }
+}
