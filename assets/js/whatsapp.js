@@ -129,6 +129,25 @@ function initWhatsApp(){
         cursor: pointer;
         font: inherit;
         font-weight: 800;
+        display: inline-grid !important;
+        place-items: center !important;
+        align-items: center !important;
+        justify-content: center !important;
+        justify-items: center !important;
+        text-align: center !important;
+        text-align-last: center !important;
+        line-height: 1.08;
+        white-space: normal;
+      }
+
+      .wa-lead-modal__btn span {
+        display: block !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        margin: 0 auto !important;
+        text-align: center !important;
+        text-align-last: center !important;
+        line-height: 1.08 !important;
       }
 
       .wa-lead-modal__btn--ghost {
@@ -157,6 +176,7 @@ function initWhatsApp(){
       @media (max-width: 460px) {
         .wa-lead-modal__card { padding: 22px; border-radius: 20px; }
         .wa-lead-modal__actions { grid-template-columns: 1fr; }
+        .wa-lead-modal__btn { width: 100%; min-height: 52px; }
       }
     `;
     document.head.appendChild(style);
@@ -183,8 +203,8 @@ function initWhatsApp(){
           </div>
           <p class="wa-lead-modal__error">Preencha nome e telefone para continuar.</p>
           <div class="wa-lead-modal__actions">
-            <button class="wa-lead-modal__btn wa-lead-modal__btn--ghost" type="button" data-wa-close>Cancelar</button>
-            <button class="wa-lead-modal__btn wa-lead-modal__btn--primary" type="submit">Chamar no WhatsApp</button>
+            <button class="wa-lead-modal__btn wa-lead-modal__btn--ghost" type="button" data-wa-close><span>Cancelar</span></button>
+            <button class="wa-lead-modal__btn wa-lead-modal__btn--primary" type="submit"><span>Chamar no WhatsApp</span></button>
           </div>
         </form>
       </div>
